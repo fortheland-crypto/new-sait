@@ -440,42 +440,80 @@ const PRODUCTS_DATA = [
   },
 
   // ==========================================
-  // 2. КРОНШТЕЙНЫ И ПОЛКИ (РЕАЛЬНЫЕ ТОВАРЫ С OZON ИЗ СКРИНШОТА)
+  // 2. КРОНШТЕЙНЫ И ПОЛКИ (РЕАЛЬНЫЕ ТОВАРЫ С OZON ИЗ СКРИНШОТОВ)
   // ==========================================
   {
-    id: "bracket-fixed-26-63",
-    sku: "OZON-BRACKET-26-63",
-    name: "Кронштейн для ТВ настенный 26–63″, фиксированный, до 50 кг",
+    id: "bracket-kaloc-26-65",
+    sku: "OZON-BRACKET-26-65-KALOC",
+    name: "Кронштейн для телевизора настенный 26\"-65\" (500×325 мм)",
     category: "appliances",
     categoryName: "Кронштейны, полки и аксессуары",
     subCategory: "tv-brackets",
     brand: "ElectroSat",
-    model: "Bracket-26-63-Fixed-50kg",
-    price: 2992,
-    oldPrice: 4200,
-    badge: "Стало дешевле",
-    badgeType: "sale",
+    model: "Kaloc-Wall-26-65",
+    price: 5647,
+    oldPrice: 7900,
+    badge: "Осталось 2 шт",
+    badgeType: "hit",
     inStock: true,
-    stockCount: 5,
-    rating: 4.7,
-    reviewCount: 51,
+    stockCount: 2,
+    rating: 5.0,
+    reviewCount: 18,
     requiresInstallation: true,
     installationPrice: 3000,
     images: [
-      "images/products/bracket-26-63-infographic.jpg",
-      "images/products/bracket-fixed-photo.jpg"
+      "images/products/bracket-26-65-kaloc.jpg"
     ],
-    shortSpecs: "Для ТВ 26–63″ • Фиксированный • Нагрузка до 50 кг • VESA до 400x400 • Настенное крепление",
-    description: "Прочный фиксированный настенный кронштейн для телевизоров диагональю от 26 до 63 дюймов. Выдерживает нагрузку до 50 кг, совместим со стандартами VESA до 400х400 мм. Надежная стальная конструкция для монтажа ТВ вплотную к стене.",
+    shortSpecs: "Диагональ 26–65″ • Ширина 500 мм, высота 325 мм • Надежное крепление • Быстрый монтаж • Экономия места",
+    description: "Надежный настенный кронштейн для плоских телевизоров 26–65 дюймов. Точные размеры рамы 500×325 мм, стальная пластина с порошковым покрытием и встроенным уровнем для удобного и быстрого монтажа дома и в офисе.",
     fullSpecs: {
-      "Диагональ экрана": "26″ – 63″",
-      "Максимальная нагрузка": "До 50 кг",
-      "Стандарты VESA": "До 400×400 мм",
-      "Тип крепления": "Фиксированное настенное",
-      "Комплектация": "Настенная планка, две вертикальные направляющие, монтажный набор"
+      "Диагональ экрана": "26″ – 65″",
+      "Габариты рамы": "Ширина 500 мм × Высота 325 мм",
+      "Тип крепления": "Настенный",
+      "Материал": "Высокопрочная сталь",
+      "Комплектация": "Настенная планка, две вертикальные направляющие, крепежный набор, инструкция"
     },
-    warranty: "24 месяца гарантии",
-    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман») / Быстрая доставка",
+    warranty: "36 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман») / Монтаж мастером",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "bracket-tilt-26-60-green",
+    sku: "OZON-BRACKET-TILT-26-60",
+    name: "Кронштейн настенный 26\"-60\" наклонный (до 50 кг, VESA 400×400)",
+    category: "appliances",
+    categoryName: "Кронштейны, полки и аксессуары",
+    subCategory: "tv-brackets",
+    brand: "ElectroSat",
+    model: "Tilt-Pro-26-60",
+    price: 5482,
+    oldPrice: 12962,
+    badge: "Распродажа -57%",
+    badgeType: "sale",
+    inStock: true,
+    stockCount: 3,
+    rating: 4.9,
+    reviewCount: 38,
+    requiresInstallation: true,
+    installationPrice: 3000,
+    images: [
+      "images/products/bracket-tilt-26-60-green.jpg"
+    ],
+    shortSpecs: "Диагональ 26–65″ • Нагрузка до 50 кг • VESA 100×100–400×400 • Наклон +5°/-12° • От стены 65–400 мм • Уровень",
+    description: "Профессиональный настенный наклонный кронштейн для телевизоров диагональю 26–65 дюймов с максимальной нагрузкой до 50 кг. Поддерживает регулировку угла наклона +5°/-12°, встроенный жидкостный уровень и замки с фиксатором от случайного смещения.",
+    fullSpecs: {
+      "Диагональ экрана": "26″ – 65″",
+      "Максимальная нагрузка": "До 50 кг",
+      "Стандарты VESA": "100×100, 200×200, 300×300, 400×400 мм",
+      "Угол наклона": "+5° вверх / -12° вниз",
+      "Расстояние от стены": "65 – 400 мм",
+      "Особенности": "Встроенный уровень, фиксаторы защиты, простая установка"
+    },
+    warranty: "36 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
     marketplaceLinks: {
       ozon: "https://ozon.kz/seller/ip-mihaylenko/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
@@ -554,6 +592,45 @@ const PRODUCTS_DATA = [
     },
     warranty: "12 месяцев гарантии",
     deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "bracket-fixed-26-63",
+    sku: "OZON-BRACKET-26-63",
+    name: "Кронштейн для ТВ настенный 26–63″, фиксированный, до 50 кг",
+    category: "appliances",
+    categoryName: "Кронштейны, полки и аксессуары",
+    subCategory: "tv-brackets",
+    brand: "ElectroSat",
+    model: "Bracket-26-63-Fixed-50kg",
+    price: 2992,
+    oldPrice: 4200,
+    badge: "Стало дешевле",
+    badgeType: "sale",
+    inStock: true,
+    stockCount: 5,
+    rating: 4.7,
+    reviewCount: 51,
+    requiresInstallation: true,
+    installationPrice: 3000,
+    images: [
+      "images/products/bracket-26-63-infographic.jpg",
+      "images/products/bracket-fixed-photo.jpg"
+    ],
+    shortSpecs: "Для ТВ 26–63″ • Фиксированный • Нагрузка до 50 кг • VESA до 400x400 • Настенное крепление",
+    description: "Прочный фиксированный настенный кронштейн для телевизоров диагональю от 26 до 63 дюймов. Выдерживает нагрузку до 50 кг, совместим со стандартами VESA до 400х400 мм. Надежная стальная конструкция для монтажа ТВ вплотную к стене.",
+    fullSpecs: {
+      "Диагональ экрана": "26″ – 63″",
+      "Максимальная нагрузка": "До 50 кг",
+      "Стандарты VESA": "До 400×400 мм",
+      "Тип крепления": "Фиксированное настенное",
+      "Комплектация": "Настенная планка, две вертикальные направляющие, монтажный набор"
+    },
+    warranty: "24 месяца гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман») / Быстрая доставка",
     marketplaceLinks: {
       ozon: "https://ozon.kz/seller/ip-mihaylenko/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
