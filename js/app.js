@@ -1355,7 +1355,7 @@ class MainApp {
     const tgInp = document.getElementById("cfg-telegram");
     const addrInp = document.getElementById("cfg-address");
     const hrsInp = document.getElementById("cfg-hours");
-    const dgisInp = document.getElementById("cfg-dgis");
+    const grokKeyInp = document.getElementById("cfg-grok-key");
 
     if (nameInp) nameInp.value = config.COMPANY_NAME || "";
     if (cityInp) cityInp.value = config.CITY || "";
@@ -1365,7 +1365,7 @@ class MainApp {
     if (tgInp) tgInp.value = config.TELEGRAM_LINK || "";
     if (addrInp) addrInp.value = config.ADDRESS || "";
     if (hrsInp) hrsInp.value = config.WORKING_HOURS || "";
-    if (dgisInp) dgisInp.value = config.DGIS_LINK || "";
+    if (grokKeyInp) grokKeyInp.value = localStorage.getItem("pv_grok_key") || config.GROK_API_KEY || "";
 
     const form = document.getElementById("settings-form");
     if (form) {
@@ -1380,7 +1380,13 @@ class MainApp {
         config.TELEGRAM_LINK = tgInp.value;
         config.ADDRESS = addrInp.value;
         config.WORKING_HOURS = hrsInp.value;
-        config.DGIS_LINK = dgisInp.value;
+
+        if (grokKeyInp && grokKeyInp.value.trim()) {
+          const key = grokKeyInp.value.trim();
+          config.GROK_API_KEY = key;
+          localStorage.setItem("pv_grok_key", key);
+          if (window.Assistant) window.Assistant.setApiKey(key);
+        }
 
         window.SITE_CONFIG = config;
         this.injectConfigPlaceholders();
@@ -1388,7 +1394,7 @@ class MainApp {
         if (window.Cart) window.Cart.updateBadges();
 
         modal.classList.add("hidden");
-        this.showToast("Данные компании успешно обновлены на сайте!");
+        this.showToast("Настройки сайта и ключ Grok AI успешно сохранены!");
       };
     }
 
