@@ -1,0 +1,182 @@
+/* ==========================================================================
+   PROFIVISION - MODERN RESPONSIVE STYLES
+   Visual direction: Light, clean, graphite typography, tech blue accents,
+   rounded cards, soft elevation, mobile-first optimization.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-blue: #0284c7;
+  --primary-blue-hover: #0369a1;
+  --primary-dark: #0f172a;
+  --accent-orange: #ea580c;
+  --accent-emerald: #10b981;
+  --bg-slate: #f8fafc;
+  --card-border: rgba(226, 232, 240, 0.85);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Floating Action Speed-Dial Container */
+.speed-dial-container {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 990;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .speed-dial-container {
+    bottom: 84px; /* above mobile sticky navigation bar */
+    right: 14px;
+    gap: 10px;
+  }
+}
+
+.speed-dial-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.speed-dial-btn:hover {
+  transform: translateY(-3px) scale(1.06);
+}
+
+.speed-dial-btn .tooltip {
+  position: absolute;
+  right: 58px;
+  white-space: nowrap;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.speed-dial-btn:hover .tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Modal and Drawer Transitions */
+.modal-backdrop {
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.drawer-slide-right {
+  animation: slideDrawerRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideDrawerRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Micro-animations */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Glassmorphism elements */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.glass-dark-panel {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Line clamp utilities for older browsers fallback */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Map frame styling */
+.map-container-frame {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+/* Mobile active tap state */
+@media (hover: none) {
+  .speed-dial-btn .tooltip {
+    display: none;
+  }
+}
