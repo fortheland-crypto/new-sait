@@ -755,20 +755,20 @@ const PRODUCTS_DATA = [
   },
 
   // ==========================================
-  // 3. СПУТНИКОВОЕ ОБОРУДОВАНИЕ (ТЕЛЕКАРТА И ОТАУ ТВ ПО 65 000 ₸)
+  // 3. СПУТНИКОВОЕ ОБОРУДОВАНИЕ (ТЕЛЕКАРТА И ОТАУ ТВ)
   // ==========================================
   {
     id: "sat-telekarta-65k",
     sku: "SAT-TK-65K",
     name: "Комплект спутникового оборудования Телекарта HD (230+ каналов)",
     category: "satellite",
-    categoryName: "Спутниковое ТВ: Телекарта (65 000 ₸)",
+    categoryName: "Спутниковое ТВ: Телекарта HD",
     subCategory: "satellite-telekarta",
     brand: "Телекарта",
     model: "EVO HD Full Kit 230+",
     price: 65000,
     oldPrice: 78000,
-    badge: "Хит 65 000 ₸",
+    badge: "Комплект HD",
     badgeType: "hit",
     inStock: true,
     stockCount: 15,
@@ -802,13 +802,13 @@ const PRODUCTS_DATA = [
     sku: "SAT-OTAU-HD",
     name: "Комплект спутникового оборудования Отау ТВ (Otau TV HD)",
     category: "satellite",
-    categoryName: "Спутниковое ТВ: Отау ТВ (65 000 ₸)",
+    categoryName: "Спутниковое ТВ: Отау ТВ",
     subCategory: "satellite-otau",
     brand: "Отау ТВ",
     model: "Otau TV DVB-S2 Full HD",
     price: 65000,
     oldPrice: 78000,
-    badge: "Хит 65 000 ₸",
+    badge: "Комплект HD",
     badgeType: "hit",
     inStock: true,
     stockCount: 12,
@@ -842,31 +842,31 @@ const PRODUCTS_DATA = [
 const CATEGORIES_DATA = [
   {
     id: "all",
-    name: "Все товары Ozon и комплекты",
+    name: "Все товары",
     icon: "layers",
     count: PRODUCTS_DATA.length
   },
   {
     id: "remotes",
-    name: "Пульты для телевизоров (Ozon)",
+    name: "Пульты для телевизоров",
     icon: "tv",
     count: PRODUCTS_DATA.filter(p => p.category === "remotes" && p.subCategory !== "satellite-remotes" && p.subCategory !== "otau-remotes").length
   },
   {
     id: "appliances",
-    name: "Кронштейны, полки, БП (Ozon)",
+    name: "Кронштейны и полки",
     icon: "layers",
     count: PRODUCTS_DATA.filter(p => p.category === "appliances").length
   },
   {
     id: "satellite-telekarta",
-    name: "Телекарта (65 000 ₸)",
+    name: "Телекарта HD",
     icon: "radio",
     count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-telekarta" || p.id === "ozon-1829366751").length
   },
   {
     id: "satellite-otau",
-    name: "Отау ТВ (65 000 ₸)",
+    name: "Отау ТВ",
     icon: "tv",
     count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-otau" || p.id === "ozon-4880651840").length
   }
