@@ -200,14 +200,13 @@ class MainApp {
       >
         <!-- Верхние бейджи и кнопки действий -->
         <div class="relative mb-3">
-          <div class="w-full h-48 sm:h-52 bg-slate-50 rounded-2xl overflow-hidden relative">
+          <div class="w-full h-48 sm:h-52 bg-white rounded-2xl overflow-hidden relative flex items-center justify-center p-3 border border-slate-100">
             <img 
               src="${p.images[0]}" 
               alt="${p.name}" 
-              class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              class="max-w-full max-h-full w-auto h-auto object-contain mx-auto group-hover:scale-105 transition-transform duration-300"
               loading="lazy"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
 
           <!-- Бейджи товара -->
@@ -605,8 +604,8 @@ class MainApp {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6">
         <!-- Галерея фото -->
         <div>
-          <div class="w-full h-64 sm:h-80 bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 mb-3 relative">
-            <img id="product-main-img" src="${p.images[0]}" alt="${p.name}" class="w-full h-full object-cover">
+          <div class="w-full h-64 sm:h-80 bg-white rounded-2xl overflow-hidden border border-slate-200 mb-3 relative flex items-center justify-center p-4">
+            <img id="product-main-img" src="${p.images[0]}" alt="${p.name}" class="max-w-full max-h-full object-contain mx-auto">
             ${p.badge ? `
               <span class="absolute top-3 left-3 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-lg text-white ${p.badgeType === 'hit' ? 'bg-orange-500' : 'bg-blue-600'}">
                 ${p.badge}
@@ -617,11 +616,13 @@ class MainApp {
           ${p.images.length > 1 ? `
             <div class="flex gap-2 overflow-x-auto pb-1">
               ${p.images.map((img, idx) => `
-                <img 
-                  src="${img}" 
+                <button 
+                  type="button"
                   onclick="document.getElementById('product-main-img').src='${img}'"
-                  class="w-16 h-16 object-cover rounded-xl border-2 border-slate-200 hover:border-blue-500 cursor-pointer transition-all"
+                  class="w-16 h-16 rounded-xl border-2 border-slate-200 hover:border-blue-500 p-1 flex-shrink-0 bg-white flex items-center justify-center cursor-pointer transition-all"
                 >
+                  <img src="${img}" class="max-w-full max-h-full object-contain mx-auto" />
+                </button>
               `).join('')}
             </div>
           ` : ''}

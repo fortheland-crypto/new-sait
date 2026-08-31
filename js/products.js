@@ -1,6 +1,6 @@
 /**
  * КАТАЛОГ ТОВАРОВ МАГАЗИНА ELECTROSAT
- * Реальные товары из магазина на Ozon и Wildberries
+ * Реальные товары из магазина на Ozon и Wildberries (ИП Михайленко)
  */
 
 const PRODUCTS_DATA = [
@@ -79,8 +79,7 @@ const PRODUCTS_DATA = [
       "https://ir.ozone.ru/s3/multimedia-1-9/11914726941.jpg",
       "https://ir.ozone.ru/s3/multimedia-1-q/11914726778.jpg",
       "https://ir.ozone.ru/s3/multimedia-1-5/11914726649.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-t/11914726817.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-a/11883488194.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-t/11914726817.jpg"
     ],
     shortSpecs: "Подходит ко всем ТВ LG (Smart TV / 3D / LED / LCD) • Кнопки Smart, Netflix, Prime • Без кодов",
     description: "Универсальный полнофункциональный пульт для любых телевизоров LG. Поддерживает все современные функции Smart TV, 3D, меню настроек и медиаплеер. Не требует предварительной настройки — вставил батарейки и управляй.",
@@ -119,7 +118,7 @@ const PRODUCTS_DATA = [
     model: "RM-L1088 / Samsung Smart",
     price: 1957,
     oldPrice: 3200,
-    badge: "Хит продаж",
+    badge: "Хит Ozon",
     badgeType: "hit",
     inStock: true,
     stockCount: 8,
@@ -128,11 +127,10 @@ const PRODUCTS_DATA = [
     requiresInstallation: false,
     installationPrice: 1000,
     images: [
-      "https://ir.ozone.ru/s3/multimedia-1-m/11914757362.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-m/11914757386.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-e/11914757354.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-b/11914757275.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-w/11883492356.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-z/11992239827.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-f/11992240635.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-n/11992239959.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-i/11992238586.jpg"
     ],
     shortSpecs: "Для всех моделей телевизоров Samsung (Smart TV, Crystal UHD, QLED, Neo QLED) • Прямой доступ к Smart Hub",
     description: "Универсальный надежный пульт ДУ для всех моделей телевизоров Samsung от кинескопных до новейших QLED и Smart TV 4K/8K. Работает сразу без настройки.",
@@ -181,10 +179,8 @@ const PRODUCTS_DATA = [
     images: [
       "https://ir.ozone.ru/s3/multimedia-1-s/12143009260.jpg",
       "https://ir.ozone.ru/s3/multimedia-1-2/12143010026.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-g/11953779280.jpg",
       "https://ir.ozone.ru/s3/multimedia-1-6/12143757822.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-c/12143764488.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-s/12143757880.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-c/12143764488.jpg"
     ],
     shortSpecs: "Совместим со всеми телевизорами ARG • Кнопки Smart, YouTube, Меню • Удобный хват",
     description: "Универсальный пульт дистанционного управления для популярных в Казахстане телевизоров марки ARG (Smart TV и стандартных моделей). Выполнен из прочного пластика с четким тактильным кликом клавиш.",
@@ -229,11 +225,10 @@ const PRODUCTS_DATA = [
     requiresInstallation: false,
     installationPrice: 1000,
     images: [
-      "https://ir.ozone.ru/s3/multimedia-1-5/11953779269.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-8/11953779316.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-9/11953779329.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-7/11953779295.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-c/11883495444.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-6/11995198998.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-u/11995198410.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-n/11995199231.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-3/11995199895.jpg"
     ],
     shortSpecs: "Для телевизоров Sony Bravia (LED, LCD, OLED, Android TV) • Кнопки Netflix, Google Play, Sync Menu",
     description: "Универсальный пульт дистанционного управления для любых телевизоров Sony Bravia. Обеспечивает мгновенный доступ ко всем функциям Smart TV, меню Home и переключению входов. Высокое качество сборки.",
@@ -280,11 +275,10 @@ const PRODUCTS_DATA = [
     requiresInstallation: false,
     installationPrice: 1000,
     images: [
-      "https://ir.ozone.ru/s3/multimedia-1-8/12536838380.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-o/12536838356.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-1/12536838321.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-i/12536838330.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-p/12536838393.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-9/11950394445.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-d/11950394233.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-0/11950395084.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-a/11950487434.jpg"
     ],
     shortSpecs: "Для спутниковых и эфирных ресиверов OTAU TV (Отау ТВ) ZK-089+10 • 100% замена оригинала • Без кодов",
     description: "Пульт дистанционного управления для национального спутникового и эфирного телевидения Отау ТВ. Подходит для популярных моделей ресиверов OTAU TV ZK-089+10. Не требует настройки, работает сразу после установки элементов питания.",
@@ -304,7 +298,7 @@ const PRODUCTS_DATA = [
     warranty: "6 месяцев гарантии",
     deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
     marketplaceLinks: {
-      ozon: "https://ozon.kz/product/pult-du-dlya-otau-tv-zk-089-10-zamena-originala-4880651840/",
+      ozon: "https://ozon.kz/product/pult-du-dlya-otau-tv-zk-089-10-zamena-originalnogo-pulta-4880651840/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
     }
   },
@@ -328,11 +322,10 @@ const PRODUCTS_DATA = [
     requiresInstallation: false,
     installationPrice: 1000,
     images: [
-      "https://ir.ozone.ru/s3/multimedia-1-u/11953782786.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-8/11953782872.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-1/11953782829.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-u/11953782810.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-e/11883495146.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-u/12067740930.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-4/12067741588.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-u/12067741362.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-i/12067742862.jpg"
     ],
     shortSpecs: "Для всех телевизоров Philips (Smart TV, Android TV, Ambilight, LED, LCD) • Кнопки Netflix, Ambilight, Меню",
     description: "Универсальный пульт для любых телевизоров Philips. Поддерживает фирменные функции Philips Smart TV, подсветку Ambilight, быстрый запуск Netflix и цифровое меню. Не требует ввода кодов.",
@@ -381,8 +374,7 @@ const PRODUCTS_DATA = [
     images: [
       "https://ir.ozone.ru/s3/multimedia-1-1/13088469565.jpg",
       "https://ir.ozone.ru/s3/multimedia-1-8/11937900788.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-l/7378357197.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-g/11953779280.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-l/7378357197.jpg"
     ],
     shortSpecs: "Настенная полка из закалённого стекла 5 мм • Нагрузка до 10 кг • Кабель-канал • Полный крепёж в комплекте",
     description: "Стильная настенная стеклянная полка для установки под настенным телевизором. Идеально размещает цифровые ресиверы Отау ТВ и Телекарта, смарт ТВ-приставки, Wi-Fi роутеры, игровые консоли и медиаплееры. Изготовлена из закаленного ударопрочного стекла с закругленными полированными углами.",
@@ -466,7 +458,7 @@ const PRODUCTS_DATA = [
     images: [
       "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
-      "https://ir.ozone.ru/s3/multimedia-1-8/12536838380.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-9/11950394445.jpg"
     ],
     shortSpecs: "Спутниковая антенна Отау ТВ • Цифровой приемник DVB-S2 • Все казахстанские каналы • Без абонентской платы",
     description: "Оригинальный комплект национального спутникового телевидения Otau TV (Отау ТВ). Трансляция всех казахстанских республиканских и региональных телеканалов в цифровом и HD качестве без обязательной абонентской платы. Идеальный прием в любой точке Сатпаева и области.",
