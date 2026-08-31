@@ -440,14 +440,169 @@ const PRODUCTS_DATA = [
   },
 
   // ==========================================
-  // 2. ПОЛКИ, КРОНШТЕЙНЫ, ПОДСТАВКИ И БЛОКИ ПИТАНИЯ
+  // 2. КРОНШТЕЙНЫ И ПОЛКИ (РЕАЛЬНЫЕ ТОВАРЫ С OZON ИЗ СКРИНШОТА)
   // ==========================================
+  {
+    id: "bracket-fixed-26-63",
+    sku: "OZON-BRACKET-26-63",
+    name: "Кронштейн для ТВ настенный 26–63″, фиксированный, до 50 кг",
+    category: "appliances",
+    categoryName: "Кронштейны, полки и аксессуары",
+    subCategory: "tv-brackets",
+    brand: "ElectroSat",
+    model: "Bracket-26-63-Fixed-50kg",
+    price: 2992,
+    oldPrice: 4200,
+    badge: "Стало дешевле",
+    badgeType: "sale",
+    inStock: true,
+    stockCount: 5,
+    rating: 4.7,
+    reviewCount: 51,
+    requiresInstallation: true,
+    installationPrice: 3000,
+    images: [
+      "images/products/bracket-26-63-infographic.jpg",
+      "images/products/bracket-fixed-photo.jpg"
+    ],
+    shortSpecs: "Для ТВ 26–63″ • Фиксированный • Нагрузка до 50 кг • VESA до 400x400 • Настенное крепление",
+    description: "Прочный фиксированный настенный кронштейн для телевизоров диагональю от 26 до 63 дюймов. Выдерживает нагрузку до 50 кг, совместим со стандартами VESA до 400х400 мм. Надежная стальная конструкция для монтажа ТВ вплотную к стене.",
+    fullSpecs: {
+      "Диагональ экрана": "26″ – 63″",
+      "Максимальная нагрузка": "До 50 кг",
+      "Стандарты VESA": "До 400×400 мм",
+      "Тип крепления": "Фиксированное настенное",
+      "Комплектация": "Настенная планка, две вертикальные направляющие, монтажный набор"
+    },
+    warranty: "24 месяца гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман») / Быстрая доставка",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "bracket-swivel-32-65",
+    sku: "OZON-BRACKET-SWIVEL-32-65",
+    name: "Кронштейн настенный поворотный, 32-65″, наклонный, выдвижной держатель для ТВ",
+    category: "appliances",
+    categoryName: "Кронштейны, полки и аксессуары",
+    subCategory: "tv-brackets",
+    brand: "ElectroSat",
+    model: "Swivel-Arm-32-65-180deg",
+    price: 5403,
+    oldPrice: 7500,
+    badge: "Осталась 1 шт",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 1,
+    rating: 5.0,
+    reviewCount: 6,
+    requiresInstallation: true,
+    installationPrice: 3500,
+    images: [
+      "images/products/bracket-swivel-32-65.jpg"
+    ],
+    shortSpecs: "Для ТВ 32–65″ • Поворот до 180° • Наклон ±15° • Выдвижение от стены 63–420 мм • VESA 100×100–400×400 • До 31.8 кг",
+    description: "Универсальный наклонно-поворотный кронштейн с выдвижным рычагом для телевизоров 32–65 дюймов. Позволяет выдвигать телевизор от стены на расстояние от 63 до 420 мм, поворачивать экран до 180° и наклонять на ±15°. Прочная стальная конструкция с крепежом в комплекте.",
+    fullSpecs: {
+      "Диагональ экрана": "32″ – 65″",
+      "Угол поворота": "До 180°",
+      "Угол наклона": "±15°",
+      "Выдвижение от стены": "63 – 420 мм",
+      "Стандарты VESA": "100×100, 200×200, 300×300, 400×400 мм",
+      "Максимальная нагрузка": "До 31.8 кг",
+      "Комплектация": "Кронштейн в сборе, полный монтажный крепеж, инструкция"
+    },
+    warranty: "36 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев / Монтаж под ключ",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "shelf-screen-top-33x16",
+    sku: "OZON-SHELF-TOP-33X16",
+    name: "Полка Прямая для монитора и ТВ, 33х16 (без лишнего монтажа)",
+    category: "appliances",
+    categoryName: "Кронштейны, полки и аксессуары",
+    subCategory: "tv-shelves",
+    brand: "ElectroSat",
+    model: "Top-Shelf-33x16-Screen",
+    price: 3258,
+    oldPrice: 5401,
+    badge: "Распродажа -39%",
+    badgeType: "sale",
+    inStock: true,
+    stockCount: 1,
+    rating: 5.0,
+    reviewCount: 5,
+    requiresInstallation: false,
+    installationPrice: 500,
+    images: [
+      "images/products/shelf-screen-top-33x16.jpg"
+    ],
+    shortSpecs: "Стильное хранение под рукой • Компактная 33х16 см • Без лишнего монтажа • Для пультов, приставок, роутеров",
+    description: "Удобная навесная верхняя полка размером 33х16 см, которая устанавливается непосредственно на верхнюю грань любого телевизора или монитора без сверления стен и инструментов. Идеальное решение для размещения Wi-Fi роутеров, смарт ТВ-приставок, пультов ДУ и аксессуаров.",
+    fullSpecs: {
+      "Размер": "33 × 16 см",
+      "Тип установки": "На верхнюю панель ТВ/монитора с упором",
+      "Монтаж": "Без сверления и инструментов за 10 секунд",
+      "Назначение": "ТВ-приставки, роутеры, пульты, часы, медиаплееры",
+      "Материал": "Термостойкий ABS-пластик с рельефной антискользящей поверхностью"
+    },
+    warranty: "12 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "bracket-fixed-photo",
+    sku: "OZON-BRACKET-FIXED-PHOTO",
+    name: "Кронштейн для ТВ настенный (универсальный черный)",
+    category: "appliances",
+    categoryName: "Кронштейны, полки и аксессуары",
+    subCategory: "tv-brackets",
+    brand: "ElectroSat",
+    model: "Bracket-Wall-Slim",
+    price: 2922,
+    oldPrice: 3900,
+    badge: "Осталось 5 шт",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 5,
+    rating: 4.3,
+    reviewCount: 3,
+    requiresInstallation: true,
+    installationPrice: 3000,
+    images: [
+      "images/products/bracket-fixed-photo.jpg",
+      "images/products/bracket-26-63-infographic.jpg"
+    ],
+    shortSpecs: "Настенный прочный стальной кронштейн для плоских телевизоров • Надежное крепление к стене",
+    description: "Надежный классический настенный кронштейн черного цвета для монтажа плоскопанельных LED и LCD телевизоров. Удобная фиксация и прочная стальная рама.",
+    fullSpecs: {
+      "Тип": "Настенный кронштейн для ТВ",
+      "Материал": "Сталь с порошковой покраской",
+      "Цвет": "Черный матовый",
+      "Комплект": "Кронштейн, комплект винтов и дюбелей"
+    },
+    warranty: "24 месяца гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
   {
     id: "ozon-1856887821",
     sku: "1856887821",
     name: "Стеклянная полка под телевизор для ресивера, ТВ приставки, Wi-Fi роутера, медиаплеера",
     category: "appliances",
-    categoryName: "Полки, кронштейны и ТВ аксессуары",
+    categoryName: "Кронштейны, полки и аксессуары",
     subCategory: "tv-shelves",
     brand: "ElectroSat",
     model: "Glass-Shelf-Black-5mm",
@@ -483,128 +638,11 @@ const PRODUCTS_DATA = [
     }
   },
   {
-    id: "bracket-arm-42",
-    sku: "BRACKET-ARM-42",
-    name: "Настенный наклонно-поворотный кронштейн для телевизора 14–43″ (боковое крепление)",
-    category: "appliances",
-    categoryName: "Полки, кронштейны и ТВ аксессуары",
-    subCategory: "tv-brackets",
-    brand: "ElectroSat",
-    model: "Arm-14-43-VESA200",
-    price: 3850,
-    oldPrice: 5500,
-    badge: "Поворотный",
-    badgeType: "hit",
-    inStock: true,
-    stockCount: 16,
-    rating: 5.0,
-    reviewCount: 34,
-    requiresInstallation: true,
-    installationPrice: 3500,
-    images: [
-      "images/products/bracket-swivel.svg"
-    ],
-    shortSpecs: "Диагональ 14–43″ • Поворот ±90°, наклон ±15° • VESA 75x75, 100x100, 200x200 • До 25 кг • Полный крепеж",
-    description: "Универсальный наклонно-поворотный кронштейн с поворотной «рукой» для телевизоров и мониторов 14–43″. Обеспечивает легкий поворот влево/вправо до 90 градусов и регулировку угла наклона. Изготовлен из прочной холоднокатаной стали 1.5 мм.",
-    fullSpecs: {
-      "Диагональ экрана": "14″ – 43″ (35–109 см)",
-      "Стандарты VESA": "75x75, 100x100, 200x100, 200x200 мм",
-      "Максимальная нагрузка": "25 кг",
-      "Угол поворота": "До ±90° (в обе стороны)",
-      "Угол наклона": "±15°",
-      "Расстояние от стены": "55 – 380 мм",
-      "Комплект": "Кронштейн в сборе, дюбели, анкеры, набор болтов для ТВ M4/M6/M8, инструкция"
-    },
-    warranty: "36 месяцев гарантии",
-    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман») • Установка мастером в день заказа",
-    marketplaceLinks: {
-      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
-      wildberries: "https://www.wildberries.ru/seller/250158087"
-    }
-  },
-  {
-    id: "bracket-tilt-65",
-    sku: "BRACKET-TILT-65",
-    name: "Наклонный усиленный кронштейн-рейка для телевизоров 32–70″ (нагрузка до 45 кг)",
-    category: "appliances",
-    categoryName: "Полки, кронштейны и ТВ аксессуары",
-    subCategory: "tv-brackets",
-    brand: "ElectroSat",
-    model: "Tilt-Heavy-32-70",
-    price: 4950,
-    oldPrice: 6800,
-    badge: "Для больших ТВ",
-    badgeType: "hit",
-    inStock: true,
-    stockCount: 12,
-    rating: 4.9,
-    reviewCount: 29,
-    requiresInstallation: true,
-    installationPrice: 3500,
-    images: [
-      "images/products/bracket-tilt.svg"
-    ],
-    shortSpecs: "Для телевизоров 32–70″ • Наклон -15° • VESA до 400x400 • До 45 кг • Встроенный уровень • Надежный замок",
-    description: "Усиленный настенный кронштейн для надежной фиксации телевизоров средних и больших диагоналей (32–70 дюймов). Оснащен механизмом плавного наклона и встроенным жидкостным уровнем для идеально ровного монтажа.",
-    fullSpecs: {
-      "Диагональ экрана": "32″ – 70″ (81–178 см)",
-      "Стандарты VESA": "100x100, 200x200, 300x300, 400x200, 400x400 мм",
-      "Максимальная нагрузка": "45 кг",
-      "Угол наклона": "0° / -15°",
-      "Расстояние от стены": "25 мм (ультратонкий профиль)",
-      "Особенности": "Встроенный уровень, фиксаторы защиты от падения"
-    },
-    warranty: "36 месяцев гарантии",
-    deliveryInfo: "В наличии в г. Сатпаев • Монтаж под ключ",
-    marketplaceLinks: {
-      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
-      wildberries: "https://www.wildberries.ru/seller/250158087"
-    }
-  },
-  {
-    id: "tv-stand-legs",
-    sku: "TV-STAND-LEGS-UNI",
-    name: "Универсальные настольные ножки / подставка для любых телевизоров 32–65″",
-    category: "appliances",
-    categoryName: "Полки, кронштейны и ТВ аксессуары",
-    subCategory: "tv-shelves",
-    brand: "ElectroSat",
-    model: "TableStand-32-65",
-    price: 3950,
-    oldPrice: 5800,
-    badge: "Подставка",
-    badgeType: "sale",
-    inStock: true,
-    stockCount: 10,
-    rating: 5.0,
-    reviewCount: 22,
-    requiresInstallation: false,
-    installationPrice: 1500,
-    images: [
-      "images/products/tv-stand-legs.svg"
-    ],
-    shortSpecs: "Универсальные ножки для ТВ 32–65″ • Замена потерянных ножек • Регулировка по высоте • До 40 кг",
-    description: "Универсальная настольная подставка (ножки) для установки телевизора на тумбу или стол. Идеальная замена сломанным или утерянным оригинальным ножкам. Крепится к стандартным отверстиям VESA на задней панели телевизора.",
-    fullSpecs: {
-      "Совместимые диагонали": "32″ – 65″",
-      "Совместимость VESA": "от 100x100 до 800x400 мм",
-      "Максимальная нагрузка": "40 кг",
-      "Регулировка высоты": "3 уровня высоты",
-      "Материал": "Сталь с полимерным покрытием, прорезиненные антискользящие накладки"
-    },
-    warranty: "12 месяцев гарантии",
-    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
-    marketplaceLinks: {
-      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
-      wildberries: "https://www.wildberries.ru/seller/250158087"
-    }
-  },
-  {
     id: "power-adapter-12v",
     sku: "ADAPTER-12V-2A",
     name: "Блок питания 12V 2A (5.5x2.5мм) для ресиверов Отау ТВ, Телекарта, роутеров и ТВ приставок",
     category: "appliances",
-    categoryName: "Полки, кронштейны и ТВ аксессуары",
+    categoryName: "Кронштейны, полки и аксессуары",
     subCategory: "accessories",
     brand: "ElectroSat",
     model: "Power-12V-2A-EU",
@@ -640,7 +678,7 @@ const PRODUCTS_DATA = [
   },
 
   // ==========================================
-  // 3. СПУТНИКОВОЕ ОБОРУДОВАНИЕ (ТЕЛЕКАРТА И ОТАУ ТВ)
+  // 3. СПУТНИКОВОЕ ОБОРУДОВАНИЕ (ТЕЛЕКАРТА И ОТАУ ТВ ПО 65 000 ₸)
   // ==========================================
   {
     id: "sat-telekarta-65k",
@@ -687,13 +725,13 @@ const PRODUCTS_DATA = [
     sku: "SAT-OTAU-HD",
     name: "Комплект спутникового оборудования Отау ТВ (Otau TV HD)",
     category: "satellite",
-    categoryName: "Спутниковое ТВ: Отау ТВ (Otau TV)",
+    categoryName: "Спутниковое ТВ: Отау ТВ (65 000 ₸)",
     subCategory: "satellite-otau",
     brand: "Отау ТВ",
     model: "Otau TV DVB-S2 Full HD",
-    price: 55000,
-    oldPrice: 65000,
-    badge: "Отау ТВ",
+    price: 65000,
+    oldPrice: 78000,
+    badge: "Хит 65 000 ₸",
     badgeType: "hit",
     inStock: true,
     stockCount: 12,
@@ -739,19 +777,19 @@ const CATEGORIES_DATA = [
   },
   {
     id: "appliances",
-    name: "Полки, кронштейны, подставки, БП",
+    name: "Кронштейны, полки, БП (Ozon)",
     icon: "layers",
     count: PRODUCTS_DATA.filter(p => p.category === "appliances").length
   },
   {
     id: "satellite-telekarta",
-    name: "Телекарта: пульт и комплект 65 000 ₸",
+    name: "Телекарта (65 000 ₸)",
     icon: "radio",
     count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-telekarta" || p.id === "ozon-1829366751").length
   },
   {
     id: "satellite-otau",
-    name: "Отау ТВ: пульт и комплект",
+    name: "Отау ТВ (65 000 ₸)",
     icon: "tv",
     count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-otau" || p.id === "ozon-4880651840").length
   }
