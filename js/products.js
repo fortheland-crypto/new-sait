@@ -1,11 +1,11 @@
 /**
  * КАТАЛОГ ТОВАРОВ МАГАЗИНА ELECTROSAT
- * Реальные товары из магазина на Ozon (ИП Михайленко)
+ * Реальные товары из магазина на Ozon и Wildberries
  */
 
 const PRODUCTS_DATA = [
   // ==========================================
-  // 1. ПУЛЬТЫ ДЛЯ ТЕЛЕВИЗОРОВ И СПУТНИКОВЫХ РЕСИВЕРОВ
+  // 1. ОРИГИНАЛЬНЫЕ ТОВАРЫ С OZON (ИП МИХАЙЛЕНКО)
   // ==========================================
   {
     id: "ozon-1829366751",
@@ -18,7 +18,7 @@ const PRODUCTS_DATA = [
     model: "EVO-09 HD / EVO-07 HD / EVO-01",
     price: 2078,
     oldPrice: 2800,
-    badge: "Хит продаж",
+    badge: "Хит Ozon",
     badgeType: "hit",
     inStock: true,
     stockCount: 79,
@@ -67,7 +67,7 @@ const PRODUCTS_DATA = [
     model: "RM-L1162 / LG Universal",
     price: 1958,
     oldPrice: 3105,
-    badge: "Распродажа",
+    badge: "Хит Ozon",
     badgeType: "sale",
     inStock: true,
     stockCount: 7,
@@ -109,6 +109,57 @@ const PRODUCTS_DATA = [
     }
   },
   {
+    id: "ozon-1853551360",
+    sku: "1853551360",
+    name: "Samsung / универсальный пульт для телевизоров Samsung",
+    category: "remotes",
+    categoryName: "Пульты для ТВ и ресиверов",
+    subCategory: "samsung-remotes",
+    brand: "HUAYU",
+    model: "RM-L1088 / Samsung Smart",
+    price: 1957,
+    oldPrice: 3200,
+    badge: "Хит продаж",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 8,
+    rating: 5.0,
+    reviewCount: 7,
+    requiresInstallation: false,
+    installationPrice: 1000,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-m/11914757362.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-m/11914757386.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-e/11914757354.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-b/11914757275.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-w/11883492356.jpg"
+    ],
+    shortSpecs: "Для всех моделей телевизоров Samsung (Smart TV, Crystal UHD, QLED, Neo QLED) • Прямой доступ к Smart Hub",
+    description: "Универсальный надежный пульт ДУ для всех моделей телевизоров Samsung от кинескопных до новейших QLED и Smart TV 4K/8K. Работает сразу без настройки.",
+    fullSpecs: {
+      "Совместимость": "Все телевизоры Samsung (Smart TV, LED, LCD, QLED)",
+      "Заменяемые модели": "BN59-01259D, BN59-01259E, BN59-01241A, BN59-01199F, BN59-01315B и др.",
+      "Тип сигнала": "Инфракрасный",
+      "Питание": "2x AAA"
+    },
+    compatibility: {
+      brand: "Samsung",
+      supportedTypes: ["QLED", "Crystal UHD", "Neo QLED", "The Frame", "Smart TV", "LED Full HD"],
+      supportedYears: "2006–2024",
+      sampleModels: [
+        "UE43AU7100", "UE50AU8000", "QE55Q60A", "UE32T5300", "QE65Q70T",
+        "UE40NU7100", "UE49MU6100", "UE55TU8500", "QE50Q67A"
+      ],
+      compatibleReplacements: "Заменяет любые классические пульты Samsung BN59 серии"
+    },
+    warranty: "6 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/product/samsung-universalnyy-pult-dlya-televizorov-samsung-1853551360/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
     id: "ozon-4944656456",
     sku: "4944656456",
     name: "Пульт для телевизора ARG, универсальный, черный",
@@ -119,7 +170,7 @@ const PRODUCTS_DATA = [
     model: "ARG-TV-UNI",
     price: 2185,
     oldPrice: 3510,
-    badge: "Распродажа",
+    badge: "Хит Ozon",
     badgeType: "sale",
     inStock: true,
     stockCount: 7,
@@ -148,11 +199,11 @@ const PRODUCTS_DATA = [
       brand: "ARG",
       supportedTypes: ["LED, Smart TV, Android TV марки ARG"],
       supportedYears: "2016–2024",
-      sampleModels: ["ARG 32", "ARG 40", "ARG 43 Smart", "ARG 50 4K", "ARG 55 UHD"],
-      compatibleReplacements: "Заменяет оригинальный пульт ARG"
+      sampleModels: ["ARG 32 Smart", "ARG 43 Smart 4K", "ARG 50 UHD", "ARG 55 Android TV"],
+      compatibleReplacements: "Заменяет любые штатные пульты ARG"
     },
     warranty: "6 месяцев гарантии",
-    deliveryInfo: "В наличии в магазине ElectroSat",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
     marketplaceLinks: {
       ozon: "https://ozon.kz/product/pult-dlya-televizora-arg-universalnyy-chernyy-4944656456/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
@@ -166,45 +217,44 @@ const PRODUCTS_DATA = [
     categoryName: "Пульты для ТВ и ресиверов",
     subCategory: "sony-remotes",
     brand: "HUAYU",
-    model: "RM-L1165 / Sony Universal",
+    model: "RM-L1185 / Sony Bravia",
     price: 2058,
     oldPrice: 2900,
-    badge: "Выгодно",
-    badgeType: "sale",
+    badge: "Хит Ozon",
+    badgeType: "hit",
     inStock: true,
-    stockCount: 6,
-    rating: 4.7,
-    reviewCount: 7,
+    stockCount: 8,
+    rating: 5.0,
+    reviewCount: 3,
     requiresInstallation: false,
     installationPrice: 1000,
     images: [
-      "https://ir.ozone.ru/s3/multimedia-1-6/11995198998.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-u/11995198410.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-n/11995199231.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-3/11995199895.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-t/11995199633.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-5/11953779269.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-8/11953779316.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-9/11953779329.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-7/11953779295.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-c/11883495444.jpg"
     ],
-    shortSpecs: "Для всех телевизоров Sony Bravia (Smart TV / 4K / OLED / LCD) • Кнопки Netflix, Home, Google Play",
-    description: "Универсальный пульт дистанционного управления для телевизоров Sony Bravia. Совместим практически со всеми моделями Sony от классических LCD до новейших 4K Android TV и Google TV.",
+    shortSpecs: "Для телевизоров Sony Bravia (LED, LCD, OLED, Android TV) • Кнопки Netflix, Google Play, Sync Menu",
+    description: "Универсальный пульт дистанционного управления для любых телевизоров Sony Bravia. Обеспечивает мгновенный доступ ко всем функциям Smart TV, меню Home и переключению входов. Высокое качество сборки.",
     fullSpecs: {
-      "Совместимость": "Все телевизоры Sony Bravia, LCD, LED, OLED",
-      "Поддерживаемые серии пультов": "RMT-TX100D, RMT-TX102D, RMT-TX200E, RMT-TX300E, RM-ED047 и др.",
+      "Совместимость": "Все телевизоры Sony Bravia (Smart TV, Android TV, Google TV)",
+      "Заменяемые пульты": "RMT-TX100D, RMT-TX102D, RMT-TX200E, RMT-TX300E, RMF-TX500E (ИК функции) и др.",
       "Тип подключения": "Инфракрасный (IR)",
-      "Материал": "ABS пластик премиум качества",
       "Питание": "2x AAA"
     },
     compatibility: {
       brand: "Sony",
-      supportedTypes: ["Bravia OLED", "Bravia 4K HDR", "Android TV", "Full HD LED"],
-      supportedYears: "2010–2024",
+      supportedTypes: ["Bravia OLED", "Bravia XR", "Android TV", "Google TV", "LED Full HD/4K"],
+      supportedYears: "2006–2024",
       sampleModels: [
-        "KDL-32WD756", "KDL-40WD653", "KD-43X81J", "KD-50X85J", "KD-55X90J",
-        "XR-55A80J", "KDL-48W655D", "KD-65X80K"
+        "KD-43X81J", "KD-55X85J", "XR-55A80J", "KDL-32W605D", "KD-49XG7005",
+        "KDL-40W650D", "KD-50X80K", "KD-65X90J"
       ],
-      compatibleReplacements: "Заменяет любой пульт Sony серии RMT и RM"
+      compatibleReplacements: "Заменяет любые классические пульты Sony RMT серии"
     },
     warranty: "6 месяцев гарантии",
-    deliveryInfo: "В наличии во всех филиалах",
+    deliveryInfo: "Самовывоз сегодня / Доставка по городу",
     marketplaceLinks: {
       ozon: "https://ozon.kz/product/pult-sony-universalnyy-dlya-televizorov-1860368493/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
@@ -213,7 +263,7 @@ const PRODUCTS_DATA = [
   {
     id: "ozon-4880651840",
     sku: "4880651840",
-    name: "Пульт ДУ для OTAU TV ZK-089+10 замена оригинального пульта",
+    name: "Пульт ДУ для OTAU TV ZK-089+10 (замена оригинала)",
     category: "remotes",
     categoryName: "Пульты для ТВ и ресиверов",
     subCategory: "otau-remotes",
@@ -221,151 +271,94 @@ const PRODUCTS_DATA = [
     model: "ZK-089+10",
     price: 1793,
     oldPrice: 2500,
-    badge: "Хит продаж",
+    badge: "Хит Ozon",
     badgeType: "hit",
     inStock: true,
-    stockCount: 11,
+    stockCount: 6,
     rating: 5.0,
-    reviewCount: 1,
+    reviewCount: 3,
     requiresInstallation: false,
     installationPrice: 1000,
     images: [
-      "https://ir.ozone.ru/s3/multimedia-1-9/11950394445.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-d/11950394233.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-0/11950395084.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-a/11950487434.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-8/12536838380.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-o/12536838356.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-1/12536838321.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-i/12536838330.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-p/12536838393.jpg"
     ],
-    shortSpecs: "Специально для приемников Отау ТВ ZK-089+10 • Точное соответствие раскладки • Быстрый отклик",
-    description: "Оригинальный пульт дистанционного управления для приемников спутникового и эфирного телевидения «Отау ТВ» (OTAU TV) модели ZK-089+10. Четкая маркировка на кнопках, надежный передатчик сигнала.",
+    shortSpecs: "Для спутниковых и эфирных ресиверов OTAU TV (Отау ТВ) ZK-089+10 • 100% замена оригинала • Без кодов",
+    description: "Пульт дистанционного управления для национального спутникового и эфирного телевидения Отау ТВ. Подходит для популярных моделей ресиверов OTAU TV ZK-089+10. Не требует настройки, работает сразу после установки элементов питания.",
     fullSpecs: {
-      "Назначение": "Ресиверы и тюнеры OTAU TV",
-      "Модель приемника": "ZK-089+10, Otau HD",
-      "Тип сигнала": "Инфракрасный (IR)",
-      "Питание": "2x AAA батарейки"
+      "Совместимость": "Ресиверы OTAU TV ZK-089+10 и аналогичные спутниковые приёмники Отау ТВ",
+      "Тип сигнала": "Инфракрасный",
+      "Корпус": "ABS-пластик, устойчивый к падениям",
+      "Питание": "2x AAA"
     },
     compatibility: {
       brand: "Отау ТВ",
-      supportedTypes: ["Спутниковые и эфирные ресиверы Отау ТВ"],
-      supportedYears: "Все года выпуска",
-      sampleModels: ["ZK-089+10", "ZK-089", "OTAU TV HD"],
-      compatibleReplacements: "Заменяет заводской пульт Отау ТВ"
+      supportedTypes: ["Спутниковые ресиверы Отау ТВ DVB-S2", "Эфирные приемники DVB-T2"],
+      supportedYears: "2014–2024",
+      sampleModels: ["ZK-089+10", "ZK-089", "OTAU HD-100", "OTAU DVB-S2"],
+      compatibleReplacements: "Оригинальный пульт Отау ТВ"
     },
     warranty: "6 месяцев гарантии",
     deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
     marketplaceLinks: {
-      ozon: "https://ozon.kz/product/pult-du-dlya-otau-tv-zk-089-10-zamena-originalnogo-pulta-4880651840/",
+      ozon: "https://ozon.kz/product/pult-du-dlya-otau-tv-zk-089-10-zamena-originala-4880651840/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
     }
   },
   {
     id: "ozon-1860366434",
     sku: "1860366434",
-    name: "Универсальный пульт для всех телевизоров PHILIPS / ФИЛИПС",
+    name: "Универсальный пульт для всех телевизоров Philips (Филипс)",
     category: "remotes",
     categoryName: "Пульты для ТВ и ресиверов",
     subCategory: "philips-remotes",
     brand: "HUAYU",
-    model: "RM-L1225 / Philips Universal",
+    model: "RM-L1220 / Philips Smart",
     price: 1957,
-    oldPrice: 2800,
-    badge: "Выгодно",
+    oldPrice: 3200,
+    badge: "Хит Ozon",
     badgeType: "sale",
     inStock: true,
-    stockCount: 9,
-    rating: 4.4,
-    reviewCount: 6,
-    requiresInstallation: false,
-    installationPrice: 1000,
-    images: [
-      "https://ir.ozone.ru/s3/multimedia-1-u/12067740930.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-4/12067741588.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-u/12067741362.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-i/12067742862.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-4/12067739896.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-s/12067741720.jpg"
-    ],
-    shortSpecs: "Подходит ко всем ТВ Philips (Ambilight / Smart TV / Android TV / 4K) • Кнопки Smart, Netflix, Ambilight",
-    description: "Универсальный пульт дистанционного управления для всех типов телевизоров Philips. Поддерживает управление подсветкой Ambilight, приложениями Smart TV, доступ к меню и переключение источников сигнала.",
-    fullSpecs: {
-      "Совместимость": "Все телевизоры Philips (LED, LCD, OLED, Ambilight)",
-      "Тип подключения": "Инфракрасный (IR)",
-      "Материал": "Качественный ABS пластик",
-      "Питание": "2x AAA"
-    },
-    compatibility: {
-      brand: "Philips",
-      supportedTypes: ["Ambilight OLED", "The One 4K", "Android TV", "Saphi Smart TV"],
-      supportedYears: "2005–2024",
-      sampleModels: [
-        "43PUS7505", "50PUS8506", "55OLED706", "58PUS8505", "65PUS8807",
-        "32PHS6605", "43PFS5505", "50PUS7607"
-      ],
-      compatibleReplacements: "Заменяет любые пульты Philips"
-    },
-    warranty: "6 месяцев гарантии",
-    deliveryInfo: "В наличии в магазине",
-    marketplaceLinks: {
-      ozon: "https://ozon.kz/product/universalnyy-pult-dlya-vseh-televizorov-philips-filips-1860366434/",
-      wildberries: "https://www.wildberries.ru/seller/250158087"
-    }
-  },
-  {
-    id: "ozon-1853551360",
-    sku: "1853551360",
-    name: "Samsung / универсальный пульт для телевизоров Samsung",
-    category: "remotes",
-    categoryName: "Пульты для ТВ и ресиверов",
-    subCategory: "samsung-remotes",
-    brand: "HUAYU",
-    model: "RM-L1088 / Samsung Universal",
-    price: 1957,
-    oldPrice: 5401,
-    badge: "Распродажа -63%",
-    badgeType: "sale",
-    inStock: true,
-    stockCount: 4,
+    stockCount: 8,
     rating: 5.0,
     reviewCount: 3,
     requiresInstallation: false,
     installationPrice: 1000,
     images: [
-      "https://ir.ozone.ru/s3/multimedia-1-z/11992239827.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-f/11992240635.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-n/11992239959.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-i/11992238586.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-m/11992240138.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-6/11992235082.jpg"
+      "https://ir.ozone.ru/s3/multimedia-1-u/11953782786.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-8/11953782872.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-1/11953782829.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-u/11953782810.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-e/11883495146.jpg"
     ],
-    shortSpecs: "Для всех моделей Samsung (Smart Hub, 4K UHD, QLED, Crystal UHD, LED) • Кнопки Smart, Netflix, Меню",
-    description: "Универсальный пульт управления для любых телевизоров Samsung. Работает сразу из коробки без ввода сложных кодов. Отличная замена сломанному или потерянному оригинальному пульту Samsung.",
+    shortSpecs: "Для всех телевизоров Philips (Smart TV, Android TV, Ambilight, LED, LCD) • Кнопки Netflix, Ambilight, Меню",
+    description: "Универсальный пульт для любых телевизоров Philips. Поддерживает фирменные функции Philips Smart TV, подсветку Ambilight, быстрый запуск Netflix и цифровое меню. Не требует ввода кодов.",
     fullSpecs: {
-      "Совместимость": "Все телевизоры Samsung (QLED, Crystal UHD, LED, LCD, Smart Hub)",
-      "Поддерживаемые серии пультов": "BN59-01199F, BN59-01259B, BN59-01315B, BN59-01175N и др.",
+      "Совместимость": "Все телевизоры Philips (LED, LCD, OLED, Ambilight, Smart TV)",
+      "Заменяемые пульты": "2422 549 90467, 2422 549 90301, YKF308-001, YKF314-001 и др.",
       "Тип подключения": "Инфракрасный (IR)",
-      "Материал": "ABS пластик, эргономичный корпус",
       "Питание": "2x AAA"
     },
     compatibility: {
-      brand: "Samsung",
-      supportedTypes: ["QLED", "Crystal UHD", "Neo QLED", "Smart TV", "LED / LCD"],
-      supportedYears: "2006–2024",
+      brand: "Philips",
+      supportedTypes: ["Ambilight 4K", "OLED", "The One", "Android TV", "Saphi Smart TV", "LED Full HD"],
+      supportedYears: "2008–2024",
       sampleModels: [
-        "UE32T4500", "UE43AU7100", "UE50AU8000", "UE55CU7100", "QE55Q60A",
-        "UE43TU7002", "UE50TU8500", "UE55RU7100", "UE65BU8000"
+        "43PUS7505", "50PUS8505", "55OLED706", "32PFS6805", "58PUS8506",
+        "43PFT4112", "55PUS7805", "65PUS8807"
       ],
-      compatibleReplacements: "Заменяет любой пульт Samsung серии BN59 и AA59"
+      compatibleReplacements: "Заменяет любые классические пульты Philips"
     },
-    warranty: "6 месяцев гарантии / обмен при несовместимости",
+    warranty: "6 месяцев гарантии",
     deliveryInfo: "Самовывоз сегодня / Доставка по городу",
     marketplaceLinks: {
-      ozon: "https://ozon.kz/product/samsung-universalnyy-pult-dlya-televizorov-samsung-1853551360/",
+      ozon: "https://ozon.kz/product/universalnyy-pult-dlya-vseh-televizorov-philips-filips-1860366434/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
     }
   },
-
-  // ==========================================
-  // 2. ПОЛКИ, КРОНШТЕЙНЫ И ТВ АКСЕССУАРЫ
-  // ==========================================
   {
     id: "ozon-1856887821",
     sku: "1856887821",
@@ -374,9 +367,9 @@ const PRODUCTS_DATA = [
     categoryName: "Полки и ТВ аксессуары",
     subCategory: "tv-shelves",
     brand: "ElectroSat",
-    model: "Glass-Shelf-Wall PRO",
+    model: "Glass-Shelf-Black-5mm",
     price: 3658,
-    oldPrice: 4900,
+    oldPrice: 5200,
     badge: "Хит продаж",
     badgeType: "hit",
     inStock: true,
@@ -406,8 +399,10 @@ const PRODUCTS_DATA = [
       ozon: "https://ozon.kz/product/steklyannaya-polka-pod-televizor-dlya-resivera-tv-pristavki-wi-fi-routera-mediapleera-1856887821/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
     }
+  },
+
   // ==========================================
-  // 3. ФЛАГМАНСКИЕ КОМПЛЕКТЫ СПУТНИКОВОГО ТВ (ТЕЛЕКАРТА И ОТАУ ТВ)
+  // 2. СПУТНИКОВОЕ ОБОРУДОВАНИЕ (ТЕЛЕКАРТА И ОТАУ ТВ)
   // ==========================================
   {
     id: "sat-telekarta-65k",
@@ -494,31 +489,31 @@ const PRODUCTS_DATA = [
 const CATEGORIES_DATA = [
   {
     id: "all",
-    name: "Все товары и комплекты",
+    name: "Все товары Ozon и комплекты",
     icon: "layers",
     count: PRODUCTS_DATA.length
   },
   {
+    id: "remotes",
+    name: "Пульты для телевизоров (Ozon)",
+    icon: "tv",
+    count: PRODUCTS_DATA.filter(p => p.category === "remotes" && p.subCategory !== "satellite-remotes" && p.subCategory !== "otau-remotes").length
+  },
+  {
     id: "satellite-telekarta",
-    name: "Спутниковое ТВ: Телекарта (65 000 ₸)",
+    name: "Телекарта: пульт и комплект 65 000 ₸",
     icon: "radio",
     count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-telekarta" || p.id === "ozon-1829366751").length
   },
   {
     id: "satellite-otau",
-    name: "Спутниковое ТВ: Отау ТВ (Otau TV)",
+    name: "Отау ТВ: пульт и комплект",
     icon: "tv",
     count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-otau" || p.id === "ozon-4880651840").length
   },
   {
-    id: "remotes",
-    name: "Пульты для телевизоров (LG, Samsung, Sony...)",
-    icon: "monitor",
-    count: PRODUCTS_DATA.filter(p => p.category === "remotes").length
-  },
-  {
     id: "appliances",
-    name: "Полки и кронштейны под ТВ",
+    name: "Полки под ТВ (Ozon)",
     icon: "layers",
     count: PRODUCTS_DATA.filter(p => p.category === "appliances").length
   }

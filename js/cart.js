@@ -14,7 +14,7 @@ class CartManager {
     this.favorites = this.loadFromStorage("pv_favorites", []);
     this.compareList = this.loadFromStorage("pv_compare", []);
     this.lastOrder = null;
-    this.currentPaymentMethod = "kaspi"; // 'kaspi' | 'card' | 'cash' | 'marketplaces'
+    this.currentPaymentMethod = "card"; // 'card' | 'cash' | 'marketplaces'
   }
 
   loadFromStorage(key, fallback) {
@@ -458,11 +458,10 @@ class CartManager {
 
     const { itemsTotal, installationTotal, grandTotal } = this.getTotals();
     const payMethodName = {
-      kaspi: "Kaspi QR / Kaspi Перевод",
       card: "Банковская карта (Оплачено онлайн)",
       cash: "Оплата при получении (Самовывоз / Курьер)",
       marketplaces: "Покупка на Ozon / WB"
-    }[customerData.paymentMethod || this.currentPaymentMethod] || "Kaspi";
+    }[customerData.paymentMethod || this.currentPaymentMethod] || "Банковская карта (Онлайн)";
 
     let text = `📦 *ЗАКАЗ В МАГАЗИН ELECTROSAT №${orderId}*\n`;
     text += `📅 Дата: ${dateStr}\n`;
@@ -525,7 +524,7 @@ class CartManager {
       alert("Корзина пуста. Добавьте товары для заказа.");
       return;
     }
-    const order = this.generateOrderText({ name: "Клиент с сайта", paymentMethod: "kaspi" });
+    const order = this.generateOrderText({ name: "Клиент с сайта", paymentMethod: "card" });
     this.lastOrder = order;
     const config = window.SITE_CONFIG || {};
     const phone = config.WHATSAPP_NUMBER || "77052202575";

@@ -74,7 +74,7 @@ class AssistantBot {
 - Адрес: Казахстан, город Сатпаев, улица Мангилик Ел 20А, Торговый Дом «Арман» (бывшая улица Комарова 20А).
 - Телефон и WhatsApp: +7 (705) 220-25-75 (прямой контакт).
 - График работы: Понедельник–Суббота с 11:00 до 19:00, Воскресенье с 11:00 до 17:00.
-- Способы оплаты: Kaspi QR / перевод на +7 705 220 25 75, банковская карта онлайн (Visa/Mastercard) с выдачей чека, оплата наличными/картой при получении в ТД «Арман», а также прямая покупка в 1 клик на Ozon (https://ozon.kz/seller/ip-mihaylenko/) и Wildberries (https://www.wildberries.ru/seller/250158087).
+- Способы оплаты: банковская карта онлайн (Visa/Mastercard) с выдачей фискального чека, оплата при получении в ТД «Арман» (г. Сатпаев, ул. Мангилик Ел 20А), а также прямая покупка в 1 клик на Ozon (https://ozon.kz/seller/ip-mihaylenko/) и Wildberries (https://www.wildberries.ru/seller/250158087).
 - Зона услуг монтажа: город Сатпаев, Жезказган и прилегающие районы с выездом мастера.
 
 АКТУАЛЬНЫЙ КАТАЛОГ ТОВАРОВ В МАГАЗИНЕ ELECTROSAT:
@@ -256,12 +256,13 @@ ${productCatalogText}
           { label: "💬 Написать в WhatsApp", action: "open_whatsapp_direct" }
         ]
       };
-    } else if (lower.includes("оплат") || lower.includes("каспи") || lower.includes("kaspi") || lower.includes("карт")) {
+    } else if (lower.includes("оплат") || lower.includes("карт") || lower.includes("чек")) {
       return {
-        text: `💳 **Способы оплаты в ElectroSat:**\n1. **Kaspi QR / перевод** на номер +7 705 220 25 75\n2. **Оплата банковской картой онлайн** (Visa/Mastercard) с выдачей чека\n3. **Наличными или картой** при получении в ТД «Арман»\n4. **Покупка на Ozon / Wildberries** со своего аккаунта`,
+        text: `💳 **Способы оплаты в магазине ElectroSat:**\n1. **Оплата банковской картой онлайн** (Visa/Mastercard) с выдачей официального фискального чека\n2. **Оплата при получении** в ТД «Арман» (г. Сатпаев, ул. Мангилик Ел 20А)\n3. **Покупка на маркетплейсах Ozon и Wildberries** со своего аккаунта с быстрой доставкой`,
         options: [
           { label: "🛒 Открыть корзину и оплату", action: "open_cart" },
-          { label: "🛍️ Наш Ozon Магазин", url: "https://ozon.kz/seller/ip-mihaylenko/" }
+          { label: "🛍️ Наш Ozon Магазин", url: "https://ozon.kz/seller/ip-mihaylenko/" },
+          { label: "💜 Наш Wildberries Магазин", url: "https://www.wildberries.ru/seller/250158087" }
         ]
       };
     }

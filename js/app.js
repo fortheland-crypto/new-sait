@@ -185,14 +185,11 @@ class MainApp {
     // Бейджи маркетплейсов
     const mpBadges = [];
     if (p.marketplaceLinks) {
-      if (p.marketplaceLinks.kaspi) {
-        mpBadges.push(`<a href="${p.marketplaceLinks.kaspi}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-red-50 text-red-600 border border-red-200/80 px-2 py-0.5 rounded-md hover:bg-red-100 transition-colors flex items-center gap-1"><span>Kaspi</span></a>`);
-      }
       if (p.marketplaceLinks.ozon) {
         mpBadges.push(`<a href="${p.marketplaceLinks.ozon}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-blue-50 text-blue-600 border border-blue-200/80 px-2 py-0.5 rounded-md hover:bg-blue-100 transition-colors flex items-center gap-1"><span>Ozon</span></a>`);
       }
       if (p.marketplaceLinks.wildberries) {
-        mpBadges.push(`<a href="${p.marketplaceLinks.wildberries}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200/80 px-2 py-0.5 rounded-md hover:bg-purple-100 transition-colors flex items-center gap-1"><span>WB</span></a>`);
+        mpBadges.push(`<a href="${p.marketplaceLinks.wildberries}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200/80 px-2 py-0.5 rounded-md hover:bg-purple-100 transition-colors flex items-center gap-1"><span>Wildberries</span></a>`);
       }
     }
 
@@ -583,20 +580,12 @@ class MainApp {
     const isFav = window.Cart ? window.Cart.isFavorite(p.id) : false;
     const isComp = window.Cart ? window.Cart.isCompared(p.id) : false;
 
-    // Кнопки маркетплейсов
+    // Кнопки маркетплейсов (Ozon и Wildberries)
     const mpButtons = [];
     if (p.marketplaceLinks) {
-      if (p.marketplaceLinks.kaspi) {
-        mpButtons.push(`
-          <a href="${p.marketplaceLinks.kaspi}" target="_blank" class="flex-1 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-sm">
-            <span class="font-black text-sm tracking-tight">Kaspi</span>
-            <span>Купить на Kaspi</span>
-          </a>
-        `);
-      }
       if (p.marketplaceLinks.ozon) {
         mpButtons.push(`
-          <a href="${p.marketplaceLinks.ozon}" target="_blank" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-sm">
+          <a href="${p.marketplaceLinks.ozon}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-sm">
             <span class="font-black text-sm">Ozon</span>
             <span>Купить на Ozon</span>
           </a>
@@ -604,7 +593,7 @@ class MainApp {
       }
       if (p.marketplaceLinks.wildberries) {
         mpButtons.push(`
-          <a href="${p.marketplaceLinks.wildberries}" target="_blank" class="flex-1 bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-sm">
+          <a href="${p.marketplaceLinks.wildberries}" target="_blank" rel="noopener noreferrer" class="flex-1 bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-3 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-sm">
             <span class="font-black text-sm">WB</span>
             <span>Купить на WB</span>
           </a>
@@ -912,15 +901,7 @@ class MainApp {
 
     // Рендерим ссылки на маркетплейсы
     this.renderCheckoutMarketplaceLinks();
-
-    // Слушатель смены типа доставки в Kaspi
-    const deliverySelect = document.getElementById("kaspi-delivery-type");
-    const addressWrap = document.getElementById("kaspi-address-wrap");
-    if (deliverySelect && addressWrap) {
-      deliverySelect.onchange = () => {
-        addressWrap.classList.toggle("hidden", deliverySelect.value !== "delivery");
-      };
-    }
+    this.switchPaymentTab('card');
 
     modal.classList.remove("hidden");
     if (window.lucide) window.lucide.createIcons();
@@ -935,7 +916,7 @@ class MainApp {
     
     // Сбрасываем стили кнопок
     document.querySelectorAll(".payment-tab-btn").forEach(btn => {
-      btn.className = "payment-tab-btn flex flex-col items-center justify-center p-2 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900";
+      btn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900";
     });
 
     const activePane = document.getElementById(`payment-pane-${tabName}`);
@@ -943,14 +924,12 @@ class MainApp {
 
     if (activePane) activePane.classList.remove("hidden");
     if (activeBtn) {
-      if (tabName === "kaspi") {
-        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2 rounded-xl text-xs font-bold transition-all bg-white text-red-600 shadow-xs border border-red-200";
-      } else if (tabName === "card") {
-        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 shadow-xs border border-blue-200";
+      if (tabName === "card") {
+        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 shadow-xs border border-blue-200";
       } else if (tabName === "cash") {
-        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2 rounded-xl text-xs font-bold transition-all bg-white text-emerald-600 shadow-xs border border-emerald-200";
+        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-white text-emerald-600 shadow-xs border border-emerald-200";
       } else if (tabName === "marketplaces") {
-        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2 rounded-xl text-xs font-bold transition-all bg-white text-purple-700 shadow-xs border border-purple-200";
+        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-white text-purple-700 shadow-xs border border-purple-200";
         this.renderCheckoutMarketplaceLinks();
       }
     }
@@ -1036,25 +1015,7 @@ class MainApp {
     }
   }
 
-  // Обработка оформления через Kaspi
-  handleKaspiCheckout(e) {
-    e.preventDefault();
-    const name = document.getElementById("kaspi-name")?.value;
-    const phone = document.getElementById("kaspi-phone")?.value;
-    const deliveryType = document.getElementById("kaspi-delivery-type")?.value || "pickup";
-    const address = document.getElementById("kaspi-address")?.value;
 
-    const customerData = {
-      name,
-      phone,
-      deliveryType,
-      address: deliveryType === 'delivery' ? address : 'Самовывоз: г. Сатпаев, ТД «Арман» (Мангилик Ел 20А)',
-      paymentMethod: 'kaspi',
-      contactMethod: 'WhatsApp'
-    };
-
-    window.Cart.sendOrderViaWhatsApp(customerData);
-  }
 
   // Обработка оплаты онлайн картой
   handleCardPayment(e) {

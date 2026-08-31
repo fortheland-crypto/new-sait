@@ -55,7 +55,6 @@ const SITE_CONFIG = {
   
   // Ссылки на маркетплейсы магазина по умолчанию
   MARKETPLACES: {
-    KASPI_STORE_URL: "https://kaspi.kz",
     OZON_STORE_URL: "https://ozon.kz/seller/ip-mihaylenko/",
     WILDBERRIES_STORE_URL: "https://www.wildberries.ru/seller/250158087"
   },
