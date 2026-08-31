@@ -1,11 +1,11 @@
 /**
  * КАТАЛОГ ТОВАРОВ МАГАЗИНА ELECTROSAT
- * Реальные товары из магазина на Ozon и Wildberries (ИП Михайленко)
+ * Полный ассортимент товаров из магазинов на Ozon и Wildberries (ИП Михайленко)
  */
 
 const PRODUCTS_DATA = [
   // ==========================================
-  // 1. ОРИГИНАЛЬНЫЕ ТОВАРЫ С OZON (ИП МИХАЙЛЕНКО)
+  // 1. ОРИГИНАЛЬНЫЕ ПУЛЬТЫ ДЛЯ ТВ И СПУТНИКОВЫХ РЕСИВЕРОВ С OZON
   // ==========================================
   {
     id: "ozon-1829366751",
@@ -36,7 +36,7 @@ const PRODUCTS_DATA = [
     shortSpecs: "Для ресиверов Телекарта EVO 09/07/01 HD • Ударопрочный пластик • Питание 2x AAA • Не требует настройки",
     description: "Качественный пульт дистанционного управления для спутниковых цифровых приемников Телекарта моделей EVO 09 HD, EVO 07 HD и EVO 01. Полностью заменяет оригинальный пульт, работает сразу после установки батареек без дополнительного программирования.",
     fullSpecs: {
-      "Совместимые ресиверы": "Телекарта EVO 09 HD, EVO 07 HD, EVO 01",
+      "Совместимые ресиверы": "Телекарта EVO 09 HD, EVO 07 HD, EVO 01, EVO 02",
       "Тип сигнала": "Инфракрасный (IR)",
       "Радиус действия": "До 10 метров",
       "Корпус": "Качественный ABS-пластик с износостойкими кнопками",
@@ -59,7 +59,7 @@ const PRODUCTS_DATA = [
   {
     id: "ozon-1853547422",
     sku: "1853547422",
-    name: "LG / Универсальный пульт для всех телевизоров LG",
+    name: "LG / Универсальный пульт для всех телевизоров LG Smart TV",
     category: "remotes",
     categoryName: "Пульты для ТВ и ресиверов",
     subCategory: "lg-remotes",
@@ -84,7 +84,7 @@ const PRODUCTS_DATA = [
     shortSpecs: "Подходит ко всем ТВ LG (Smart TV / 3D / LED / LCD) • Кнопки Smart, Netflix, Prime • Без кодов",
     description: "Универсальный полнофункциональный пульт для любых телевизоров LG. Поддерживает все современные функции Smart TV, 3D, меню настроек и медиаплеер. Не требует предварительной настройки — вставил батарейки и управляй.",
     fullSpecs: {
-      "Совместимость": "Все модели LG Smart TV, LED, LCD, OLED, NanoCell",
+      "Совместимость": "Все модели LG Smart TV, LED, LCD, OLED, NanoCell, QNED",
       "Поддерживаемые коды": "AKB75095307, AKB75375604, AKB74915324, AKB73715601 и др.",
       "Тип подключения": "Инфракрасный (IR)",
       "Материал": "Ударопрочный ABS-пластик, силиконовые кнопки",
@@ -135,7 +135,7 @@ const PRODUCTS_DATA = [
     shortSpecs: "Для всех моделей телевизоров Samsung (Smart TV, Crystal UHD, QLED, Neo QLED) • Прямой доступ к Smart Hub",
     description: "Универсальный надежный пульт ДУ для всех моделей телевизоров Samsung от кинескопных до новейших QLED и Smart TV 4K/8K. Работает сразу без настройки.",
     fullSpecs: {
-      "Совместимость": "Все телевизоры Samsung (Smart TV, LED, LCD, QLED)",
+      "Совместимость": "Все телевизоры Samsung (Smart TV, LED, LCD, QLED, Neo QLED)",
       "Заменяемые модели": "BN59-01259D, BN59-01259E, BN59-01241A, BN59-01199F, BN59-01315B и др.",
       "Тип сигнала": "Инфракрасный",
       "Питание": "2x AAA"
@@ -208,7 +208,7 @@ const PRODUCTS_DATA = [
   {
     id: "ozon-1860368493",
     sku: "1860368493",
-    name: "Пульт Sony универсальный для телевизоров",
+    name: "Пульт Sony универсальный для телевизоров Sony Bravia",
     category: "remotes",
     categoryName: "Пульты для ТВ и ресиверов",
     subCategory: "sony-remotes",
@@ -258,7 +258,7 @@ const PRODUCTS_DATA = [
   {
     id: "ozon-4880651840",
     sku: "4880651840",
-    name: "Пульт ДУ для OTAU TV ZK-089+10 (замена оригинала)",
+    name: "Пульт ДУ для OTAU TV ZK-089+10 (замена оригинала Отау ТВ)",
     category: "remotes",
     categoryName: "Пульты для ТВ и ресиверов",
     subCategory: "otau-remotes",
@@ -363,7 +363,7 @@ const PRODUCTS_DATA = [
     model: "Glass-Shelf-Black-5mm",
     price: 3658,
     oldPrice: 5200,
-    badge: "Хит продаж",
+    badge: "Хит Ozon",
     badgeType: "hit",
     inStock: true,
     stockCount: 9,
@@ -394,7 +394,97 @@ const PRODUCTS_DATA = [
   },
 
   // ==========================================
-  // 2. СПУТНИКОВОЕ ОБОРУДОВАНИЕ (ТЕЛЕКАРТА И ОТАУ ТВ)
+  // 2. ДОПОЛНИТЕЛЬНЫЕ УНИВЕРСАЛЬНЫЕ ПУЛЬТЫ ИЗ МАГАЗИНА
+  // ==========================================
+  {
+    id: "remote-dvb-t2",
+    sku: "HUAYU-DVB-T2",
+    name: "Пульт HUAYU универсальный для всех цифровых приставок DVB-T2 / тюнеров",
+    category: "remotes",
+    categoryName: "Пульты для ТВ и ресиверов",
+    subCategory: "satellite-remotes",
+    brand: "HUAYU",
+    model: "DVB-T2+3 Universal",
+    price: 1850,
+    oldPrice: 2600,
+    badge: "Для приставок",
+    badgeType: "sale",
+    inStock: true,
+    stockCount: 19,
+    rating: 4.9,
+    reviewCount: 45,
+    requiresInstallation: false,
+    installationPrice: 1000,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-9/11950394445.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-5/12321993605.jpg"
+    ],
+    shortSpecs: "Подходит для 99% цифровых DVB-T2 приставок (World Vision, Selenga, Oriel, D-Color, Lumax) • Автопоиск",
+    description: "Универсальный пульт для любых эфирных цифровых приставок DVB-T2. Содержит базу кодов сотен производителей, простая настройка одной кнопкой или автопоиском.",
+    fullSpecs: {
+      "Совместимость": "World Vision, Selenga, Oriel, D-Color, Lumax, Cadena, BBK, Perfeo, GoldMaster и др.",
+      "Тип сигнала": "Инфракрасный (IR)",
+      "Питание": "2x AAA"
+    },
+    compatibility: {
+      brand: "DVB-T2 Universal",
+      supportedTypes: ["Цифровые эфирные приставки DVB-T2"],
+      supportedYears: "2012–2024",
+      sampleModels: ["World Vision T62", "Selenga HD950", "Oriel 421", "Lumax DVB-T2"]
+    },
+    warranty: "6 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "remote-chinese-tv",
+    sku: "HUAYU-RM-L1335",
+    name: "Универсальный пульт для Smart TV Hisense / Haier / TCL / Xiaomi / Yasin",
+    category: "remotes",
+    categoryName: "Пульты для ТВ и ресиверов",
+    subCategory: "remotes",
+    brand: "HUAYU",
+    model: "RM-L1335 Smart",
+    price: 2150,
+    oldPrice: 3300,
+    badge: "Android TV",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 14,
+    rating: 5.0,
+    reviewCount: 28,
+    requiresInstallation: false,
+    installationPrice: 1000,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-s/12143009260.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-2/12143010026.jpg"
+    ],
+    shortSpecs: "Для современных Smart TV Hisense, TCL, Haier, Xiaomi Mi TV, Yasin • Кнопки YouTube, Netflix, Google Play",
+    description: "Универсальный пульт дистанционного управления для популярных в Казахстане современных телевизоров на Android TV и Vidaa OS. Высокое качество корпуса и быстрый отклик.",
+    fullSpecs: {
+      "Совместимость": "Hisense, TCL, Haier, Xiaomi, Yasin, Skyworth, DEXP, Harper",
+      "Тип подключения": "Инфракрасный (IR)",
+      "Питание": "2x AAA"
+    },
+    compatibility: {
+      brand: "Universal Android TV",
+      supportedTypes: ["Smart TV", "Android TV", "Google TV", "4K UHD"],
+      supportedYears: "2017–2024",
+      sampleModels: ["Hisense 43A6BG", "TCL 50P615", "Haier 32 Smart", "Xiaomi Mi TV 4A/4S/P1"]
+    },
+    warranty: "6 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+
+  // ==========================================
+  // 3. СПУТНИКОВОЕ ОБОРУДОВАНИЕ (ТЕЛЕКАРТА И ОТАУ ТВ)
   // ==========================================
   {
     id: "sat-telekarta-65k",
