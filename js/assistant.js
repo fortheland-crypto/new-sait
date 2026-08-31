@@ -16,7 +16,11 @@ class AssistantBot {
     this.userAnswers = {};
     this.unreadCount = 1;
     this.isTyping = false;
+    this.isBubbleVisible = false;
+    this.bubbleDismissed = false;
     this.init();
+    this.scheduleGreetings();
+    this.startWiggleTimer();
   }
 
   getApiKey() {
@@ -396,10 +400,52 @@ ${productCatalogText}
     this.render();
   }
 
+  scheduleGreetings() {
+    setTimeout(() => {
+      if (!this.isOpen && !this.bubbleDismissed) {
+        this.isBubbleVisible = true;
+        this.render();
+      }
+    }, 4500);
+  }
+
+  startWiggleTimer() {
+    setInterval(() => {
+      if (!this.isOpen) {
+        const btn = document.getElementById("assistant-toggle-btn");
+        if (btn) {
+          btn.classList.add("assistant-wiggle-anim");
+          setTimeout(() => {
+            btn.classList.remove("assistant-wiggle-anim");
+          }, 1500);
+        }
+      }
+    }, 18000);
+  }
+
+  dismissBubble() {
+    this.isBubbleVisible = false;
+    this.bubbleDismissed = true;
+    this.render();
+  }
+
+  openChatWithQuery(query) {
+    this.isOpen = true;
+    this.isBubbleVisible = false;
+    this.unreadCount = 0;
+    this.render();
+    if (query) {
+      setTimeout(() => {
+        this.handleUserTextInput(query);
+      }, 300);
+    }
+  }
+
   toggleChat() {
     this.isOpen = !this.isOpen;
     if (this.isOpen) {
       this.unreadCount = 0;
+      this.isBubbleVisible = false;
     }
     this.render();
   }
@@ -407,6 +453,7 @@ ${productCatalogText}
   openChat() {
     this.isOpen = true;
     this.unreadCount = 0;
+    this.isBubbleVisible = false;
     this.render();
   }
 
@@ -421,12 +468,64 @@ ${productCatalogText}
 
     if (!this.isOpen) {
       container.innerHTML = `
-        <button id="assistant-toggle-btn" class="assistant-trigger-btn flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/40 group relative" title="Онлайн-помощник ElectroSat">
-          <i data-lucide="bot" class="w-5 h-5 text-white"></i>
-          ${this.unreadCount > 0 ? `
-            <span class="absolute -top-0.5 -right-0.5 w-3 h-3 bg-red-500 rounded-full border-2 border-white"></span>
+        <div class="flex flex-col items-end gap-2 relative">
+          <!-- Всплывающее облачко-подсказка с анимацией -->
+          ${this.isBubbleVisible ? `
+            <div 
+              onclick="window.Assistant.openChat()" 
+              class="assistant-speech-bubble bg-white/95 backdrop-blur-md text-slate-800 p-3.5 rounded-2xl shadow-2xl border border-slate-200/90 max-w-[270px] sm:max-w-[290px] mb-1 text-xs relative cursor-pointer group hover:border-blue-400 hover:shadow-blue-500/10 transition-all"
+            >
+              <div class="flex items-start justify-between gap-2 mb-1.5">
+                <div class="flex items-center gap-1.5">
+                  <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span class="font-black text-[10px] text-blue-600 uppercase tracking-wider">ElectroSat AI</span>
+                </div>
+                <button 
+                  onclick="event.stopPropagation(); window.Assistant.dismissBubble()" 
+                  title="Скрыть" 
+                  class="text-slate-400 hover:text-slate-700 p-0.5 rounded-md hover:bg-slate-100 transition-colors"
+                >
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <p class="font-semibold leading-snug mb-2.5 text-slate-800">
+                👋 Здравствуйте! Помочь подобрать пульт для телевизора или спутниковое ТВ?
+              </p>
+              <div class="flex flex-wrap gap-1.5 pt-1.5 border-t border-slate-100">
+                <button 
+                  onclick="event.stopPropagation(); window.Assistant.openChatWithQuery('Подобрать пульт для телевизора')" 
+                  class="text-[10px] font-bold bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 px-2.5 py-1 rounded-lg transition-colors"
+                >
+                  📺 Подобрать пульт
+                </button>
+                <button 
+                  onclick="event.stopPropagation(); window.Assistant.openChatWithQuery('Комплекты спутникового ТВ Телекарта и Отау')" 
+                  class="text-[10px] font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 px-2.5 py-1 rounded-lg transition-colors"
+                >
+                  📡 Отау ТВ
+                </button>
+              </div>
+              <!-- Указатель-стрелка -->
+              <div class="absolute -bottom-1.5 right-6 w-3 h-3 bg-white border-r border-b border-slate-200/90 transform rotate-45"></div>
+            </div>
           ` : ''}
-        </button>
+
+          <!-- Плавающая круглая кнопка помощника с пульсацией -->
+          <button 
+            id="assistant-toggle-btn" 
+            class="assistant-trigger-btn assistant-glow-btn flex items-center justify-center w-14 h-14 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-700 hover:to-indigo-800 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-white/80 group relative cursor-pointer" 
+            title="Онлайн-помощник ElectroSat"
+          >
+            <i data-lucide="bot" class="w-6 h-6 text-white group-hover:scale-110 transition-transform"></i>
+            <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white"></span>
+            </span>
+          </button>
+        </div>
       `;
       
       const toggleBtn = document.getElementById("assistant-toggle-btn");
