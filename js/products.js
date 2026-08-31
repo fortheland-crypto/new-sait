@@ -406,6 +406,87 @@ const PRODUCTS_DATA = [
       ozon: "https://ozon.kz/product/steklyannaya-polka-pod-televizor-dlya-resivera-tv-pristavki-wi-fi-routera-mediapleera-1856887821/",
       wildberries: "https://www.wildberries.ru/seller/250158087"
     }
+  // ==========================================
+  // 3. ФЛАГМАНСКИЕ КОМПЛЕКТЫ СПУТНИКОВОГО ТВ (ТЕЛЕКАРТА И ОТАУ ТВ)
+  // ==========================================
+  {
+    id: "sat-telekarta-65k",
+    sku: "SAT-TK-65K",
+    name: "Комплект спутникового оборудования Телекарта HD (230+ каналов)",
+    category: "satellite",
+    categoryName: "Спутниковое ТВ: Телекарта (65 000 ₸)",
+    subCategory: "satellite-telekarta",
+    brand: "Телекарта",
+    model: "EVO HD Full Kit 230+",
+    price: 65000,
+    oldPrice: 78000,
+    badge: "Хит 65 000 ₸",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 15,
+    rating: 5.0,
+    reviewCount: 48,
+    requiresInstallation: true,
+    installationPrice: 7000,
+    images: [
+      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=1200&q=80",
+      "https://ir.ozone.ru/s3/multimedia-1-5/12321993605.jpg"
+    ],
+    shortSpecs: "Спутниковая антенна 0.6–0.9м • Ресивер Телекарта HD • Пульт ДУ • Кабель • Карта доступа • 230+ каналов",
+    description: "Полный оригинальный комплект спутникового телевидения Телекарта HD для дома, дачи и квартиры в Сатпаеве и Жезказгане. Включает спутниковую антенну, фирменный HD-ресивер, пульт управления, карту доступа и кабель. Более 230 популярных каналов: кино, спорт, детские, познавательные и музыкальные передачи в превосходном цифровом качестве.",
+    fullSpecs: {
+      "Комплектация": "Спутниковая тарелка, кронштейн, конвертер круговой/линейный, HD-приемник Телекарта EVO, пульт, HDMI кабель, карта доступа",
+      "Количество каналов": "230+ каналов цифрового и Full HD качества",
+      "Формат вещания": "DVB-S2 / MPEG-4 / Full HD 1080p",
+      "Зона покрытия": "Сатпаев, Жезказган и вся Карагандинская / Улытауская область",
+      "Установка": "Профессиональный монтаж и юстировка мастером"
+    },
+    warranty: "12 месяцев официальной гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман») • Выезд мастера в день заказа",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "sat-otau-tv-kit",
+    sku: "SAT-OTAU-HD",
+    name: "Комплект спутникового оборудования Отау ТВ (Otau TV HD)",
+    category: "satellite",
+    categoryName: "Спутниковое ТВ: Отау ТВ (Otau TV)",
+    subCategory: "satellite-otau",
+    brand: "Отау ТВ",
+    model: "Otau TV DVB-S2 Full HD",
+    price: 55000,
+    oldPrice: 65000,
+    badge: "Отау ТВ",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 12,
+    rating: 4.9,
+    reviewCount: 39,
+    requiresInstallation: true,
+    installationPrice: 7000,
+    images: [
+      "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80",
+      "https://ir.ozone.ru/s3/multimedia-1-8/12536838380.jpg"
+    ],
+    shortSpecs: "Спутниковая антенна Отау ТВ • Цифровой приемник DVB-S2 • Все казахстанские каналы • Без абонентской платы",
+    description: "Оригинальный комплект национального спутникового телевидения Otau TV (Отау ТВ). Трансляция всех казахстанских республиканских и региональных телеканалов в цифровом и HD качестве без обязательной абонентской платы. Идеальный прием в любой точке Сатпаева и области.",
+    fullSpecs: {
+      "Комплектация": "Спутниковая антенна Отау ТВ, конвертер, спутниковый тюнер DVB-S2, пульт ДУ, кабель, блок питания",
+      "Каналы": "Все национальные и цифровые каналы Казахстана (Qazaqstan, Khabar, 24KZ, Balapan, Седьмой канал, КТК, НТК и др.)",
+      "Абонентская плата": "Базовый пакет каналов — бесплатно навсегда",
+      "Качество изображения": "Full HD 1080p, чистый цифровой звук"
+    },
+    warranty: "12 месяцев официальной гарантии",
+    deliveryInfo: "В наличии в магазине ElectroSat (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
   }
 ];
 
@@ -413,26 +494,32 @@ const PRODUCTS_DATA = [
 const CATEGORIES_DATA = [
   {
     id: "all",
-    name: "Все товары на Ozon",
+    name: "Все товары и комплекты",
     icon: "layers",
     count: PRODUCTS_DATA.length
   },
   {
-    id: "remotes",
-    name: "Пульты для ТВ и техники",
+    id: "satellite-telekarta",
+    name: "Спутниковое ТВ: Телекарта (65 000 ₸)",
+    icon: "radio",
+    count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-telekarta" || p.id === "ozon-1829366751").length
+  },
+  {
+    id: "satellite-otau",
+    name: "Спутниковое ТВ: Отау ТВ (Otau TV)",
     icon: "tv",
+    count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-otau" || p.id === "ozon-4880651840").length
+  },
+  {
+    id: "remotes",
+    name: "Пульты для телевизоров (LG, Samsung, Sony...)",
+    icon: "monitor",
     count: PRODUCTS_DATA.filter(p => p.category === "remotes").length
   },
   {
-    id: "satellite",
-    name: "Пульты для ресиверов (Отау / Телекарта)",
-    icon: "radio",
-    count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-remotes" || p.subCategory === "otau-remotes").length
-  },
-  {
     id: "appliances",
-    name: "Полки и ТВ аксессуары",
-    icon: "monitor",
+    name: "Полки и кронштейны под ТВ",
+    icon: "layers",
     count: PRODUCTS_DATA.filter(p => p.category === "appliances").length
   }
 ];

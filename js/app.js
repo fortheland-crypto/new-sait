@@ -160,12 +160,14 @@ class MainApp {
 
     let filtered = PRODUCTS_DATA;
     if (this.currentCategory !== "all") {
-      if (this.currentCategory === "satellite") {
-        filtered = PRODUCTS_DATA.filter(p => p.subCategory === "satellite-remotes" || p.subCategory === "otau-remotes" || p.category === "satellite");
+      if (this.currentCategory === "satellite-telekarta") {
+        filtered = PRODUCTS_DATA.filter(p => p.subCategory === "satellite-telekarta" || p.id === "ozon-1829366751" || p.name.toLowerCase().includes("телекарта"));
+      } else if (this.currentCategory === "satellite-otau") {
+        filtered = PRODUCTS_DATA.filter(p => p.subCategory === "satellite-otau" || p.id === "ozon-4880651840" || p.name.toLowerCase().includes("отау"));
       } else if (this.currentCategory === "remotes") {
         filtered = PRODUCTS_DATA.filter(p => p.category === "remotes" && p.subCategory !== "satellite-remotes" && p.subCategory !== "otau-remotes");
       } else {
-        filtered = PRODUCTS_DATA.filter(p => p.category === this.currentCategory);
+        filtered = PRODUCTS_DATA.filter(p => p.category === this.currentCategory || p.subCategory === this.currentCategory);
       }
     }
 

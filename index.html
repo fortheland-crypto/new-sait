@@ -244,26 +244,56 @@
         <!-- Визуальная композиция Hero -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            <!-- Основное фото композиции -->
+            <!-- Основное фото с небом и спутниковым оборудованием -->
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
               <img 
-                src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=1200&q=80" 
-                alt="Комплект спутникового ТВ Телекарта 230 каналов ElectroSat" 
-                class="w-full h-96 sm:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1400&q=85" 
+                alt="Спутниковое оборудование Телекарта и Отау ТВ на фоне неба" 
+                class="w-full h-[380px] sm:h-[440px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
               
-              <!-- Нижний оверлей -->
-              <div class="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/60 shadow-xl">
-                <div class="flex items-center justify-between gap-3">
-                  <div>
-                    <div class="text-[11px] text-blue-600 font-extrabold uppercase tracking-wider">Хит продаж • 230+ каналов</div>
-                    <div class="font-black text-sm sm:text-base text-slate-900 leading-tight mt-0.5">Комплект «Телекарта HD»</div>
-                  </div>
-                  <div class="text-right flex-shrink-0">
-                    <span class="text-sm sm:text-base font-black bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3.5 py-1.5 rounded-xl shadow-md inline-block">65 000 ₸</span>
+              <!-- 2 Флагманские плашки спутникового ТВ -->
+              <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 space-y-2">
+                
+                <!-- 1. Телекарта 65 000 ₸ -->
+                <div 
+                  onclick="window.App.openProductModal('sat-telekarta-65k')" 
+                  class="bg-white/95 hover:bg-white backdrop-blur-md border border-white/70 rounded-2xl p-3 sm:p-3.5 shadow-xl cursor-pointer hover:scale-[1.02] transition-all"
+                >
+                  <div class="flex items-center justify-between gap-2">
+                    <div class="min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-[10px] bg-red-600 text-white font-extrabold px-2 py-0.5 rounded-md">ХИТ</span>
+                        <span class="text-[11px] text-blue-600 font-bold">230+ каналов HD</span>
+                      </div>
+                      <h4 class="font-black text-xs sm:text-sm text-slate-900 truncate mt-0.5">Спутниковое ТВ «Телекарта»</h4>
+                    </div>
+                    <div class="text-right flex-shrink-0">
+                      <span class="text-xs sm:text-sm font-black bg-gradient-to-r from-red-600 to-rose-600 text-white px-3 py-1.5 rounded-xl shadow-xs inline-block">65 000 ₸</span>
+                    </div>
                   </div>
                 </div>
+
+                <!-- 2. Отау ТВ (Otau TV) -->
+                <div 
+                  onclick="window.App.openProductModal('sat-otau-tv-kit')" 
+                  class="bg-slate-900/90 hover:bg-slate-900 backdrop-blur-md border border-slate-700/80 rounded-2xl p-3 sm:p-3.5 shadow-xl text-white cursor-pointer hover:scale-[1.02] transition-all"
+                >
+                  <div class="flex items-center justify-between gap-2">
+                    <div class="min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-[10px] bg-emerald-600 text-white font-extrabold px-2 py-0.5 rounded-md">OTAU TV</span>
+                        <span class="text-[11px] text-emerald-400 font-semibold">Казахстанские каналы HD</span>
+                      </div>
+                      <h4 class="font-bold text-xs sm:text-sm text-white truncate mt-0.5">Спутниковое ТВ «Отау ТВ»</h4>
+                    </div>
+                    <div class="text-right flex-shrink-0">
+                      <span class="text-xs sm:text-sm font-black bg-emerald-600 text-white px-3 py-1.5 rounded-xl shadow-xs inline-block">55 000 ₸</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -372,16 +402,19 @@
         <!-- Табы переключения категорий -->
         <div class="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none">
           <button data-category="all" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-xs whitespace-nowrap">
-            Все товары Ozon
+            Все товары и комплекты
+          </button>
+          <button data-category="satellite-telekarta" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
+            📡 Телекарта (65 000 ₸)
+          </button>
+          <button data-category="satellite-otau" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
+            🛰️ Отау ТВ (Otau TV)
           </button>
           <button data-category="remotes" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
-            Пульты для телевизоров
-          </button>
-          <button data-category="satellite" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
-            Пульты Отау ТВ и Телекарта
+            📺 Пульты для ТВ
           </button>
           <button data-category="appliances" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
-            Полки и кронштейны под ТВ
+            🔲 Полки под ТВ
           </button>
         </div>
       </div>
