@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <rect width="400" height="400" fill="#ffffff"/>
+  <defs>
+    <linearGradient id="legMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadowLegs" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Стол/подставка визуальная линия -->
+  <line x1="30" y1="320" x2="370" y2="320" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <!-- Левая ножка -->
+  <g filter="url(#shadowLegs)">
+    <!-- Вертикальная планка к ТВ -->
+    <rect x="90" y="80" width="24" height="200" rx="6" fill="url(#legMetal)" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Отверстия для регулировки высоты VESA -->
+    <circle cx="102" cy="100" r="3.5" fill="#f8fafc"/>
+    <circle cx="102" cy="130" r="3.5" fill="#f8fafc"/>
+    <circle cx="102" cy="160" r="3.5" fill="#f8fafc"/>
+    <circle cx="102" cy="190" r="3.5" fill="#f8fafc"/>
+    <circle cx="102" cy="220" r="3.5" fill="#f8fafc"/>
+    <circle cx="102" cy="250" r="3.5" fill="#f8fafc"/>
+
+    <!-- Диагональное усиление -->
+    <path d="M 102 240 L 60 310 L 160 310 Z" fill="url(#legMetal)" opacity="0.95"/>
+
+    <!-- Горизонтальная лапа-опора -->
+    <rect x="50" y="310" width="120" height="12" rx="6" fill="url(#legMetal)" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Противоскользящие накладки -->
+    <rect x="55" y="322" width="20" height="4" rx="2" fill="#ef4444"/>
+    <rect x="145" y="322" width="20" height="4" rx="2" fill="#ef4444"/>
+  </g>
+
+  <!-- Правая ножка -->
+  <g filter="url(#shadowLegs)">
+    <!-- Вертикальная планка к ТВ -->
+    <rect x="286" y="80" width="24" height="200" rx="6" fill="url(#legMetal)" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Отверстия для регулировки высоты VESA -->
+    <circle cx="298" cy="100" r="3.5" fill="#f8fafc"/>
+    <circle cx="298" cy="130" r="3.5" fill="#f8fafc"/>
+    <circle cx="298" cy="160" r="3.5" fill="#f8fafc"/>
+    <circle cx="298" cy="190" r="3.5" fill="#f8fafc"/>
+    <circle cx="298" cy="220" r="3.5" fill="#f8fafc"/>
+    <circle cx="298" cy="250" r="3.5" fill="#f8fafc"/>
+
+    <!-- Диагональное усиление -->
+    <path d="M 298 240 L 240 310 L 340 310 Z" fill="url(#legMetal)" opacity="0.95"/>
+
+    <!-- Горизонтальная лапа-опора -->
+    <rect x="230" y="310" width="120" height="12" rx="6" fill="url(#legMetal)" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Противоскользящие накладки -->
+    <rect x="235" y="322" width="20" height="4" rx="2" fill="#ef4444"/>
+    <rect x="325" y="322" width="20" height="4" rx="2" fill="#ef4444"/>
+  </g>
+
+  <!-- Иконка экрана ТВ (пунктиром) -->
+  <rect x="125" y="60" width="150" height="100" rx="8" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4,4" fill="#eff6ff" opacity="0.8"/>
+  <text x="200" y="115" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#2563eb" text-anchor="middle">ТЕЛЕВИЗОР</text>
+
+  <!-- Бейдж снизу -->
+  <rect x="90" y="348" width="220" height="30" rx="15" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="200" y="368" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#334155" text-anchor="middle">Пара ножек 32–65″ • До 40 кг</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <rect width="400" height="400" fill="#ffffff"/>
+  <defs>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="armGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Задняя настенная пластина -->
+  <g filter="url(#shadow)">
+    <rect x="50" y="100" width="44" height="200" rx="8" fill="url(#metalGrad)" stroke="#64748b" stroke-width="2"/>
+    <!-- Отверстия под анкеры -->
+    <circle cx="72" cy="125" r="5" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+    <circle cx="72" cy="175" r="5" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+    <circle cx="72" cy="225" r="5" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+    <circle cx="72" cy="275" r="5" fill="#f8fafc" stroke="#475569" stroke-width="2"/>
+  </g>
+
+  <!-- Шарнир настенный -->
+  <rect x="86" y="170" width="18" height="60" rx="4" fill="url(#silverGrad)" stroke="#475569" stroke-width="1.5"/>
+  <circle cx="95" cy="200" r="4" fill="#0f172a"/>
+
+  <!-- Первое колено поворотной руки -->
+  <g filter="url(#shadow)">
+    <path d="M 98 185 L 180 155 L 180 195 L 98 215 Z" fill="url(#armGrad)" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="180" cy="175" r="14" fill="url(#metalGrad)" stroke="#64748b" stroke-width="2"/>
+    <circle cx="180" cy="175" r="5" fill="url(#silverGrad)"/>
+  </g>
+
+  <!-- Второе колено поворотной руки -->
+  <g filter="url(#shadow)">
+    <path d="M 180 165 L 260 190 L 260 225 L 180 185 Z" fill="url(#armGrad)" stroke="#475569" stroke-width="1.5"/>
+    <!-- Шарнир головы -->
+    <circle cx="260" cy="205" r="16" fill="url(#metalGrad)" stroke="#64748b" stroke-width="2"/>
+    <circle cx="260" cy="205" r="6" fill="url(#silverGrad)"/>
+    <!-- Рукоятка регулировки наклона -->
+    <rect x="256" y="155" width="8" height="36" rx="4" fill="#ef4444"/>
+    <circle cx="260" cy="155" r="6" fill="#dc2626"/>
+  </g>
+
+  <!-- VESA монтажная пластина (X-образная) -->
+  <g filter="url(#shadow)">
+    <!-- Центральная пластина -->
+    <rect x="270" y="160" width="30" height="90" rx="6" fill="url(#metalGrad)" stroke="#64748b" stroke-width="2"/>
+    
+    <!-- 4 Луча VESA с отверстиями -->
+    <!-- Верхний левый -->
+    <path d="M 285 180 L 230 110 L 250 95 L 295 165 Z" fill="url(#armGrad)" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="240" cy="105" r="4" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="255" cy="125" r="3.5" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Верхний правый -->
+    <path d="M 290 180 L 345 110 L 365 125 L 305 195 Z" fill="url(#armGrad)" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="352" cy="118" r="4" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="335" cy="138" r="3.5" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Нижний левый -->
+    <path d="M 285 230 L 230 300 L 250 315 L 295 245 Z" fill="url(#armGrad)" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="240" cy="305" r="4" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="255" cy="285" r="3.5" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Нижний правый -->
+    <path d="M 290 230 L 345 300 L 365 285 L 305 215 Z" fill="url(#armGrad)" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="352" cy="292" r="4" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="335" cy="272" r="3.5" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+  </g>
+
+  <!-- Текстовый бейдж с характеристиками -->
+  <rect x="110" y="340" width="180" height="30" rx="15" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="200" y="360" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#334155" text-anchor="middle">Поворот ±90° • VESA 200×200</text>
+</svg>
