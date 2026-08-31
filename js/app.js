@@ -90,10 +90,10 @@ class MainApp {
     if (!container) return;
 
     const items = [
-      { icon: "shield-check", title: "Подбор под задачу", subtitle: "Точный расчет без переплат" },
-      { icon: "wrench", title: "Монтаж и настройка", subtitle: "Выезд в день заказа" },
-      { icon: "award", title: "Гарантия до 3 лет", subtitle: "Официальный договор" },
-      { icon: "headphones", title: "Поддержка после покупки", subtitle: "Всегда на связи" }
+      { icon: "camera", title: "Видеонаблюдение под ключ", subtitle: "Просмотр с телефона и запись" },
+      { icon: "radio", title: "Спутниковое ТВ (Телекарта / Отау)", subtitle: "230+ каналов без абонплаты и помех" },
+      { icon: "wrench", title: "Монтаж и настройка", subtitle: "Выезд мастера в день заказа" },
+      { icon: "shield-check", title: "Официальная гарантия", subtitle: "Сервисное сопровождение" }
     ];
 
     container.innerHTML = items.map(item => `
