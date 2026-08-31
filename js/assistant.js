@@ -306,18 +306,11 @@ class AssistantBot {
 
     if (!this.isOpen) {
       container.innerHTML = `
-        <button id="assistant-toggle-btn" class="assistant-trigger-btn flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium px-4 py-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group border-2 border-white/20">
-          <div class="relative">
-            <span class="w-7 h-7 flex items-center justify-center bg-white/20 rounded-full">
-              <i data-lucide="bot" class="w-4 h-4 text-white"></i>
-            </span>
-            ${this.unreadCount > 0 ? `
-              <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-white animate-ping"></span>
-              <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-white"></span>
-            ` : ''}
-          </div>
-          <span class="text-sm font-semibold pr-1 hidden sm:inline">Помощник ElectroSat</span>
-          <span class="text-xs bg-white/25 px-2 py-0.5 rounded-full text-blue-50 font-normal hidden md:inline">Online</span>
+        <button id="assistant-toggle-btn" class="assistant-trigger-btn flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/40 group relative" title="Онлайн-помощник ElectroSat">
+          <i data-lucide="bot" class="w-5 h-5 text-white"></i>
+          ${this.unreadCount > 0 ? `
+            <span class="absolute -top-0.5 -right-0.5 w-3 h-3 bg-red-500 rounded-full border-2 border-white"></span>
+          ` : ''}
         </button>
       `;
       

@@ -264,27 +264,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Плавающие бейджи доверия -->
-            <div class="absolute -top-4 -left-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce duration-1000">
-              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-black">
-                <i data-lucide="check-circle" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <span class="font-black text-sm text-slate-900 block leading-tight">3 200+</span>
-                <span class="text-[11px] text-slate-500">готовых установок</span>
-              </div>
-            </div>
-
-            <div class="absolute -bottom-4 -right-4 bg-slate-900 text-white p-3.5 rounded-2xl shadow-xl border border-slate-800 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center">
-                <i data-lucide="award" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="font-black text-sm block leading-tight">10+ лет</span>
-                <span class="text-[11px] text-slate-400">опыта мастеров</span>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -741,47 +720,9 @@
   </footer>
 
   <!-- ==========================================
-       ПЛАВАЮЩИЕ КНОПКИ БЫСТРОЙ СВЯЗИ (SPEED-DIAL)
+       КОМПАКТНЫЙ ВИДЖЕТ ОНЛАЙН-ПОМОЩНИКА
        ========================================== -->
-  <div class="speed-dial-container">
-    <!-- Кнопка WhatsApp -->
-    <a 
-      href="#" 
-      data-config="WA_LINK" 
-      target="_blank" 
-      class="speed-dial-btn bg-emerald-500 hover:bg-emerald-600 text-white"
-      title="Написать в WhatsApp"
-    >
-      <i data-lucide="message-circle" class="w-6 h-6"></i>
-      <span class="tooltip">Написать в WhatsApp: 87052202575</span>
-    </a>
-
-    <!-- Кнопка Telegram -->
-    <a 
-      href="#" 
-      data-config="TG_LINK" 
-      target="_blank" 
-      class="speed-dial-btn bg-sky-500 hover:bg-sky-600 text-white"
-      title="Написать в Telegram"
-    >
-      <i data-lucide="send" class="w-5 h-5 -ml-0.5"></i>
-      <span class="tooltip">Написать в Telegram</span>
-    </a>
-
-    <!-- Кнопка прямого звонка -->
-    <a 
-      href="#" 
-      data-config="TEL_LINK" 
-      class="speed-dial-btn bg-blue-600 hover:bg-blue-700 text-white"
-      title="Позвонить"
-    >
-      <i data-lucide="phone" class="w-5 h-5"></i>
-      <span class="tooltip">Позвонить: <span data-config="PHONE">+7 (705) 220-25-75</span></span>
-    </a>
-
-    <!-- Виджет помощника -->
-    <div id="assistant-widget-container"></div>
-  </div>
+  <div id="assistant-widget-container" class="fixed bottom-5 right-5 z-40 hidden sm:block"></div>
 
   <!-- ==========================================
        НИЖНЯЯ НАВИГАЦИОННАЯ ПАНЕЛЬ ДЛЯ СМАРТФОНОВ (MOBILE BOTTOM NAV)
