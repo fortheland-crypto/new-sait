@@ -353,50 +353,6 @@ const PRODUCTS_DATA = [
     }
   },
   {
-    id: "ozon-1856887821",
-    sku: "1856887821",
-    name: "Стеклянная полка под телевизор для ресивера, ТВ приставки, Wi-Fi роутера, медиаплеера",
-    category: "appliances",
-    categoryName: "Полки и ТВ аксессуары",
-    subCategory: "tv-shelves",
-    brand: "ElectroSat",
-    model: "Glass-Shelf-Black-5mm",
-    price: 3658,
-    oldPrice: 5200,
-    badge: "Хит Ozon",
-    badgeType: "hit",
-    inStock: true,
-    stockCount: 9,
-    rating: 4.9,
-    reviewCount: 10,
-    requiresInstallation: true,
-    installationPrice: 2000,
-    images: [
-      "https://ir.ozone.ru/s3/multimedia-1-1/13088469565.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-8/11937900788.jpg",
-      "https://ir.ozone.ru/s3/multimedia-1-l/7378357197.jpg"
-    ],
-    shortSpecs: "Настенная полка из закалённого стекла 5 мм • Нагрузка до 10 кг • Кабель-канал • Полный крепёж в комплекте",
-    description: "Стильная настенная стеклянная полка для установки под настенным телевизором. Идеально размещает цифровые ресиверы Отау ТВ и Телекарта, смарт ТВ-приставки, Wi-Fi роутеры, игровые консоли и медиаплееры. Изготовлена из закаленного ударопрочного стекла с закругленными полированными углами.",
-    fullSpecs: {
-      "Материал полки": "Ударопрочное закаленное стекло (Safety Glass 5 мм)",
-      "Материал кронштейна": "Металлический профиль с порошковой покраской",
-      "Максимальная нагрузка": "До 10 кг",
-      "Кабель-менеджмент": "Встроенный скрытый кабель-канал",
-      "Комплектация": "Стеклянная полка, металлический кронштейн, дюбели, винты, инструкция"
-    },
-    warranty: "24 месяца гарантии",
-    deliveryInfo: "В наличии в г. Сатпаев / Монтаж под ключ",
-    marketplaceLinks: {
-      ozon: "https://ozon.kz/product/steklyannaya-polka-pod-televizor-dlya-resivera-tv-pristavki-wi-fi-routera-mediapleera-1856887821/",
-      wildberries: "https://www.wildberries.ru/seller/250158087"
-    }
-  },
-
-  // ==========================================
-  // 2. ДОПОЛНИТЕЛЬНЫЕ УНИВЕРСАЛЬНЫЕ ПУЛЬТЫ ИЗ МАГАЗИНА
-  // ==========================================
-  {
     id: "remote-dvb-t2",
     sku: "HUAYU-DVB-T2",
     name: "Пульт HUAYU универсальный для всех цифровых приставок DVB-T2 / тюнеров",
@@ -476,6 +432,210 @@ const PRODUCTS_DATA = [
       sampleModels: ["Hisense 43A6BG", "TCL 50P615", "Haier 32 Smart", "Xiaomi Mi TV 4A/4S/P1"]
     },
     warranty: "6 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+
+  // ==========================================
+  // 2. ПОЛКИ, КРОНШТЕЙНЫ, ПОДСТАВКИ И БЛОКИ ПИТАНИЯ
+  // ==========================================
+  {
+    id: "ozon-1856887821",
+    sku: "1856887821",
+    name: "Стеклянная полка под телевизор для ресивера, ТВ приставки, Wi-Fi роутера, медиаплеера",
+    category: "appliances",
+    categoryName: "Полки, кронштейны и ТВ аксессуары",
+    subCategory: "tv-shelves",
+    brand: "ElectroSat",
+    model: "Glass-Shelf-Black-5mm",
+    price: 3658,
+    oldPrice: 5200,
+    badge: "Хит Ozon",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 9,
+    rating: 4.9,
+    reviewCount: 10,
+    requiresInstallation: true,
+    installationPrice: 2000,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-1/13088469565.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-8/11937900788.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-l/7378357197.jpg"
+    ],
+    shortSpecs: "Настенная полка из закалённого стекла 5 мм • Нагрузка до 10 кг • Кабель-канал • Полный крепёж в комплекте",
+    description: "Стильная настенная стеклянная полка для установки под настенным телевизором. Идеально размещает цифровые ресиверы Отау ТВ и Телекарта, смарт ТВ-приставки, Wi-Fi роутеры, игровые консоли и медиаплееры. Изготовлена из закаленного ударопрочного стекла с закругленными полированными углами.",
+    fullSpecs: {
+      "Материал полки": "Ударопрочное закаленное стекло (Safety Glass 5 мм)",
+      "Материал кронштейна": "Металлический профиль с порошковой покраской",
+      "Максимальная нагрузка": "До 10 кг",
+      "Кабель-менеджмент": "Встроенный скрытый кабель-канал",
+      "Комплектация": "Стеклянная полка, металлический кронштейн, дюбели, винты, инструкция"
+    },
+    warranty: "24 месяца гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев / Монтаж под ключ",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/product/steklyannaya-polka-pod-televizor-dlya-resivera-tv-pristavki-wi-fi-routera-mediapleera-1856887821/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "bracket-arm-42",
+    sku: "BRACKET-ARM-42",
+    name: "Настенный наклонно-поворотный кронштейн для телевизора 14–43″ (нагрузка до 25 кг)",
+    category: "appliances",
+    categoryName: "Полки, кронштейны и ТВ аксессуары",
+    subCategory: "tv-brackets",
+    brand: "ElectroSat",
+    model: "Arm-14-43-VESA200",
+    price: 3850,
+    oldPrice: 5500,
+    badge: "Поворотный",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 16,
+    rating: 5.0,
+    reviewCount: 34,
+    requiresInstallation: true,
+    installationPrice: 3500,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-8/11937900788.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-1/13088469565.jpg"
+    ],
+    shortSpecs: "Диагональ 14–43″ • Поворот ±90°, наклон ±15° • VESA 75x75, 100x100, 200x200 • До 25 кг • Полный крепеж",
+    description: "Универсальный наклонно-поворотный кронштейн для телевизоров и мониторов диагональю от 14 до 43 дюймов. Позволяет поворачивать экран в любую сторону, регулировать угол наклона и вылет от стены. Изготовлен из прочной холоднокатаной стали 1.5 мм.",
+    fullSpecs: {
+      "Диагональ экрана": "14″ – 43″ (35–109 см)",
+      "Стандарты VESA": "75x75, 100x100, 200x100, 200x200 мм",
+      "Максимальная нагрузка": "25 кг",
+      "Угол поворота": "До ±90° (в зависимости от ширины ТВ)",
+      "Угол наклона": "±15°",
+      "Расстояние от стены": "55 – 380 мм",
+      "Комплект": "Кронштейн, дюбели, анкеры, комплект болтов для ТВ M4/M6/M8, инструкция"
+    },
+    warranty: "36 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман») • Установка мастером в день заказа",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "bracket-tilt-65",
+    sku: "BRACKET-TILT-65",
+    name: "Наклонный усиленный кронштейн для телевизоров 32–70″ (нагрузка до 45 кг)",
+    category: "appliances",
+    categoryName: "Полки, кронштейны и ТВ аксессуары",
+    subCategory: "tv-brackets",
+    brand: "ElectroSat",
+    model: "Tilt-Heavy-32-70",
+    price: 4950,
+    oldPrice: 6800,
+    badge: "Для больших ТВ",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 12,
+    rating: 4.9,
+    reviewCount: 29,
+    requiresInstallation: true,
+    installationPrice: 3500,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-8/11937900788.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-l/7378357197.jpg"
+    ],
+    shortSpecs: "Для телевизоров 32–70″ • Наклон -15° • VESA до 400x400 • До 45 кг • Встроенный уровень • Надежный замок",
+    description: "Усиленный настенный кронштейн для надежной фиксации телевизоров средних и больших диагоналей (32–70 дюймов). Оснащен механизмом плавного наклона и встроенным жидкостным уровнем для идеально ровного монтажа.",
+    fullSpecs: {
+      "Диагональ экрана": "32″ – 70″ (81–178 см)",
+      "Стандарты VESA": "100x100, 200x200, 300x300, 400x200, 400x400 мм",
+      "Максимальная нагрузка": "45 кг",
+      "Угол наклона": "0° / -15°",
+      "Расстояние от стены": "25 мм (ультратонкий профиль)",
+      "Особенности": "Встроенный уровень, фиксаторы защиты от падения"
+    },
+    warranty: "36 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев • Монтаж под ключ",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "tv-stand-legs",
+    sku: "TV-STAND-LEGS-UNI",
+    name: "Универсальные настольные ножки / подставка для любых телевизоров 32–65″",
+    category: "appliances",
+    categoryName: "Полки, кронштейны и ТВ аксессуары",
+    subCategory: "tv-shelves",
+    brand: "ElectroSat",
+    model: "TableStand-32-65",
+    price: 3950,
+    oldPrice: 5800,
+    badge: "Подставка",
+    badgeType: "sale",
+    inStock: true,
+    stockCount: 10,
+    rating: 5.0,
+    reviewCount: 22,
+    requiresInstallation: false,
+    installationPrice: 1500,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-1/13088469565.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-8/11937900788.jpg"
+    ],
+    shortSpecs: "Универсальные ножки для ТВ 32–65″ • Замена потерянных ножек • Регулировка по высоте • До 40 кг",
+    description: "Универсальная настольная подставка (ножки) для установки телевизора на тумбу или стол. Идеальная замена сломанным или утерянным оригинальным ножкам. Крепится к стандартным отверстиям VESA на задней панели телевизора.",
+    fullSpecs: {
+      "Совместимые диагонали": "32″ – 65″",
+      "Совместимость VESA": "от 100x100 до 800x400 мм",
+      "Максимальная нагрузка": "40 кг",
+      "Регулировка высоты": "3 уровня высоты",
+      "Материал": "Сталь с полимерным покрытием, прорезиненные антискользящие накладки"
+    },
+    warranty: "12 месяцев гарантии",
+    deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
+    marketplaceLinks: {
+      ozon: "https://ozon.kz/seller/ip-mihaylenko/",
+      wildberries: "https://www.wildberries.ru/seller/250158087"
+    }
+  },
+  {
+    id: "power-adapter-12v",
+    sku: "ADAPTER-12V-2A",
+    name: "Блок питания 12V 2A (5.5x2.5мм) для ресиверов Отау ТВ, Телекарта, роутеров и ТВ приставок",
+    category: "appliances",
+    categoryName: "Полки, кронштейны и ТВ аксессуары",
+    subCategory: "accessories",
+    brand: "ElectroSat",
+    model: "Power-12V-2A-EU",
+    price: 2200,
+    oldPrice: 3100,
+    badge: "Блок питания",
+    badgeType: "hit",
+    inStock: true,
+    stockCount: 25,
+    rating: 4.9,
+    reviewCount: 57,
+    requiresInstallation: false,
+    installationPrice: 500,
+    images: [
+      "https://ir.ozone.ru/s3/multimedia-1-9/11950394445.jpg",
+      "https://ir.ozone.ru/s3/multimedia-1-5/12321993605.jpg"
+    ],
+    shortSpecs: "12V 2A (24W) • Штекер 5.5x2.5 / 5.5x2.1 мм • Защита от КЗ и перегрузок • Длина провода 1м • Евровилка",
+    description: "Качественный импульсный блок питания 12V 2000mA со стандартным штекером 5.5х2.5 мм (совместим с 5.5х2.1 мм). Предназначен для спутниковых и эфирных ресиверов Отау ТВ, Телекарта, цифровых приставок, Wi-Fi роутеров, камер видеонаблюдения и светодиодных лент.",
+    fullSpecs: {
+      "Входное напряжение": "100–240V AC, 50/60Hz",
+      "Выходное напряжение": "12V DC, сила тока 2A (24W)",
+      "Размер штекера": "5.5 мм (внешний) / 2.5 мм (внутренний)",
+      "Полярность": "Плюс в центре, минус снаружи",
+      "Защиты": "Защита от короткого замыкания (SCP), перегрузки по току (OCP) и перенапряжения (OVP)",
+      "Совместимость": "Ресиверы Отау ТВ, Телекарта EVO, приставки DVB-T2, Wi-Fi роутеры TP-Link/D-Link/Keenetic, видеокамеры CCTV"
+    },
+    warranty: "12 месяцев гарантии",
     deliveryInfo: "В наличии в г. Сатпаев (ТД «Арман»)",
     marketplaceLinks: {
       ozon: "https://ozon.kz/seller/ip-mihaylenko/",
@@ -582,6 +742,12 @@ const CATEGORIES_DATA = [
     count: PRODUCTS_DATA.filter(p => p.category === "remotes" && p.subCategory !== "satellite-remotes" && p.subCategory !== "otau-remotes").length
   },
   {
+    id: "appliances",
+    name: "Полки, кронштейны, подставки, БП",
+    icon: "layers",
+    count: PRODUCTS_DATA.filter(p => p.category === "appliances").length
+  },
+  {
     id: "satellite-telekarta",
     name: "Телекарта: пульт и комплект 65 000 ₸",
     icon: "radio",
@@ -592,12 +758,6 @@ const CATEGORIES_DATA = [
     name: "Отау ТВ: пульт и комплект",
     icon: "tv",
     count: PRODUCTS_DATA.filter(p => p.subCategory === "satellite-otau" || p.id === "ozon-4880651840").length
-  },
-  {
-    id: "appliances",
-    name: "Полки под ТВ (Ozon)",
-    icon: "layers",
-    count: PRODUCTS_DATA.filter(p => p.category === "appliances").length
   }
 ];
 
