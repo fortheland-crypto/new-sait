@@ -551,7 +551,7 @@ class MainApp {
   // ==========================================
   setup2GISBlock() {
     const config = window.SITE_CONFIG || {};
-    const dgisLink = config.DGIS_LINK || "https://2gis.kz";
+    const dgisLink = config.DGIS_LINK || "https://2gis.kz/zhezkazgan/search/%D0%A2%D0%94%20%D0%90%D1%80%D0%BC%D0%B0%D0%BD%20%D0%9C%D0%B0%D0%BD%D0%B3%D0%B8%D0%BB%D0%B8%D0%BA%20%D0%95%D0%BB%2020%D0%90/firm/70000001069371110/67.52803%2C47.905774";
     const lng = config.DGIS_COORDS?.lng || 67.52803;
     const lat = config.DGIS_COORDS?.lat || 47.905774;
     const routeLink = `https://2gis.kz/zhezkazgan/routeSearch/rsType/car/to/${lng},${lat}`;
@@ -559,6 +559,103 @@ class MainApp {
     document.querySelectorAll("a[data-action='open-2gis-route']").forEach(el => el.href = routeLink);
     document.querySelectorAll("a[data-action='open-2gis-card']").forEach(el => el.href = dgisLink);
     document.querySelectorAll("a[data-config='DGIS_LINK']").forEach(el => el.href = dgisLink);
+
+    const mapContainer = document.getElementById("interactive-2gis-map");
+    if (!mapContainer) return;
+
+    // Инициализируем карту через Leaflet
+    const initMap = () => {
+      if (!window.L || this.mapInitialized) return;
+      this.mapInitialized = true;
+
+      try {
+        const map = window.L.map('interactive-2gis-map', {
+          center: [lat, lng],
+          zoom: 16,
+          zoomControl: false,
+          scrollWheelZoom: false
+        });
+
+        // Добавляем контрол зума в удобное место
+        window.L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+        // Включение зума при взаимодействии с картой
+        map.on('focus', () => map.scrollWheelZoom.enable());
+        map.on('click', () => map.scrollWheelZoom.enable());
+
+        // Слой тайлов (CartoDB Voyager - отлично читаются улицы и номера домов Сатпаева)
+        window.L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://2gis.kz" target="_blank">2ГИС</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+          maxZoom: 19,
+          subdomains: 'abcd'
+        }).addTo(map);
+
+        // Кастомный маркер с брендингом ElectroSat и 2ГИС
+        const customIcon = window.L.divIcon({
+          className: 'custom-map-marker',
+          html: `
+            <div class="relative cursor-pointer group flex flex-col items-center">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-blue-700 text-white flex items-center justify-center shadow-2xl border-2 border-white/90 ring-4 ring-blue-500/40 transform group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[24px]">storefront</span>
+              </div>
+              <div class="w-3 h-3 bg-indigo-700 rotate-45 -mt-1.5 border-r border-b border-white/90"></div>
+              <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00AA5B] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#00AA5B] border-2 border-white"></span>
+              </span>
+            </div>
+          `,
+          iconSize: [48, 54],
+          iconAnchor: [24, 54],
+          popupAnchor: [0, -52]
+        });
+
+        const marker = window.L.marker([lat, lng], { icon: customIcon }).addTo(map);
+
+        // Интерактивное всплывающее окно
+        const popupHtml = `
+          <div style="font-family: 'Plus Jakarta Sans', sans-serif; min-width: 230px; padding: 4px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="background: #00AA5B; color: white; font-weight: 800; font-size: 10px; padding: 2px 6px; border-radius: 6px;">2ГИС</span>
+                <strong style="font-size: 13px; color: #f8fafc;">ElectroSat</strong>
+              </div>
+              <span style="font-size: 10px; color: #22C55E; font-weight: 600;">● Открыто</span>
+            </div>
+            <p style="font-size: 11px; color: #cbd5e1; margin: 0 0 6px 0; line-height: 1.35;">
+              📍 г. Сатпаев, ул. Мангилик Ел 20А<br>
+              🏬 <strong>ТД «Арман»</strong> (бывшая Комарова 20А)
+            </p>
+            <p style="font-size: 10px; color: #94a3b8; margin: 0 0 10px 0;">
+              🕒 Пн–Сб: 11:00 – 19:00, Вс: 11:00 – 17:00
+            </p>
+            <div style="display: flex; gap: 6px;">
+              <a href="${dgisLink}" target="_blank" rel="noopener noreferrer" style="flex: 1; text-align: center; background: #00AA5B; color: white; padding: 6px 8px; border-radius: 8px; font-size: 11px; font-weight: bold; text-decoration: none; display: inline-block;">
+                В 2ГИС ↗
+              </a>
+              <a href="${routeLink}" target="_blank" rel="noopener noreferrer" style="flex: 1; text-align: center; background: #2563eb; color: white; padding: 6px 8px; border-radius: 8px; font-size: 11px; font-weight: bold; text-decoration: none; display: inline-block;">
+                Маршрут 🚗
+              </a>
+            </div>
+          </div>
+        `;
+
+        marker.bindPopup(popupHtml, { autoClose: false, closeOnClick: false }).openPopup();
+
+        // Обновление размеров при ресайзе или скролле
+        setTimeout(() => map.invalidateSize(), 400);
+        window.addEventListener('resize', () => map.invalidateSize());
+      } catch (err) {
+        console.warn("Leaflet map initialization failed:", err);
+      }
+    };
+
+    if (window.L) {
+      initMap();
+    } else {
+      window.addEventListener('load', initMap);
+      setTimeout(initMap, 1000);
+    }
   }
 
   // ==========================================

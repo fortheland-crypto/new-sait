@@ -12,6 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
+  <!-- Leaflet Interactive Maps CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -903,43 +907,56 @@
           </div>
         </div>
 
-        <!-- Интерактивная карта 2ГИС / Стилизованный блок карты -->
+        <!-- Интерактивная карта 2ГИС -->
         <div class="lg:col-span-7">
-          <div class="map-container-frame shadow-2xl relative bg-surface-card border border-border-subtle rounded-3xl overflow-hidden min-h-[380px] flex items-center justify-center">
-            <!-- Стилизованная карточка 2ГИС -->
-            <div class="absolute inset-0 bg-surface-container-low flex flex-col justify-between p-6">
-              <div class="flex items-center justify-between">
-                <div class="bg-surface-card/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl shadow-md border border-border-subtle flex items-center gap-2">
-                  <span class="w-3 h-3 bg-[#00AA5B] rounded-full"></span>
-                  <span class="text-xs font-bold text-text-primary">2ГИС Сатпаев</span>
-                </div>
-                <a href="https://2gis.kz/zhezkazgan/search/%D0%A2%D0%94%20%D0%90%D1%80%D0%BC%D0%B0%D0%BD%20%D0%9C%D0%B0%D0%BD%D0%B3%D0%B8%D0%BB%D0%B8%D0%BA%20%D0%95%D0%BB%2020%D0%90/firm/70000001069371110/67.52803%2C47.905774" data-config="DGIS_LINK" target="_blank" rel="noopener noreferrer" class="bg-surface-card hover:bg-surface-raised text-text-primary text-xs font-bold px-3 py-1.5 rounded-xl shadow-md border border-border-subtle flex items-center gap-1">
-                  <span>Развернуть</span>
+          <div class="map-container-frame shadow-2xl relative bg-surface-card border border-border-subtle rounded-3xl overflow-hidden min-h-[440px] flex flex-col group">
+            <!-- Контейнер для реальной интерактивной карты -->
+            <div id="interactive-2gis-map" class="w-full h-[440px] z-0"></div>
+
+            <!-- Верхняя плашка управления поверх карты -->
+            <div class="absolute top-4 left-4 right-4 z-10 flex items-center justify-between pointer-events-none">
+              <div class="bg-surface-card/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-xl border border-border-subtle flex items-center gap-2.5 pointer-events-auto">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00AA5B] opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00AA5B]"></span>
+                </span>
+                <span class="text-xs font-bold text-text-primary">2ГИС Сатпаев • ТД «Арман»</span>
+              </div>
+
+              <div class="flex items-center gap-2 pointer-events-auto">
+                <a 
+                  href="https://2gis.kz/zhezkazgan/search/%D0%A2%D0%94%20%D0%90%D1%80%D0%BC%D0%B0%D0%BD%20%D0%9C%D0%B0%D0%BD%D0%B3%D0%B8%D0%BB%D0%B8%D0%BA%20%D0%95%D0%BB%2020%D0%90/firm/70000001069371110/67.52803%2C47.905774" 
+                  data-config="DGIS_LINK" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="bg-[#00AA5B] hover:bg-[#00914d] text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-lg border border-[#00AA5B]/40 flex items-center gap-1.5 transition-all transform hover:scale-105 active:scale-95 cursor-pointer"
+                >
+                  <span class="font-black text-xs">2ГИС</span>
+                  <span>Открыть карточку</span>
                   <span class="material-symbols-outlined text-[16px]">open_in_new</span>
                 </a>
               </div>
+            </div>
 
-              <!-- Центральная метка магазина -->
-              <div class="self-center text-center animate-bounce duration-1000">
-                <div class="bg-primary text-white p-3.5 rounded-2xl shadow-2xl flex items-center gap-2 border-2 border-primary/40">
-                  <span class="material-symbols-outlined text-[24px]">storefront</span>
-                  <div class="text-left">
-                    <span class="font-bold text-xs block leading-tight" data-config="COMPANY_NAME">ElectroSat</span>
-                    <span class="text-[10px] text-blue-100">г. Сатпаев, ТД «Арман»</span>
-                  </div>
-                </div>
-                <div class="w-3 h-3 bg-primary rotate-45 mx-auto -mt-1.5 border-r border-b border-primary/40"></div>
-              </div>
-
-              <div class="bg-surface-card/90 backdrop-blur-md p-3.5 rounded-2xl shadow-lg border border-border-subtle flex items-center justify-between text-xs">
+            <!-- Нижняя плашка быстрой навигации и парковки -->
+            <div class="absolute bottom-4 left-4 right-4 z-10 pointer-events-none">
+              <div class="bg-surface-card/95 backdrop-blur-md p-3 rounded-2xl shadow-2xl border border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs pointer-events-auto">
                 <div class="flex items-center gap-2 text-text-primary">
-                  <span class="material-symbols-outlined text-whatsapp-green text-[18px]">local_parking</span>
-                  <span class="font-medium">Бесплатная парковка перед ТД «Арман»</span>
+                  <span class="material-symbols-outlined text-whatsapp-green text-[20px]">local_parking</span>
+                  <span class="font-medium text-xs">Бесплатная парковка перед ТД «Арман»</span>
                 </div>
-                <a href="https://2gis.kz/zhezkazgan/firm/70000001069371110/tab/route" data-action="open-2gis-route" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline flex items-center gap-1">
-                  <span>Маршрут</span>
-                  <span class="material-symbols-outlined text-[16px]">chevron_right</span>
-                </a>
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                  <a 
+                    href="https://2gis.kz/zhezkazgan/firm/70000001069371110/tab/route" 
+                    data-action="open-2gis-route" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="flex-1 sm:flex-initial bg-primary hover:bg-blue-600 text-white font-bold px-3.5 py-2 rounded-xl shadow-md flex items-center justify-center gap-1.5 transition-all active:scale-95"
+                  >
+                    <span class="material-symbols-outlined text-[16px]">directions_car</span>
+                    <span>Построить маршрут</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
