@@ -179,26 +179,12 @@ class MainApp {
   }
 
   createProductCardHtml(p, currency) {
-    const isFav = window.Cart ? window.Cart.isFavorite(p.id) : false;
-    const isComp = window.Cart ? window.Cart.isCompared(p.id) : false;
-
-    // Бейджи маркетплейсов
-    const mpBadges = [];
-    if (p.marketplaceLinks) {
-      if (p.marketplaceLinks.ozon) {
-        mpBadges.push(`<a href="${p.marketplaceLinks.ozon}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-primary/10 text-primary border border-primary/20 px-2 py-0.5 rounded-md hover:bg-primary/20 transition-colors flex items-center gap-1"><span>Ozon</span></a>`);
-      }
-      if (p.marketplaceLinks.wildberries) {
-        mpBadges.push(`<a href="${p.marketplaceLinks.wildberries}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-purple-900/20 text-purple-300 border border-purple-500/30 px-2 py-0.5 rounded-md hover:bg-purple-900/30 transition-colors flex items-center gap-1"><span>Wildberries</span></a>`);
-      }
-    }
-
     return `
       <div 
         class="product-card group bg-surface-card border border-border-subtle hover:border-primary/50 rounded-3xl p-4 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative"
         onclick="window.App.openProductModal('${p.id}')"
       >
-        <!-- Верхние бейджи и кнопки действий -->
+        <!-- Фотография оборудования -->
         <div class="relative mb-3">
           <div class="w-full h-48 sm:h-52 bg-surface-container-lowest rounded-2xl overflow-hidden relative flex items-center justify-center p-3 border border-border-subtle/50">
             <img 
@@ -208,56 +194,13 @@ class MainApp {
               loading="lazy"
             />
           </div>
-
-          <!-- Бейджи товара -->
-          <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
-            ${p.badge ? `
-              <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-sm ${p.badgeType === 'hit' ? 'bg-badge-amber text-slate-950' : p.badgeType === 'sale' ? 'bg-rose-500 text-white' : 'bg-primary text-white'}">
-                ${p.badge}
-              </span>
-            ` : ''}
-            ${p.requiresInstallation ? `
-              <span class="text-[10px] font-medium bg-surface/90 backdrop-blur-md text-text-primary px-2 py-0.5 rounded-md flex items-center gap-1 border border-border-subtle shadow-xs">
-                <span class="material-symbols-outlined text-whatsapp-green text-[12px]">build</span>
-                <span>Монтаж</span>
-              </span>
-            ` : ''}
-          </div>
-
-          <!-- Кнопки избранного и сравнения -->
-          <div class="absolute top-2.5 right-2.5 flex flex-col gap-1.5 z-10">
-            <button 
-              onclick="event.stopPropagation(); window.Cart.toggleFavorite('${p.id}')" 
-              title="В избранное"
-              class="w-8 h-8 rounded-full ${isFav ? 'bg-rose-500 text-white' : 'bg-surface-card/90 backdrop-blur-md text-text-muted hover:text-rose-400'} border border-border-subtle shadow-md flex items-center justify-center transition-all transform active:scale-90"
-            >
-              <span class="material-symbols-outlined text-[18px] ${isFav ? 'fill-current' : ''}">favorite</span>
-            </button>
-            <button 
-              onclick="event.stopPropagation(); window.Cart.toggleCompare('${p.id}')" 
-              title="Сравнить"
-              class="w-8 h-8 rounded-full ${isComp ? 'bg-primary text-white' : 'bg-surface-card/90 backdrop-blur-md text-text-muted hover:text-primary'} border border-border-subtle shadow-md flex items-center justify-center transition-all transform active:scale-90"
-            >
-              <span class="material-symbols-outlined text-[18px]">compare_arrows</span>
-            </button>
-          </div>
         </div>
 
         <!-- Информация о товаре -->
         <div class="flex-1 flex flex-col justify-between">
           <div>
-            <!-- Рейтинг и категория -->
-            <div class="flex items-center justify-between text-xs text-text-muted mb-1.5">
-              <span class="font-medium text-text-muted">${p.categoryName}</span>
-              <div class="flex items-center gap-1 text-badge-amber font-semibold">
-                <span class="material-symbols-outlined text-[14px]">star</span>
-                <span>${p.rating}</span>
-                <span class="text-text-muted font-normal">(${p.reviewCount})</span>
-              </div>
-            </div>
-
             <!-- Название -->
-            <h4 class="font-bold text-sm text-text-primary group-hover:text-primary transition-colors line-clamp-2 leading-snug mb-1.5">
+            <h4 class="font-bold text-sm text-text-primary group-hover:text-primary transition-colors line-clamp-2 leading-snug mb-2">
               ${p.name}
             </h4>
 
@@ -266,14 +209,6 @@ class MainApp {
               ${p.shortSpecs}
             </p>
           </div>
-
-          <!-- Маркетплейсы наличие -->
-          ${mpBadges.length > 0 ? `
-            <div class="flex items-center gap-1.5 flex-wrap mb-3 pt-2 border-t border-border-subtle/50">
-              <span class="text-[10px] text-text-muted font-medium">Маркетплейсы:</span>
-              ${mpBadges.join('')}
-            </div>
-          ` : ''}
 
           <!-- Цена и кнопки -->
           <div class="pt-3 border-t border-border-subtle flex flex-col gap-2.5">
@@ -701,11 +636,6 @@ class MainApp {
         <div>
           <div class="w-full h-64 sm:h-80 bg-surface-container-lowest rounded-2xl overflow-hidden border border-border-subtle mb-3 relative flex items-center justify-center p-4">
             <img id="product-main-img" src="${p.images[0]}" alt="${p.name}" class="max-w-full max-h-full object-contain mx-auto">
-            ${p.badge ? `
-              <span class="absolute top-3 left-3 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-lg text-white ${p.badgeType === 'hit' ? 'bg-orange-500' : 'bg-primary'}">
-                ${p.badge}
-              </span>
-            ` : ''}
           </div>
 
           ${p.images.length > 1 ? `
