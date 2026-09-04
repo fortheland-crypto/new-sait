@@ -583,11 +583,10 @@ class MainApp {
         map.on('focus', () => map.scrollWheelZoom.enable());
         map.on('click', () => map.scrollWheelZoom.enable());
 
-        // Слой тайлов (CartoDB Voyager - отлично читаются улицы и номера домов Сатпаева)
-        window.L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-          attribution: '&copy; <a href="https://2gis.kz" target="_blank">2ГИС</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-          maxZoom: 19,
-          subdomains: 'abcd'
+        // Слой тайлов OpenStreetMap (без водяных знаков и ключей, с чёткими названиями улиц Сатпаева)
+        window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors &copy; <a href="https://2gis.kz" target="_blank">2ГИС</a>',
+          maxZoom: 19
         }).addTo(map);
 
         // Кастомный маркер с брендингом ElectroSat и 2ГИС
