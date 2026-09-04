@@ -97,13 +97,13 @@ class MainApp {
     ];
 
     container.innerHTML = items.map(item => `
-      <div class="flex items-center gap-3 bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+      <div class="flex items-center gap-3 bg-surface-card backdrop-blur-md p-3.5 rounded-2xl border border-border-subtle shadow-xl hover:border-primary/50 transition-all">
+        <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
           <i data-lucide="${item.icon}" class="w-5 h-5"></i>
         </div>
         <div>
-          <h4 class="font-bold text-xs sm:text-sm text-slate-900">${item.title}</h4>
-          <p class="text-[11px] text-slate-500">${item.subtitle}</p>
+          <h4 class="font-bold text-xs sm:text-sm text-text-primary">${item.title}</h4>
+          <p class="text-[11px] text-text-muted">${item.subtitle}</p>
         </div>
       </div>
     `).join('');
@@ -121,29 +121,29 @@ class MainApp {
     container.innerHTML = categories.map(cat => `
       <div 
         onclick="window.App.openCatalogWithCategory('${cat.id}')"
-        class="group relative bg-white border border-slate-200/90 hover:border-blue-400 rounded-3xl p-5 shadow-2xs hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between"
+        class="group relative bg-surface-card border border-border-subtle hover:border-primary/50 rounded-3xl p-5 shadow-xl transition-all duration-300 cursor-pointer overflow-hidden flex flex-col justify-between"
       >
-        <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-blue-50/50 rounded-full group-hover:scale-125 transition-transform duration-500 -z-0"></div>
+        <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/5 rounded-full group-hover:scale-125 transition-transform duration-500 -z-0"></div>
 
         <div class="relative z-10">
           <div class="flex items-start justify-between mb-3">
-            <span class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-md group-hover:bg-blue-700 transition-colors">
+            <span class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-md group-hover:bg-blue-600 transition-colors">
               <i data-lucide="${cat.icon}" class="w-6 h-6"></i>
             </span>
-            <span class="text-[11px] font-semibold bg-slate-100 group-hover:bg-blue-50 group-hover:text-blue-700 text-slate-600 px-2.5 py-1 rounded-full transition-colors">
+            <span class="text-[11px] font-semibold bg-surface-container-low group-hover:bg-primary/20 group-hover:text-primary text-text-muted px-2.5 py-1 rounded-full transition-colors border border-border-subtle">
               ${cat.badge}
             </span>
           </div>
 
-          <h3 class="font-bold text-base sm:text-lg text-slate-900 group-hover:text-blue-600 transition-colors mb-1">
+          <h3 class="font-bold text-base sm:text-lg text-text-primary group-hover:text-primary transition-colors mb-1">
             ${cat.name}
           </h3>
-          <p class="text-xs text-slate-500 line-clamp-2 mb-4 leading-relaxed">
+          <p class="text-xs text-text-muted line-clamp-2 mb-4 leading-relaxed">
             ${cat.description}
           </p>
         </div>
 
-        <div class="relative z-10 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-600 group-hover:text-blue-700">
+        <div class="relative z-10 pt-3 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary group-hover:text-blue-400">
           <span>Смотреть каталог (${cat.count})</span>
           <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
         </div>
@@ -186,21 +186,21 @@ class MainApp {
     const mpBadges = [];
     if (p.marketplaceLinks) {
       if (p.marketplaceLinks.ozon) {
-        mpBadges.push(`<a href="${p.marketplaceLinks.ozon}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-blue-50 text-blue-600 border border-blue-200/80 px-2 py-0.5 rounded-md hover:bg-blue-100 transition-colors flex items-center gap-1"><span>Ozon</span></a>`);
+        mpBadges.push(`<a href="${p.marketplaceLinks.ozon}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-primary/10 text-primary border border-primary/20 px-2 py-0.5 rounded-md hover:bg-primary/20 transition-colors flex items-center gap-1"><span>Ozon</span></a>`);
       }
       if (p.marketplaceLinks.wildberries) {
-        mpBadges.push(`<a href="${p.marketplaceLinks.wildberries}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200/80 px-2 py-0.5 rounded-md hover:bg-purple-100 transition-colors flex items-center gap-1"><span>Wildberries</span></a>`);
+        mpBadges.push(`<a href="${p.marketplaceLinks.wildberries}" target="_blank" onclick="event.stopPropagation()" class="text-[10px] font-bold bg-purple-900/20 text-purple-300 border border-purple-500/30 px-2 py-0.5 rounded-md hover:bg-purple-900/30 transition-colors flex items-center gap-1"><span>Wildberries</span></a>`);
       }
     }
 
     return `
       <div 
-        class="product-card group bg-white border border-slate-200/90 hover:border-blue-400 rounded-3xl p-4 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative"
+        class="product-card group bg-surface-card border border-border-subtle hover:border-primary/50 rounded-3xl p-4 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative"
         onclick="window.App.openProductModal('${p.id}')"
       >
         <!-- Верхние бейджи и кнопки действий -->
         <div class="relative mb-3">
-          <div class="w-full h-48 sm:h-52 bg-white rounded-2xl overflow-hidden relative flex items-center justify-center p-3 border border-slate-100">
+          <div class="w-full h-48 sm:h-52 bg-surface-container-lowest rounded-2xl overflow-hidden relative flex items-center justify-center p-3 border border-border-subtle/50">
             <img 
               src="${p.images[0]}" 
               alt="${p.name}" 
@@ -212,13 +212,13 @@ class MainApp {
           <!-- Бейджи товара -->
           <div class="absolute top-2.5 left-2.5 flex flex-col gap-1 z-10">
             ${p.badge ? `
-              <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-sm ${p.badgeType === 'hit' ? 'bg-orange-500 text-white' : p.badgeType === 'sale' ? 'bg-rose-500 text-white' : 'bg-blue-600 text-white'}">
+              <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-sm ${p.badgeType === 'hit' ? 'bg-badge-amber text-slate-950' : p.badgeType === 'sale' ? 'bg-rose-500 text-white' : 'bg-primary text-white'}">
                 ${p.badge}
               </span>
             ` : ''}
             ${p.requiresInstallation ? `
-              <span class="text-[10px] font-medium bg-slate-900/80 backdrop-blur-md text-white px-2 py-0.5 rounded-md flex items-center gap-1 shadow-xs">
-                <i data-lucide="wrench" class="w-3 h-3 text-amber-400"></i>
+              <span class="text-[10px] font-medium bg-surface/90 backdrop-blur-md text-text-primary px-2 py-0.5 rounded-md flex items-center gap-1 border border-border-subtle shadow-xs">
+                <span class="material-symbols-outlined text-whatsapp-green text-[12px]">build</span>
                 <span>Монтаж</span>
               </span>
             ` : ''}
@@ -229,16 +229,16 @@ class MainApp {
             <button 
               onclick="event.stopPropagation(); window.Cart.toggleFavorite('${p.id}')" 
               title="В избранное"
-              class="w-8 h-8 rounded-full ${isFav ? 'bg-rose-500 text-white' : 'bg-white/90 backdrop-blur-md text-slate-600 hover:text-rose-500'} shadow-md flex items-center justify-center transition-all transform active:scale-90"
+              class="w-8 h-8 rounded-full ${isFav ? 'bg-rose-500 text-white' : 'bg-surface-card/90 backdrop-blur-md text-text-muted hover:text-rose-400'} border border-border-subtle shadow-md flex items-center justify-center transition-all transform active:scale-90"
             >
-              <i data-lucide="heart" class="w-4 h-4 ${isFav ? 'fill-current' : ''}"></i>
+              <span class="material-symbols-outlined text-[18px] ${isFav ? 'fill-current' : ''}">favorite</span>
             </button>
             <button 
               onclick="event.stopPropagation(); window.Cart.toggleCompare('${p.id}')" 
               title="Сравнить"
-              class="w-8 h-8 rounded-full ${isComp ? 'bg-blue-600 text-white' : 'bg-white/90 backdrop-blur-md text-slate-600 hover:text-blue-600'} shadow-md flex items-center justify-center transition-all transform active:scale-90"
+              class="w-8 h-8 rounded-full ${isComp ? 'bg-primary text-white' : 'bg-surface-card/90 backdrop-blur-md text-text-muted hover:text-primary'} border border-border-subtle shadow-md flex items-center justify-center transition-all transform active:scale-90"
             >
-              <i data-lucide="bar-chart-2" class="w-4 h-4"></i>
+              <span class="material-symbols-outlined text-[18px]">compare_arrows</span>
             </button>
           </div>
         </div>
@@ -247,44 +247,44 @@ class MainApp {
         <div class="flex-1 flex flex-col justify-between">
           <div>
             <!-- Рейтинг и категория -->
-            <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
-              <span class="font-medium text-slate-500">${p.categoryName}</span>
-              <div class="flex items-center gap-1 text-amber-500 font-semibold">
-                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+            <div class="flex items-center justify-between text-xs text-text-muted mb-1.5">
+              <span class="font-medium text-text-muted">${p.categoryName}</span>
+              <div class="flex items-center gap-1 text-badge-amber font-semibold">
+                <span class="material-symbols-outlined text-[14px]">star</span>
                 <span>${p.rating}</span>
-                <span class="text-slate-400 font-normal">(${p.reviewCount})</span>
+                <span class="text-text-muted font-normal">(${p.reviewCount})</span>
               </div>
             </div>
 
             <!-- Название -->
-            <h4 class="font-bold text-sm text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-2 leading-snug mb-1.5">
+            <h4 class="font-bold text-sm text-text-primary group-hover:text-primary transition-colors line-clamp-2 leading-snug mb-1.5">
               ${p.name}
             </h4>
 
             <!-- Краткие характеристики -->
-            <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-3">
+            <p class="text-xs text-text-muted line-clamp-2 leading-relaxed mb-3">
               ${p.shortSpecs}
             </p>
           </div>
 
           <!-- Маркетплейсы наличие -->
           ${mpBadges.length > 0 ? `
-            <div class="flex items-center gap-1.5 flex-wrap mb-3 pt-2 border-t border-slate-100">
-              <span class="text-[10px] text-slate-400 font-medium">Маркетплейсы:</span>
+            <div class="flex items-center gap-1.5 flex-wrap mb-3 pt-2 border-t border-border-subtle/50">
+              <span class="text-[10px] text-text-muted font-medium">Маркетплейсы:</span>
               ${mpBadges.join('')}
             </div>
           ` : ''}
 
           <!-- Цена и кнопки -->
-          <div class="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+          <div class="pt-3 border-t border-border-subtle flex flex-col gap-2.5">
             <div class="flex items-baseline justify-between">
               <div>
-                <span class="font-black text-lg sm:text-xl text-slate-900">${p.price.toLocaleString('ru-RU')} ${currency}</span>
+                <span class="font-black text-lg sm:text-xl text-text-primary">${p.price.toLocaleString('ru-RU')} ${currency}</span>
                 ${p.oldPrice ? `
-                  <span class="text-xs text-slate-400 line-through ml-1.5">${p.oldPrice.toLocaleString('ru-RU')}</span>
+                  <span class="text-xs text-text-muted line-through ml-1.5">${p.oldPrice.toLocaleString('ru-RU')}</span>
                 ` : ''}
               </div>
-              <span class="text-[11px] font-medium ${p.inStock ? 'text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md' : 'text-slate-400'}">
+              <span class="text-[11px] font-medium ${p.inStock ? 'text-whatsapp-green bg-whatsapp-green/10 px-2 py-0.5 rounded-md border border-whatsapp-green/20' : 'text-text-muted'}">
                 ${p.inStock ? '● В наличии' : 'Под заказ'}
               </span>
             </div>
@@ -292,25 +292,25 @@ class MainApp {
             <div class="grid grid-cols-2 gap-2">
               <button 
                 onclick="event.stopPropagation(); window.Cart.addItem('${p.id}', 1)"
-                class="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-sm"
+                class="bg-primary hover:bg-blue-600 active:scale-95 text-white font-semibold text-xs py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 transition-all shadow-sm"
               >
-                <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+                <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
                 <span>В корзину</span>
               </button>
 
               ${p.requiresInstallation ? `
                 <button 
                   onclick="event.stopPropagation(); window.Cart.addItem('${p.id}', 1, true)"
-                  class="bg-slate-900 hover:bg-slate-800 active:scale-95 text-white font-medium text-xs py-2.5 px-2 rounded-xl flex items-center justify-center gap-1 transition-all"
+                  class="bg-surface-container-low hover:bg-surface-raised active:scale-95 text-text-primary border border-border-subtle font-medium text-xs py-2.5 px-2 rounded-xl flex items-center justify-center gap-1 transition-all"
                   title="Заказать товар с профессиональным монтажом"
                 >
-                  <i data-lucide="wrench" class="w-3.5 h-3.5 text-amber-400"></i>
+                  <span class="material-symbols-outlined text-whatsapp-green text-[14px]">build</span>
                   <span>С монтажом</span>
                 </button>
               ` : `
                 <button 
                   onclick="event.stopPropagation(); window.App.openQuickOrderModal('${p.id}')"
-                  class="bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-800 font-medium text-xs py-2.5 px-2 rounded-xl flex items-center justify-center gap-1 transition-all"
+                  class="bg-surface-container-low hover:bg-surface-raised active:scale-95 text-text-primary border border-border-subtle font-medium text-xs py-2.5 px-2 rounded-xl flex items-center justify-center gap-1 transition-all"
                 >
                   <span>В 1 клик</span>
                 </button>
@@ -330,42 +330,42 @@ class MainApp {
     if (!container) return;
 
     container.innerHTML = SERVICES_DATA.map(srv => `
-      <div class="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+      <div class="bg-surface-card border border-border-subtle rounded-3xl p-6 shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col justify-between group">
         <div>
           <div class="flex items-start justify-between mb-4">
-            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors shadow-sm">
-              <i data-lucide="${srv.icon}" class="w-6 h-6"></i>
+            <div class="w-12 h-12 rounded-2xl bg-primary/15 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors border border-primary/20 shadow-sm">
+              <span class="material-symbols-outlined text-[26px]">home_repair_service</span>
             </div>
-            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
               ${srv.priceText}
             </span>
           </div>
 
-          <h3 class="font-bold text-lg text-slate-900 mb-2 leading-snug">
+          <h3 class="font-bold text-lg text-text-primary mb-2 leading-snug group-hover:text-primary transition-colors">
             ${srv.title}
           </h3>
-          <p class="text-xs text-slate-500 mb-4 leading-relaxed">
+          <p class="text-xs text-text-muted mb-4 leading-relaxed">
             ${srv.description}
           </p>
 
           <ul class="space-y-2 mb-6">
             ${srv.features.map(f => `
-              <li class="flex items-center gap-2 text-xs text-slate-700">
-                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+              <li class="flex items-center gap-2 text-xs text-text-primary">
+                <span class="material-symbols-outlined text-whatsapp-green text-[16px] flex-shrink-0">check_circle</span>
                 <span>${f}</span>
               </li>
             `).join('')}
           </ul>
         </div>
 
-        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-          <span class="text-xs font-semibold text-slate-500">${srv.badge}</span>
+        <div class="pt-4 border-t border-border-subtle flex items-center justify-between">
+          <span class="text-xs font-semibold text-text-muted">${srv.badge}</span>
           <button 
             onclick="window.App.openServiceModal('${srv.id}')"
-            class="bg-slate-900 hover:bg-blue-600 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5"
+            class="bg-primary hover:bg-blue-600 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm flex items-center gap-1.5"
           >
             <span>Оставить заявку</span>
-            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
           </button>
         </div>
       </div>
@@ -380,13 +380,13 @@ class MainApp {
     if (!container) return;
 
     container.innerHTML = ADVANTAGES_DATA.map(adv => `
-      <div class="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-2xs hover:shadow-lg transition-all flex items-start gap-4">
-        <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center flex-shrink-0 shadow-md">
-          <i data-lucide="${adv.icon}" class="w-6 h-6"></i>
+      <div class="bg-surface-card border border-border-subtle rounded-3xl p-6 shadow-xl hover:border-primary/50 transition-all flex items-start gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-primary/15 text-primary flex items-center justify-center flex-shrink-0 border border-primary/20 shadow-md">
+          <span class="material-symbols-outlined text-[26px]">verified</span>
         </div>
         <div>
-          <h4 class="font-bold text-base text-slate-900 mb-1.5">${adv.title}</h4>
-          <p class="text-xs text-slate-500 leading-relaxed">${adv.text}</p>
+          <h4 class="font-bold text-base text-text-primary mb-1.5">${adv.title}</h4>
+          <p class="text-xs text-text-muted leading-relaxed">${adv.text}</p>
         </div>
       </div>
     `).join('');
@@ -400,26 +400,26 @@ class MainApp {
     if (!container) return;
 
     container.innerHTML = PORTFOLIO_DATA.map(item => `
-      <div class="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col group">
-        <div class="h-48 relative overflow-hidden bg-slate-100">
+      <div class="bg-surface-card border border-border-subtle rounded-3xl overflow-hidden shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col group">
+        <div class="h-48 relative overflow-hidden bg-surface-container-lowest">
           <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-lg">
+          <div class="absolute top-3 left-3 bg-surface/90 backdrop-blur-md text-text-primary border border-border-subtle text-[11px] font-medium px-3 py-1 rounded-lg">
             ${item.category}
           </div>
-          <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-slate-800 text-[11px] font-semibold px-2.5 py-0.5 rounded-md">
+          <div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-md text-text-primary border border-border-subtle text-[11px] font-semibold px-2.5 py-0.5 rounded-md">
             ${item.date}
           </div>
         </div>
 
         <div class="p-5 flex-1 flex flex-col justify-between">
           <div>
-            <h4 class="font-bold text-sm text-slate-900 mb-2 leading-snug">${item.title}</h4>
-            <p class="text-xs text-slate-600 mb-3 leading-relaxed">
-              <strong>Задача:</strong> ${item.tasks}
+            <h4 class="font-bold text-sm text-text-primary mb-2 leading-snug">${item.title}</h4>
+            <p class="text-xs text-text-muted mb-3 leading-relaxed">
+              <strong class="text-text-primary">Задача:</strong> ${item.tasks}
             </p>
           </div>
-          <div class="pt-3 border-t border-slate-100 text-xs text-emerald-700 bg-emerald-50/70 p-2.5 rounded-xl font-medium flex items-center gap-2">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+          <div class="pt-3 border-t border-border-subtle text-xs text-emerald-300 bg-whatsapp-green/10 border border-whatsapp-green/20 p-2.5 rounded-xl font-medium flex items-center gap-2">
+            <span class="material-symbols-outlined text-whatsapp-green text-[16px] flex-shrink-0">check</span>
             <span>${item.result}</span>
           </div>
         </div>
@@ -432,34 +432,34 @@ class MainApp {
     if (!container) return;
 
     container.innerHTML = REVIEWS_DATA.map(rev => `
-      <div class="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-2xs hover:shadow-lg transition-all flex flex-col justify-between">
+      <div class="bg-surface-card border border-border-subtle rounded-3xl p-6 shadow-xl hover:border-primary/50 transition-all flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-3">
-              <img src="${rev.avatar}" alt="${rev.author}" class="w-11 h-11 rounded-full object-cover border-2 border-blue-100">
+              <img src="${rev.avatar}" alt="${rev.author}" class="w-11 h-11 rounded-full object-cover border-2 border-primary/30">
               <div>
-                <h5 class="font-bold text-sm text-slate-900">${rev.author}</h5>
-                <span class="text-[11px] text-slate-400">${rev.city} • ${rev.date}</span>
+                <h5 class="font-bold text-sm text-text-primary">${rev.author}</h5>
+                <span class="text-[11px] text-text-muted">${rev.city} • ${rev.date}</span>
               </div>
             </div>
-            <div class="flex text-amber-400">
-              ${Array(rev.rating).fill('<i data-lucide="star" class="w-4 h-4 fill-current"></i>').join('')}
+            <div class="flex text-badge-amber">
+              ${Array(rev.rating).fill('<span class="material-symbols-outlined text-[16px]">star</span>').join('')}
             </div>
           </div>
 
           <div class="mb-3">
-            <span class="text-[11px] font-semibold text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-md">
+            <span class="text-[11px] font-semibold text-primary bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-md">
               ${rev.project}
             </span>
           </div>
 
-          <p class="text-xs text-slate-600 leading-relaxed italic">
+          <p class="text-xs text-text-muted leading-relaxed italic">
             «${rev.text}»
           </p>
         </div>
 
-        <div class="pt-3 mt-4 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-400">
-          <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+        <div class="pt-3 mt-4 border-t border-border-subtle flex items-center gap-1.5 text-[11px] text-text-muted">
+          <span class="material-symbols-outlined text-whatsapp-green text-[16px]">verified</span>
           <span>Проверенный заказ</span>
         </div>
       </div>
@@ -490,31 +490,31 @@ class MainApp {
       const waLink = window.RemoteChecker.getWhatsAppCheckLink(query);
 
       resultBox.innerHTML = `
-        <div class="bg-blue-50/80 border border-blue-200/90 rounded-2xl p-4 text-left animate-in fade-in duration-300">
+        <div class="bg-surface-container-low border border-border-subtle rounded-2xl p-4 text-left animate-in fade-in duration-300">
           <div class="flex items-center gap-2 mb-2">
-            <span class="w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs">
-              <i data-lucide="check" class="w-3.5 h-3.5"></i>
+            <span class="w-6 h-6 rounded-full bg-whatsapp-green text-slate-950 flex items-center justify-center text-xs">
+              <span class="material-symbols-outlined text-[16px]">check</span>
             </span>
-            <h5 class="font-bold text-sm text-slate-900">
+            <h5 class="font-bold text-sm text-text-primary">
               ${result.status === "found" ? `Найдена совместимость для ${result.brand}` : 'Универсальное решение'}
             </h5>
           </div>
 
-          <p class="text-xs text-slate-600 mb-3 leading-relaxed">
+          <p class="text-xs text-text-muted mb-3 leading-relaxed">
             ${result.tip}
           </p>
 
           ${result.recommendedProduct ? `
-            <div class="bg-white border border-slate-200 rounded-xl p-3 flex gap-3 items-center mb-3">
-              <img src="${result.recommendedProduct.images[0]}" alt="" class="w-14 h-14 object-cover rounded-lg border flex-shrink-0">
+            <div class="bg-surface-card border border-border-subtle rounded-xl p-3 flex gap-3 items-center mb-3">
+              <img src="${result.recommendedProduct.images[0]}" alt="" class="w-14 h-14 object-contain rounded-lg border border-border-subtle bg-surface-container-lowest flex-shrink-0 p-1">
               <div class="flex-1 min-w-0">
-                <h6 class="font-semibold text-xs text-slate-900 truncate">${result.recommendedProduct.name}</h6>
-                <span class="text-blue-600 font-bold text-xs">${result.recommendedProduct.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
+                <h6 class="font-semibold text-xs text-text-primary truncate">${result.recommendedProduct.name}</h6>
+                <span class="text-primary font-bold text-xs">${result.recommendedProduct.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
                 <div class="flex gap-2 mt-1.5">
-                  <button onclick="window.App.openProductModal('${result.recommendedProduct.id}')" class="text-[11px] bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded-md hover:bg-blue-100">
+                  <button onclick="window.App.openProductModal('${result.recommendedProduct.id}')" class="text-[11px] bg-primary/10 text-primary border border-primary/20 font-medium px-2 py-0.5 rounded-md hover:bg-primary/20 transition-colors">
                     Подробнее
                   </button>
-                  <button onclick="window.Cart.addItem('${result.recommendedProduct.id}', 1)" class="text-[11px] bg-blue-600 text-white font-medium px-2 py-0.5 rounded-md hover:bg-blue-700">
+                  <button onclick="window.Cart.addItem('${result.recommendedProduct.id}', 1)" class="text-[11px] bg-primary text-white font-medium px-2 py-0.5 rounded-md hover:bg-blue-600 transition-colors">
                     В корзину
                   </button>
                 </div>
@@ -522,12 +522,12 @@ class MainApp {
             </div>
           ` : ''}
 
-          <div class="flex flex-wrap gap-2 pt-2 border-t border-blue-100 text-xs">
-            <a href="${waLink}" target="_blank" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-xl font-medium transition-all shadow-xs">
-              <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-border-subtle text-xs">
+            <a href="${waLink}" target="_blank" class="inline-flex items-center gap-1.5 bg-whatsapp-green hover:bg-emerald-600 text-slate-950 px-3.5 py-1.5 rounded-xl font-bold transition-all shadow-xs">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
               <span>Спросить специалиста в WhatsApp</span>
             </a>
-            <button onclick="window.App.openCatalogWithCategory('remotes')" class="text-slate-600 hover:text-blue-600 px-3 py-1.5 rounded-xl font-medium underline">
+            <button onclick="window.App.openCatalogWithCategory('remotes')" class="text-text-muted hover:text-primary px-3 py-1.5 rounded-xl font-medium underline">
               Все пульты в каталоге
             </button>
           </div>
@@ -535,7 +535,6 @@ class MainApp {
       `;
 
       resultBox.classList.remove("hidden");
-      if (window.lucide) window.lucide.createIcons();
     };
 
     if (checkBtn) checkBtn.onclick = performCheck;
@@ -601,13 +600,13 @@ class MainApp {
     }
 
     container.innerHTML = `
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 sm:p-6 text-text-primary">
         <!-- Галерея фото -->
         <div>
-          <div class="w-full h-64 sm:h-80 bg-white rounded-2xl overflow-hidden border border-slate-200 mb-3 relative flex items-center justify-center p-4">
+          <div class="w-full h-64 sm:h-80 bg-surface-container-lowest rounded-2xl overflow-hidden border border-border-subtle mb-3 relative flex items-center justify-center p-4">
             <img id="product-main-img" src="${p.images[0]}" alt="${p.name}" class="max-w-full max-h-full object-contain mx-auto">
             ${p.badge ? `
-              <span class="absolute top-3 left-3 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-lg text-white ${p.badgeType === 'hit' ? 'bg-orange-500' : 'bg-blue-600'}">
+              <span class="absolute top-3 left-3 text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-lg text-white ${p.badgeType === 'hit' ? 'bg-orange-500' : 'bg-primary'}">
                 ${p.badge}
               </span>
             ` : ''}
@@ -619,7 +618,7 @@ class MainApp {
                 <button 
                   type="button"
                   onclick="document.getElementById('product-main-img').src='${img}'"
-                  class="w-16 h-16 rounded-xl border-2 border-slate-200 hover:border-blue-500 p-1 flex-shrink-0 bg-white flex items-center justify-center cursor-pointer transition-all"
+                  class="w-16 h-16 rounded-xl border-2 border-border-subtle hover:border-primary p-1 flex-shrink-0 bg-surface-container-lowest flex items-center justify-center cursor-pointer transition-all"
                 >
                   <img src="${img}" class="max-w-full max-h-full object-contain mx-auto" />
                 </button>
@@ -628,14 +627,14 @@ class MainApp {
           ` : ''}
 
           <!-- Гарантия и доставка -->
-          <div class="mt-4 space-y-2 bg-slate-50 border border-slate-200/80 rounded-2xl p-3.5 text-xs text-slate-700">
+          <div class="mt-4 space-y-2 bg-surface-container-low border border-border-subtle rounded-2xl p-3.5 text-xs text-text-muted">
             <div class="flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
-              <span>${p.warranty}</span>
+              <span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+              <span class="text-text-primary">${p.warranty}</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="truck" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-              <span>${p.deliveryInfo}</span>
+              <span class="material-symbols-outlined text-whatsapp-green text-[18px]">local_shipping</span>
+              <span class="text-text-primary">${p.deliveryInfo}</span>
             </div>
           </div>
         </div>
@@ -643,30 +642,30 @@ class MainApp {
         <!-- Детали и заказ -->
         <div class="flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
-              <span>Артикул: <strong class="text-slate-700 font-mono">${p.model || p.id}</strong></span>
-              <div class="flex items-center gap-1 text-amber-500 font-semibold">
-                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <div class="flex items-center justify-between text-xs text-text-muted mb-2">
+              <span>Артикул: <strong class="text-text-primary font-mono">${p.model || p.id}</strong></span>
+              <div class="flex items-center gap-1 text-badge-amber font-semibold">
+                <span class="material-symbols-outlined text-[16px]">star</span>
                 <span>${p.rating} (${p.reviewCount} отзывов)</span>
               </div>
             </div>
 
-            <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug">${p.name}</h2>
-            <p class="text-xs text-slate-600 mb-4 leading-relaxed">${p.description}</p>
+            <h2 class="text-lg sm:text-xl font-bold text-text-primary mb-2 leading-snug">${p.name}</h2>
+            <p class="text-xs text-text-muted mb-4 leading-relaxed">${p.description}</p>
 
             <!-- Блок совместимости (если это пульт) -->
             ${p.compatibility ? `
-              <div class="bg-blue-50/70 border border-blue-200 rounded-2xl p-3.5 mb-4 text-xs">
-                <div class="flex items-center gap-1.5 font-bold text-blue-900 mb-1">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-600"></i>
+              <div class="bg-primary/10 border border-primary/20 rounded-2xl p-3.5 mb-4 text-xs">
+                <div class="flex items-center gap-1.5 font-bold text-primary mb-1">
+                  <span class="material-symbols-outlined text-[16px]">check_circle</span>
                   <span>Проверка совместимости:</span>
                 </div>
-                <p class="text-slate-700 mb-1.5"><strong>Бренд:</strong> ${p.compatibility.brand} (${p.compatibility.supportedYears || 'Все годы'})</p>
-                <p class="text-slate-600 text-[11px] mb-2 leading-snug"><strong>Поддерживаемые серии:</strong> ${p.compatibility.supportedTypes.join(', ')}</p>
-                <div class="flex items-center justify-between pt-2 border-t border-blue-100">
-                  <span class="text-[11px] text-slate-500">Не уверены в совместимости?</span>
-                  <a href="${window.RemoteChecker.getWhatsAppCheckLink(p.name)}" target="_blank" class="text-emerald-700 font-bold text-[11px] hover:underline flex items-center gap-1">
-                    <i data-lucide="message-circle" class="w-3 h-3"></i> Спросить в WhatsApp
+                <p class="text-text-primary mb-1.5"><strong>Бренд:</strong> ${p.compatibility.brand} (${p.compatibility.supportedYears || 'Все годы'})</p>
+                <p class="text-text-muted text-[11px] mb-2 leading-snug"><strong>Поддерживаемые серии:</strong> ${p.compatibility.supportedTypes.join(', ')}</p>
+                <div class="flex items-center justify-between pt-2 border-t border-primary/20">
+                  <span class="text-[11px] text-text-muted">Не уверены в совместимости?</span>
+                  <a href="${window.RemoteChecker.getWhatsAppCheckLink(p.name)}" target="_blank" class="text-whatsapp-green font-bold text-[11px] hover:underline flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">chat</span> Спросить в WhatsApp
                   </a>
                 </div>
               </div>
@@ -674,12 +673,12 @@ class MainApp {
 
             <!-- Характеристики таблица -->
             <div class="mb-4">
-              <h4 class="font-bold text-xs uppercase text-slate-400 tracking-wider mb-2">Характеристики:</h4>
-              <div class="bg-slate-50 rounded-xl p-2.5 text-xs space-y-1.5 max-h-40 overflow-y-auto">
+              <h4 class="font-bold text-xs uppercase text-text-muted tracking-wider mb-2">Характеристики:</h4>
+              <div class="bg-surface-container-low border border-border-subtle rounded-xl p-3 text-xs space-y-1.5 max-h-40 overflow-y-auto">
                 ${Object.entries(p.fullSpecs || {}).map(([key, val]) => `
-                  <div class="flex justify-between py-1 border-b border-slate-200/60 last:border-0">
-                    <span class="text-slate-500">${key}:</span>
-                    <span class="font-semibold text-slate-800 text-right ml-2">${val}</span>
+                  <div class="flex justify-between py-1 border-b border-border-subtle last:border-0">
+                    <span class="text-text-muted">${key}:</span>
+                    <span class="font-medium text-text-primary text-right ml-2">${val}</span>
                   </div>
                 `).join('')}
               </div>
@@ -687,25 +686,25 @@ class MainApp {
           </div>
 
           <!-- Блок покупки -->
-          <div class="pt-4 border-t border-slate-200 space-y-3">
+          <div class="pt-4 border-t border-border-subtle space-y-3">
             <div class="flex items-baseline justify-between">
               <div>
-                <span class="text-2xl font-black text-slate-900">${p.price.toLocaleString('ru-RU')} ${currency}</span>
-                ${p.oldPrice ? `<span class="text-sm text-slate-400 line-through ml-2">${p.oldPrice.toLocaleString('ru-RU')}</span>` : ''}
+                <span class="text-2xl font-black text-text-primary">${p.price.toLocaleString('ru-RU')} ${currency}</span>
+                ${p.oldPrice ? `<span class="text-sm text-text-muted line-through ml-2">${p.oldPrice.toLocaleString('ru-RU')}</span>` : ''}
               </div>
-              <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">
+              <span class="text-xs font-semibold text-whatsapp-green bg-whatsapp-green/10 border border-whatsapp-green/20 px-2.5 py-1 rounded-md">
                 ${p.inStock ? '● В наличии в магазине' : 'Под заказ'}
               </span>
             </div>
 
             <!-- Чекбокс монтажа -->
             ${p.requiresInstallation ? `
-              <label class="flex items-center justify-between bg-blue-50/60 border border-blue-200/80 p-3 rounded-xl cursor-pointer">
+              <label class="flex items-center justify-between bg-primary/10 border border-primary/20 p-3 rounded-xl cursor-pointer">
                 <div class="flex items-center gap-2">
-                  <input type="checkbox" id="modal-install-checkbox" class="w-4 h-4 text-blue-600 rounded border-slate-300">
-                  <span class="text-xs font-medium text-slate-800">Добавить профессиональную установку</span>
+                  <input type="checkbox" id="modal-install-checkbox" class="w-4 h-4 text-primary rounded border-border-subtle bg-surface-container-low">
+                  <span class="text-xs font-medium text-text-primary">Добавить профессиональную установку</span>
                 </div>
-                <span class="text-xs font-bold text-blue-600">+${(p.installationPrice || 4500).toLocaleString('ru-RU')} ${currency}</span>
+                <span class="text-xs font-bold text-primary">+${(p.installationPrice || 4500).toLocaleString('ru-RU')} ${currency}</span>
               </label>
             ` : ''}
 
@@ -718,17 +717,17 @@ class MainApp {
                   document.getElementById('product-detail-modal').classList.add('hidden');
                   window.App.openCartDrawer();
                 "
-                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-md active:scale-98"
+                class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-md active:scale-98"
               >
-                <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
                 <span>В корзину</span>
               </button>
 
               <button 
                 onclick="window.App.openQuickOrderModal('${p.id}')"
-                class="bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-1.5 text-xs transition-all active:scale-98"
+                class="bg-surface-container-high hover:bg-slate-700 text-text-primary border border-border-subtle font-medium py-3 px-4 rounded-xl flex items-center justify-center gap-1.5 text-xs transition-all active:scale-98"
               >
-                <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i>
+                <span class="material-symbols-outlined text-badge-amber text-[16px]">bolt</span>
                 <span>Купить в 1 клик</span>
               </button>
             </div>
@@ -736,7 +735,7 @@ class MainApp {
             <!-- Маркетплейсы -->
             ${mpButtons.length > 0 ? `
               <div class="pt-2">
-                <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Купить на маркетплейсе:</div>
+                <div class="text-[11px] font-bold text-text-muted uppercase tracking-wider mb-1.5">Купить на маркетплейсе:</div>
                 <div class="flex gap-2 flex-wrap">
                   ${mpButtons.join('')}
                 </div>
@@ -852,11 +851,11 @@ class MainApp {
     document.querySelectorAll(".category-tab-btn").forEach(btn => {
       const btnCat = btn.getAttribute("data-category");
       if (btnCat === catId) {
-        btn.classList.add("bg-blue-600", "text-white");
-        btn.classList.remove("bg-white", "text-slate-700");
+        btn.classList.add("bg-primary", "text-white", "shadow-sm");
+        btn.classList.remove("bg-surface-card", "text-text-muted", "hover:text-text-primary");
       } else {
-        btn.classList.remove("bg-blue-600", "text-white");
-        btn.classList.add("bg-white", "text-slate-700");
+        btn.classList.remove("bg-primary", "text-white", "shadow-sm");
+        btn.classList.add("bg-surface-card", "text-text-muted", "hover:text-text-primary");
       }
     });
 
@@ -917,7 +916,7 @@ class MainApp {
     
     // Сбрасываем стили кнопок
     document.querySelectorAll(".payment-tab-btn").forEach(btn => {
-      btn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900";
+      btn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all text-text-muted hover:text-text-primary bg-surface-container-low border border-border-subtle";
     });
 
     const activePane = document.getElementById(`payment-pane-${tabName}`);
@@ -926,11 +925,11 @@ class MainApp {
     if (activePane) activePane.classList.remove("hidden");
     if (activeBtn) {
       if (tabName === "card") {
-        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 shadow-xs border border-blue-200";
+        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-primary/20 text-primary shadow-xs border border-primary/40";
       } else if (tabName === "cash") {
-        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-white text-emerald-600 shadow-xs border border-emerald-200";
+        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-whatsapp-green/20 text-whatsapp-green shadow-xs border border-whatsapp-green/40";
       } else if (tabName === "marketplaces") {
-        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-white text-purple-700 shadow-xs border border-purple-200";
+        activeBtn.className = "payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-purple-500/20 text-purple-300 shadow-xs border border-purple-500/40";
         this.renderCheckoutMarketplaceLinks();
       }
     }
@@ -949,7 +948,7 @@ class MainApp {
 
     if (cart.length === 0) {
       container.innerHTML = `
-        <div class="p-3 bg-slate-50 rounded-xl text-center text-xs text-slate-500">
+        <div class="p-3 bg-surface-container-low border border-border-subtle rounded-xl text-center text-xs text-text-muted">
           В корзине пока нет товаров. Выберите товар в каталоге.
         </div>
       `;
@@ -963,22 +962,22 @@ class MainApp {
       const wbLink = p.marketplaceLinks?.wildberries || "https://www.wildberries.ru/seller/250158087";
 
       return `
-        <div class="bg-white border border-slate-200 rounded-xl p-2.5 flex items-center justify-between gap-3 shadow-2xs">
+        <div class="bg-surface-card border border-border-subtle rounded-xl p-2.5 flex items-center justify-between gap-3 shadow-2xs">
           <div class="flex items-center gap-2 min-w-0">
-            <img src="${p.images[0]}" alt="" class="w-10 h-10 object-contain rounded-lg border flex-shrink-0 bg-white">
+            <img src="${p.images[0]}" alt="" class="w-10 h-10 object-contain rounded-lg border border-border-subtle flex-shrink-0 bg-surface-container-lowest p-0.5">
             <div class="min-w-0">
-              <h6 class="text-xs font-bold text-slate-900 truncate">${p.name}</h6>
-              <span class="text-blue-600 font-bold text-xs">${(p.price * item.quantity).toLocaleString('ru-RU')} ${currency} (${item.quantity} шт.)</span>
+              <h6 class="text-xs font-bold text-text-primary truncate">${p.name}</h6>
+              <span class="text-primary font-bold text-xs">${(p.price * item.quantity).toLocaleString('ru-RU')} ${currency} (${item.quantity} шт.)</span>
             </div>
           </div>
           <div class="flex items-center gap-1.5 flex-shrink-0">
             <a href="${ozonLink}" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-[11px] px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-colors">
               <span>Ozon</span>
-              <i data-lucide="external-link" class="w-3 h-3"></i>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
             </a>
             <a href="${wbLink}" target="_blank" class="bg-purple-700 hover:bg-purple-800 text-white font-bold text-[11px] px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition-colors">
               <span>WB</span>
-              <i data-lucide="external-link" class="w-3 h-3"></i>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
             </a>
           </div>
         </div>
@@ -1081,30 +1080,30 @@ class MainApp {
     if (favs.length === 0) {
       container.innerHTML = `
         <div class="text-center py-12">
-          <div class="w-16 h-16 bg-slate-100 text-slate-300 rounded-full flex items-center justify-center mx-auto mb-3">
-            <i data-lucide="heart" class="w-8 h-8"></i>
+          <div class="w-16 h-16 bg-surface-container-low text-text-muted rounded-full flex items-center justify-center mx-auto mb-3 border border-border-subtle">
+            <span class="material-symbols-outlined text-[32px]">favorite</span>
           </div>
-          <h5 class="font-bold text-slate-800 mb-1">Список избранного пуст</h5>
-          <p class="text-xs text-slate-500">Нажимайте на сердечко у товаров, чтобы сохранить их.</p>
+          <h5 class="font-bold text-text-primary mb-1">Список избранного пуст</h5>
+          <p class="text-xs text-text-muted">Нажимайте на сердечко у товаров, чтобы сохранить их.</p>
         </div>
       `;
     } else {
       const items = PRODUCTS_DATA.filter(p => favs.includes(p.id));
       container.innerHTML = items.map(p => `
-        <div class="flex items-center justify-between p-3 border-b border-slate-100 last:border-0 hover:bg-slate-50 rounded-xl transition-colors">
+        <div class="flex items-center justify-between p-3 border-b border-border-subtle last:border-0 hover:bg-surface-container-low rounded-xl transition-colors">
           <div class="flex items-center gap-3">
-            <img src="${p.images[0]}" alt="${p.name}" class="w-12 h-12 object-cover rounded-lg border">
+            <img src="${p.images[0]}" alt="${p.name}" class="w-12 h-12 object-contain rounded-lg border border-border-subtle bg-surface-container-lowest p-1">
             <div>
-              <h6 class="font-semibold text-xs text-slate-900 cursor-pointer hover:text-blue-600" onclick="window.App.openProductModal('${p.id}')">${p.name}</h6>
-              <span class="text-blue-600 font-bold text-xs">${p.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
+              <h6 class="font-semibold text-xs text-text-primary cursor-pointer hover:text-primary" onclick="window.App.openProductModal('${p.id}')">${p.name}</h6>
+              <span class="text-primary font-bold text-xs">${p.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
             </div>
           </div>
           <div class="flex items-center gap-2">
-            <button onclick="window.Cart.addItem('${p.id}', 1)" class="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 text-xs font-medium">
-              <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+            <button onclick="window.Cart.addItem('${p.id}', 1)" class="bg-primary text-white p-2 rounded-lg hover:bg-blue-600 text-xs font-medium">
+              <span class="material-symbols-outlined text-[16px]">shopping_cart</span>
             </button>
-            <button onclick="window.Cart.toggleFavorite('${p.id}'); window.App.openFavoritesModal();" class="text-slate-400 hover:text-red-500 p-2">
-              <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+            <button onclick="window.Cart.toggleFavorite('${p.id}'); window.App.openFavoritesModal();" class="text-text-muted hover:text-rose-400 p-2">
+              <span class="material-symbols-outlined text-[16px]">delete</span>
             </button>
           </div>
         </div>
@@ -1126,11 +1125,11 @@ class MainApp {
     if (compIds.length === 0) {
       container.innerHTML = `
         <div class="text-center py-12">
-          <div class="w-16 h-16 bg-slate-100 text-slate-300 rounded-full flex items-center justify-center mx-auto mb-3">
-            <i data-lucide="bar-chart-2" class="w-8 h-8"></i>
+          <div class="w-16 h-16 bg-surface-container-low text-text-muted rounded-full flex items-center justify-center mx-auto mb-3 border border-border-subtle">
+            <span class="material-symbols-outlined text-[32px]">balance</span>
           </div>
-          <h5 class="font-bold text-slate-800 mb-1">Нет товаров для сравнения</h5>
-          <p class="text-xs text-slate-500">Добавляйте товары к сравнению с помощью кнопки с графиком на карточке.</p>
+          <h5 class="font-bold text-text-primary mb-1">Нет товаров для сравнения</h5>
+          <p class="text-xs text-text-muted">Добавляйте товары к сравнению с помощью кнопки с весами на карточке.</p>
         </div>
       `;
     } else {
@@ -1139,34 +1138,34 @@ class MainApp {
         <div class="overflow-x-auto">
           <table class="w-full text-xs text-left border-collapse">
             <thead>
-              <tr class="border-b border-slate-200">
-                <th class="p-3 bg-slate-50 font-bold text-slate-700 w-36">Параметр</th>
+              <tr class="border-b border-border-subtle">
+                <th class="p-3 bg-surface-container-low font-bold text-text-muted w-36 border-r border-border-subtle">Параметр</th>
                 ${items.map(p => `
-                  <th class="p-3 bg-white min-w-[180px] max-w-[220px]">
-                    <img src="${p.images[0]}" class="w-20 h-20 object-cover rounded-xl mx-auto mb-2 border">
-                    <h6 class="font-bold text-slate-900 leading-snug line-clamp-2">${p.name}</h6>
-                    <span class="text-blue-600 font-black text-sm block mt-1">${p.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
-                    <button onclick="window.Cart.addItem('${p.id}', 1)" class="w-full bg-blue-600 text-white font-medium py-1.5 rounded-lg mt-2 hover:bg-blue-700">В корзину</button>
+                  <th class="p-3 bg-surface-card min-w-[180px] max-w-[220px] border-r border-border-subtle last:border-0">
+                    <img src="${p.images[0]}" class="w-20 h-20 object-contain rounded-xl mx-auto mb-2 border border-border-subtle bg-surface-container-lowest p-1">
+                    <h6 class="font-bold text-text-primary leading-snug line-clamp-2">${p.name}</h6>
+                    <span class="text-primary font-black text-sm block mt-1">${p.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
+                    <button onclick="window.Cart.addItem('${p.id}', 1)" class="w-full bg-primary text-white font-medium py-1.5 rounded-lg mt-2 hover:bg-blue-600">В корзину</button>
                   </th>
                 `).join('')}
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-100">
+            <tbody class="divide-y divide-border-subtle">
               <tr>
-                <td class="p-3 bg-slate-50 font-semibold text-slate-600">Категория</td>
-                ${items.map(p => `<td class="p-3">${p.categoryName}</td>`).join('')}
+                <td class="p-3 bg-surface-container-low font-semibold text-text-muted border-r border-border-subtle">Категория</td>
+                ${items.map(p => `<td class="p-3 bg-surface-card text-text-primary border-r border-border-subtle last:border-0">${p.categoryName}</td>`).join('')}
               </tr>
               <tr>
-                <td class="p-3 bg-slate-50 font-semibold text-slate-600">Бренд</td>
-                ${items.map(p => `<td class="p-3">${p.brand || '—'}</td>`).join('')}
+                <td class="p-3 bg-surface-container-low font-semibold text-text-muted border-r border-border-subtle">Бренд</td>
+                ${items.map(p => `<td class="p-3 bg-surface-card text-text-primary border-r border-border-subtle last:border-0">${p.brand || '—'}</td>`).join('')}
               </tr>
               <tr>
-                <td class="p-3 bg-slate-50 font-semibold text-slate-600">Монтаж</td>
-                ${items.map(p => `<td class="p-3">${p.requiresInstallation ? `Доступен (+${p.installationPrice} ${config.CURRENCY_SYMBOL})` : 'Не требуется'}</td>`).join('')}
+                <td class="p-3 bg-surface-container-low font-semibold text-text-muted border-r border-border-subtle">Монтаж</td>
+                ${items.map(p => `<td class="p-3 bg-surface-card text-text-primary border-r border-border-subtle last:border-0">${p.requiresInstallation ? `Доступен (+${p.installationPrice} ${config.CURRENCY_SYMBOL})` : 'Не требуется'}</td>`).join('')}
               </tr>
               <tr>
-                <td class="p-3 bg-slate-50 font-semibold text-slate-600">Гарантия</td>
-                ${items.map(p => `<td class="p-3">${p.warranty}</td>`).join('')}
+                <td class="p-3 bg-surface-container-low font-semibold text-text-muted border-r border-border-subtle">Гарантия</td>
+                ${items.map(p => `<td class="p-3 bg-surface-card text-text-primary border-r border-border-subtle last:border-0">${p.warranty}</td>`).join('')}
               </tr>
             </tbody>
           </table>
@@ -1289,10 +1288,10 @@ class MainApp {
 
     if (filtered.length === 0) {
       container.innerHTML = `
-        <div class="col-span-full text-center py-12 bg-white rounded-3xl border border-slate-200">
-          <i data-lucide="search-x" class="w-12 h-12 text-slate-300 mx-auto mb-2"></i>
-          <h4 class="font-bold text-slate-800">По запросу «${query}» ничего не найдено</h4>
-          <p class="text-xs text-slate-500 mt-1">Попробуйте изменить формулировку или спросите нашего онлайн-помощника.</p>
+        <div class="col-span-full text-center py-12 bg-surface-card rounded-3xl border border-border-subtle">
+          <span class="material-symbols-outlined text-[48px] text-text-muted mx-auto mb-2 block">search_off</span>
+          <h4 class="font-bold text-text-primary">По запросу «${query}» ничего не найдено</h4>
+          <p class="text-xs text-text-muted mt-1">Попробуйте изменить формулировку или спросите нашего онлайн-помощника.</p>
         </div>
       `;
     } else {

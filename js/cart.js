@@ -250,20 +250,20 @@ class CartManager {
     if (this.cart.length === 0) {
       container.innerHTML = `
         <div class="text-center py-16 px-4">
-          <div class="w-20 h-20 bg-slate-100 text-slate-400 rounded-3xl flex items-center justify-center mx-auto mb-4">
-            <i data-lucide="shopping-cart" class="w-10 h-10"></i>
+          <div class="w-20 h-20 bg-surface-container-low text-text-muted rounded-3xl flex items-center justify-center mx-auto mb-4 border border-border-subtle">
+            <span class="material-symbols-outlined text-[36px]">shopping_cart</span>
           </div>
-          <h4 class="text-lg font-bold text-slate-800 mb-1">Ваша корзина пуста</h4>
-          <p class="text-slate-500 text-xs max-w-xs mx-auto mb-6">
+          <h4 class="text-lg font-bold text-text-primary mb-1">Ваша корзина пуста</h4>
+          <p class="text-text-muted text-xs max-w-xs mx-auto mb-6">
             В каталоге представлены оригинальные пульты ДУ для LG, Samsung, Sony, Philips, ARG, Отау ТВ, Телекарта и настенные полки.
           </p>
           <div class="flex flex-col gap-2 max-w-xs mx-auto">
-            <button onclick="window.App.closeCartDrawer(); window.App.openCatalogWithCategory('all');" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs py-3 px-4 rounded-xl transition-all shadow-sm">
+            <button onclick="window.App.closeCartDrawer(); window.App.openCatalogWithCategory('all');" class="w-full bg-primary hover:bg-blue-600 text-white font-bold text-xs py-3 px-4 rounded-xl transition-all shadow-sm">
               Перейти в каталог товаров
             </button>
-            <a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs py-2.5 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5">
+            <a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" class="w-full bg-surface-container-low hover:bg-surface-container text-text-primary border border-border-subtle font-semibold text-xs py-2.5 px-4 rounded-xl transition-all flex items-center justify-center gap-1.5">
               <span>Открыть наш Ozon Магазин</span>
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span class="material-symbols-outlined text-[14px]">open_in_new</span>
             </a>
           </div>
         </div>
@@ -282,18 +282,18 @@ class CartManager {
       const wbUrl = p.marketplaceLinks?.wildberries || "https://www.wildberries.ru/seller/250158087";
 
       return `
-        <div class="bg-white border border-slate-200/90 rounded-2xl p-3.5 shadow-2xs hover:border-slate-300 transition-all flex flex-col gap-3">
+        <div class="bg-surface-card border border-border-subtle rounded-2xl p-3.5 shadow-xl hover:border-primary/40 transition-all flex flex-col gap-3">
           <div class="flex gap-3 items-start">
             <img 
               src="${p.images[0]}" 
               alt="${p.name}" 
-              class="w-16 h-16 min-w-[4rem] min-h-[4rem] max-w-[4rem] max-h-[4rem] object-contain rounded-xl border border-slate-100 bg-white p-1 flex-shrink-0 cursor-pointer"
+              class="w-16 h-16 min-w-[4rem] min-h-[4rem] max-w-[4rem] max-h-[4rem] object-contain rounded-xl border border-border-subtle bg-surface-container-lowest p-1 flex-shrink-0 cursor-pointer"
               onclick="window.App.openProductModal('${p.id}')"
             >
             <div class="flex-1 min-w-0">
               <div class="flex items-start justify-between gap-1">
                 <h5 
-                  class="text-xs font-bold text-slate-900 line-clamp-2 leading-snug hover:text-blue-600 cursor-pointer" 
+                  class="text-xs font-bold text-text-primary line-clamp-2 leading-snug hover:text-primary cursor-pointer" 
                   onclick="window.App.openProductModal('${p.id}')"
                 >
                   ${p.name}
@@ -302,9 +302,9 @@ class CartManager {
                   type="button"
                   onclick="event.stopPropagation(); window.Cart.removeItem('${p.id}')" 
                   title="Удалить товар" 
-                  class="text-slate-400 hover:text-rose-600 hover:bg-rose-50 p-1.5 rounded-lg transition-colors flex-shrink-0"
+                  class="text-text-muted hover:text-rose-400 hover:bg-rose-500/10 p-1.5 rounded-lg transition-colors flex-shrink-0"
                 >
-                  <i data-lucide="trash-2" class="w-4 h-4 text-rose-500"></i>
+                  <span class="material-symbols-outlined text-[18px] text-rose-400">delete</span>
                 </button>
               </div>
 
@@ -314,37 +314,37 @@ class CartManager {
                   href="${ozonUrl}" 
                   target="_blank" 
                   onclick="event.stopPropagation()" 
-                  class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 bg-blue-50 hover:bg-blue-100 px-2 py-0.5 rounded-md border border-blue-200 transition-colors"
+                  class="inline-flex items-center gap-1 text-[10px] font-bold text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 px-2 py-0.5 rounded-md border border-blue-500/30 transition-colors"
                 >
                   <span>Купить на Ozon</span>
-                  <i data-lucide="external-link" class="w-2.5 h-2.5"></i>
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
                 </a>
                 <a 
                   href="${wbUrl}" 
                   target="_blank" 
                   onclick="event.stopPropagation()" 
-                  class="inline-flex items-center gap-1 text-[10px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 px-2 py-0.5 rounded-md border border-purple-200 transition-colors"
+                  class="inline-flex items-center gap-1 text-[10px] font-bold text-purple-300 bg-purple-500/10 hover:bg-purple-500/20 px-2 py-0.5 rounded-md border border-purple-500/30 transition-colors"
                 >
                   <span>WB</span>
-                  <i data-lucide="external-link" class="w-2.5 h-2.5"></i>
+                  <span class="material-symbols-outlined text-[12px]">open_in_new</span>
                 </a>
               </div>
 
-              <div class="flex items-center justify-between mt-2.5 pt-2 border-t border-slate-100">
+              <div class="flex items-center justify-between mt-2.5 pt-2 border-t border-border-subtle">
                 <!-- Управление количеством -->
-                <div class="flex items-center border border-slate-200 rounded-lg overflow-hidden bg-slate-50">
+                <div class="flex items-center border border-border-subtle rounded-lg overflow-hidden bg-surface-container-low">
                   <button 
                     type="button"
                     onclick="event.stopPropagation(); window.Cart.updateQuantity('${p.id}', ${item.quantity - 1})" 
-                    class="px-2.5 py-1 text-slate-700 hover:bg-slate-200 text-xs font-bold transition-colors"
+                    class="px-2.5 py-1 text-text-primary hover:bg-surface-container text-xs font-bold transition-colors"
                   >
                     –
                   </button>
-                  <span class="px-2.5 py-0.5 text-xs font-bold text-slate-900 bg-white min-w-[24px] text-center">${item.quantity}</span>
+                  <span class="px-2.5 py-0.5 text-xs font-bold text-text-primary bg-surface-card min-w-[24px] text-center">${item.quantity}</span>
                   <button 
                     type="button"
                     onclick="event.stopPropagation(); window.Cart.updateQuantity('${p.id}', ${item.quantity + 1})" 
-                    class="px-2.5 py-1 text-slate-700 hover:bg-slate-200 text-xs font-bold transition-colors"
+                    class="px-2.5 py-1 text-text-primary hover:bg-surface-container text-xs font-bold transition-colors"
                   >
                     +
                   </button>
@@ -352,8 +352,8 @@ class CartManager {
 
                 <!-- Цена -->
                 <div class="text-right">
-                  <span class="font-extrabold text-xs sm:text-sm text-slate-900">${itemSubtotal.toLocaleString('ru-RU')} ${currency}</span>
-                  ${item.quantity > 1 ? `<span class="block text-[10px] text-slate-400 font-medium">${p.price.toLocaleString('ru-RU')} ${currency}/шт</span>` : ''}
+                  <span class="font-extrabold text-xs sm:text-sm text-text-primary">${itemSubtotal.toLocaleString('ru-RU')} ${currency}</span>
+                  ${item.quantity > 1 ? `<span class="block text-[10px] text-text-muted font-medium">${p.price.toLocaleString('ru-RU')} ${currency}/шт</span>` : ''}
                 </div>
               </div>
             </div>
@@ -361,17 +361,17 @@ class CartManager {
 
           <!-- Опция монтажа/настройки -->
           ${p.requiresInstallation ? `
-            <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
-              <label class="flex items-center gap-2 cursor-pointer select-none text-xs text-slate-700">
+            <div class="pt-2 border-t border-border-subtle flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer select-none text-xs text-text-muted">
                 <input 
                   type="checkbox" 
                   ${item.withInstallation ? 'checked' : ''} 
                   onchange="window.Cart.toggleInstallation('${p.id}')"
-                  class="rounded border-slate-300 text-blue-600 focus:ring-blue-500 w-4 h-4 cursor-pointer"
+                  class="rounded border-border-subtle text-primary bg-surface-container-low focus:ring-primary w-4 h-4 cursor-pointer"
                 >
-                <span>Монтаж мастером</span>
+                <span class="text-text-primary">Монтаж мастером</span>
               </label>
-              <span class="text-xs font-medium ${item.withInstallation ? 'text-blue-600 font-bold' : 'text-slate-400'}">
+              <span class="text-xs font-medium ${item.withInstallation ? 'text-primary font-bold' : 'text-text-muted'}">
                 +${instPrice.toLocaleString('ru-RU')} ${currency}
               </span>
             </div>
@@ -382,27 +382,27 @@ class CartManager {
 
     if (summaryContainer) {
       summaryContainer.innerHTML = `
-        <div class="p-4 bg-white border-t border-slate-200 shadow-lg space-y-3">
+        <div class="p-4 bg-surface-card border-t border-border-subtle shadow-lg space-y-3">
           <div class="space-y-1.5 text-xs">
-            <div class="flex justify-between text-slate-600">
+            <div class="flex justify-between text-text-muted">
               <span>Товары (${itemsCount} шт.):</span>
-              <span class="font-bold text-slate-900">${itemsTotal.toLocaleString('ru-RU')} ${currency}</span>
+              <span class="font-bold text-text-primary">${itemsTotal.toLocaleString('ru-RU')} ${currency}</span>
             </div>
             ${installationTotal > 0 ? `
-              <div class="flex justify-between text-blue-700 font-medium">
+              <div class="flex justify-between text-primary font-medium">
                 <span>Монтаж и настройка:</span>
                 <span>+${installationTotal.toLocaleString('ru-RU')} ${currency}</span>
               </div>
             ` : ''}
-            <div class="flex justify-between text-slate-600">
+            <div class="flex justify-between text-text-muted">
               <span>Самовывоз (ТД «Арман»):</span>
-              <span class="text-emerald-600 font-bold">Бесплатно</span>
+              <span class="text-whatsapp-green font-bold">Бесплатно</span>
             </div>
           </div>
 
-          <div class="pt-2 border-t border-slate-200 flex justify-between items-baseline">
-            <span class="font-extrabold text-sm text-slate-900">ИТОГО К ОПЛАТЕ:</span>
-            <span class="font-black text-xl text-blue-600">${grandTotal.toLocaleString('ru-RU')} ${currency}</span>
+          <div class="pt-2 border-t border-border-subtle flex justify-between items-baseline">
+            <span class="font-extrabold text-sm text-text-primary">ИТОГО К ОПЛАТЕ:</span>
+            <span class="font-black text-xl text-primary">${grandTotal.toLocaleString('ru-RU')} ${currency}</span>
           </div>
 
           <!-- Кнопка перехода к способам оплаты -->
@@ -410,9 +410,9 @@ class CartManager {
             <button 
               type="button"
               onclick="window.App.openCheckoutModal()" 
-              class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 shadow-md hover:shadow-xl transition-all transform active:scale-98 text-sm"
+              class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 shadow-md hover:shadow-xl transition-all transform active:scale-98 text-sm"
             >
-              <i data-lucide="credit-card" class="w-5 h-5"></i>
+              <span class="material-symbols-outlined text-[18px]">credit_card</span>
               <span>Выбрать способ оплаты и оформить</span>
             </button>
 
@@ -420,22 +420,22 @@ class CartManager {
             <button 
               type="button"
               onclick="window.Cart.quickWhatsAppOrder()" 
-              class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-xs"
+              class="w-full bg-whatsapp-green hover:bg-emerald-600 text-slate-950 font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-all shadow-xs"
             >
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span class="material-symbols-outlined text-[16px]">chat</span>
               <span>Быстрый заказ через WhatsApp</span>
             </button>
           </div>
 
           <!-- Прямой переход на Ozon Магазин -->
-          <div class="pt-2 text-center border-t border-slate-100">
+          <div class="pt-2 text-center border-t border-border-subtle">
             <a 
               href="https://ozon.kz/seller/ip-mihaylenko/" 
               target="_blank" 
-              class="text-[11px] text-slate-500 hover:text-blue-600 font-medium inline-flex items-center gap-1"
+              class="text-[11px] text-text-muted hover:text-primary font-medium inline-flex items-center gap-1"
             >
               <span>Или закажите напрямую в приложении Ozon</span>
-              <i data-lucide="external-link" class="w-3 h-3"></i>
+              <span class="material-symbols-outlined text-[12px]">open_in_new</span>
             </a>
           </div>
         </div>
@@ -569,55 +569,55 @@ class CartManager {
 
     if (container) {
       container.innerHTML = `
-        <div class="text-center py-2">
-          <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 animate-bounce">
-            <i data-lucide="check-circle" class="w-10 h-10"></i>
+        <div class="text-center py-2 text-text-primary">
+          <div class="w-16 h-16 bg-whatsapp-green/20 text-whatsapp-green rounded-full flex items-center justify-center mx-auto mb-3 animate-bounce border border-whatsapp-green/30">
+            <span class="material-symbols-outlined text-[36px]">check_circle</span>
           </div>
 
-          <span class="text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full border border-emerald-300">
+          <span class="text-xs font-bold uppercase tracking-wider bg-whatsapp-green/10 text-whatsapp-green px-3 py-1 rounded-full border border-whatsapp-green/30">
             ✓ Оплата успешно принята
           </span>
 
-          <h3 class="text-xl font-black text-slate-900 mt-2 mb-1">Электронный чек заказа</h3>
-          <p class="text-xs text-slate-500 mb-4">Номер заказа: <strong class="text-blue-600 font-mono text-sm font-bold">#${order.orderId}</strong></p>
+          <h3 class="text-xl font-black text-text-primary mt-3 mb-1">Электронный чек заказа</h3>
+          <p class="text-xs text-text-muted mb-4">Номер заказа: <strong class="text-primary font-mono text-sm font-bold">#${order.orderId}</strong></p>
 
           <!-- Бланк чека -->
-          <div class="bg-slate-50 border border-slate-300 rounded-2xl p-4 text-left mb-4 text-xs font-mono text-slate-800 space-y-2 shadow-inner">
-            <div class="text-center font-bold pb-2 border-b border-dashed border-slate-300">
+          <div class="bg-surface-container-lowest border border-border-subtle rounded-2xl p-4 text-left mb-4 text-xs font-mono text-text-primary space-y-2 shadow-inner">
+            <div class="text-center font-bold pb-2 border-b border-dashed border-border-subtle text-text-primary">
               МАГАЗИН ELECTROSAT<br>
-              <span class="text-[10px] font-normal text-slate-500">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман»</span>
+              <span class="text-[10px] font-normal text-text-muted">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман»</span>
             </div>
 
-            <div class="flex justify-between pt-1">
+            <div class="flex justify-between pt-1 text-text-muted">
               <span>Транзакция:</span>
-              <span class="font-bold">${order.transactionId || 'TXN-OK-2026'}</span>
+              <span class="font-bold text-text-primary">${order.transactionId || 'TXN-OK-2026'}</span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between text-text-muted">
               <span>Дата и время:</span>
-              <span>${dateStr}</span>
+              <span class="text-text-primary">${dateStr}</span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between text-text-muted">
               <span>Карта:</span>
-              <span>•••• ${order.cardLast4 || '4400'} (Visa/Mastercard)</span>
+              <span class="text-text-primary">•••• ${order.cardLast4 || '4400'} (Visa/Mastercard)</span>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between text-text-muted">
               <span>Покупатель:</span>
-              <span>${order.customerData?.name || 'Клиент'}</span>
+              <span class="text-text-primary">${order.customerData?.name || 'Клиент'}</span>
             </div>
 
-            <div class="pt-2 border-t border-dashed border-slate-300 flex justify-between font-black text-sm text-slate-900">
+            <div class="pt-2 border-t border-dashed border-border-subtle flex justify-between font-black text-sm text-text-primary">
               <span>ИТОГО ОПЛАЧЕНО:</span>
-              <span class="text-emerald-700">${order.grandTotal.toLocaleString('ru-RU')} ${order.currency}</span>
+              <span class="text-whatsapp-green">${order.grandTotal.toLocaleString('ru-RU')} ${order.currency}</span>
             </div>
-            <div class="text-[10px] text-center text-slate-400 pt-1">
+            <div class="text-[10px] text-center text-text-muted pt-1">
               Чек сформирован автоматически. Товар забронирован.
             </div>
           </div>
 
-          <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-4 text-left flex items-start gap-2.5">
-            <i data-lucide="clock" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
-            <div class="text-xs text-blue-900 leading-snug">
-              Менеджер магазина свяжется с вами по телефону <strong>${order.customerData?.phone || '+7 (705) 220-25-75'}</strong> для согласования получения.
+          <div class="bg-primary/10 border border-primary/20 rounded-xl p-3 mb-4 text-left flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0 mt-0.5">schedule</span>
+            <div class="text-xs text-text-primary leading-snug">
+              Менеджер магазина свяжется с вами по телефону <strong class="text-primary">${order.customerData?.phone || '+7 (705) 220-25-75'}</strong> для согласования получения.
             </div>
           </div>
 
@@ -625,15 +625,15 @@ class CartManager {
             <a 
               href="https://wa.me/${config.WHATSAPP_NUMBER || '77052202575'}?text=${encodeURIComponent(`Здравствуйте! Я оплатил заказ #${order.orderId} на сумму ${order.grandTotal} ${order.currency}. Чек: ${order.transactionId}`)}" 
               target="_blank" 
-              class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 text-xs"
+              class="w-full bg-whatsapp-green hover:bg-emerald-600 text-slate-950 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 text-xs"
             >
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span class="material-symbols-outlined text-[18px]">chat</span>
               <span>Отправить чек в WhatsApp магазина</span>
             </a>
 
             <button 
               onclick="document.getElementById('thankyou-modal').classList.add('hidden')" 
-              class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold py-2.5 rounded-xl transition-colors"
+              class="w-full bg-surface-container-low hover:bg-surface-container text-text-primary border border-border-subtle text-xs font-semibold py-2.5 rounded-xl transition-colors"
             >
               Вернуться на главную страницу
             </button>
@@ -660,38 +660,38 @@ class CartManager {
     const container = document.getElementById("thankyou-modal-content");
     if (container) {
       container.innerHTML = `
-        <div class="text-center py-2">
-          <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 animate-bounce">
-            <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+        <div class="text-center py-2 text-text-primary">
+          <div class="w-16 h-16 bg-whatsapp-green/20 text-whatsapp-green rounded-full flex items-center justify-center mx-auto mb-3 animate-bounce border border-whatsapp-green/30">
+            <span class="material-symbols-outlined text-[36px]">check_circle</span>
           </div>
-          <span class="text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200">
+          <span class="text-xs font-bold uppercase tracking-wider bg-whatsapp-green/10 text-whatsapp-green px-3 py-1 rounded-full border border-whatsapp-green/30">
             Заказ успешно сформирован
           </span>
-          <h3 class="text-xl font-black text-slate-900 mt-2 mb-1">Спасибо за заказ в ElectroSat!</h3>
-          <p class="text-slate-500 text-xs mb-4">Номер вашей заявки: <strong class="text-blue-600 font-mono text-sm font-bold">#${order.orderId}</strong></p>
+          <h3 class="text-xl font-black text-text-primary mt-3 mb-1">Спасибо за заказ в ElectroSat!</h3>
+          <p class="text-text-muted text-xs mb-4">Номер вашей заявки: <strong class="text-primary font-mono text-sm font-bold">#${order.orderId}</strong></p>
 
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3.5 text-left mb-4 max-h-48 overflow-y-auto text-[11px] font-mono text-slate-700 leading-relaxed whitespace-pre-wrap select-all">
+          <div class="bg-surface-container-lowest border border-border-subtle rounded-2xl p-3.5 text-left mb-4 max-h-48 overflow-y-auto text-[11px] font-mono text-text-muted leading-relaxed whitespace-pre-wrap select-all">
 ${order.text}
           </div>
 
-          <div class="bg-blue-50 border border-blue-100 rounded-xl p-3 mb-4 text-left flex items-start gap-2.5">
-            <i data-lucide="map-pin" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i>
-            <div class="text-xs text-blue-900 leading-snug">
-              <strong class="font-bold block mb-0.5">Самовывоз: г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман»</strong>
+          <div class="bg-primary/10 border border-primary/20 rounded-xl p-3 mb-4 text-left flex items-start gap-2.5">
+            <span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0 mt-0.5">location_on</span>
+            <div class="text-xs text-text-primary leading-snug">
+              <strong class="font-bold block mb-0.5 text-text-primary">Самовывоз: г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман»</strong>
               Режим работы: Пн–Сб 11:00–19:00, Вс 11:00–17:00.
             </div>
           </div>
 
           <div class="space-y-2">
-            <a href="https://wa.me/${config.WHATSAPP_NUMBER || '77052202575'}?text=${encodeURIComponent(order.text)}" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 text-xs">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <a href="https://wa.me/${config.WHATSAPP_NUMBER || '77052202575'}?text=${encodeURIComponent(order.text)}" target="_blank" class="w-full bg-whatsapp-green hover:bg-emerald-600 text-slate-950 font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-98 text-xs">
+              <span class="material-symbols-outlined text-[18px]">chat</span>
               <span>Открыть и подтвердить в WhatsApp</span>
             </a>
-            <button onclick="window.Cart.copyOrderText()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-colors">
-              <i data-lucide="copy" class="w-4 h-4"></i>
+            <button onclick="window.Cart.copyOrderText()" class="w-full bg-surface-container-low hover:bg-surface-container text-text-primary border border-border-subtle font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-colors">
+              <span class="material-symbols-outlined text-[16px]">content_copy</span>
               <span>Скопировать текст заказа</span>
             </button>
-            <button onclick="document.getElementById('thankyou-modal').classList.add('hidden')" class="w-full text-slate-500 hover:text-slate-700 text-xs py-1.5">
+            <button onclick="document.getElementById('thankyou-modal').classList.add('hidden')" class="w-full text-text-muted hover:text-text-primary text-xs py-1.5">
               Закрыть окно
             </button>
           </div>

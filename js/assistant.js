@@ -473,56 +473,56 @@ ${productCatalogText}
           ${this.isBubbleVisible ? `
             <div 
               onclick="window.Assistant.openChat()" 
-              class="assistant-speech-bubble bg-white/95 backdrop-blur-md text-slate-800 p-3.5 rounded-2xl shadow-2xl border border-slate-200/90 max-w-[270px] sm:max-w-[290px] mb-1 text-xs relative cursor-pointer group hover:border-blue-400 hover:shadow-blue-500/10 transition-all"
+              class="assistant-speech-bubble bg-surface-card/95 backdrop-blur-md text-text-primary p-3.5 rounded-2xl shadow-2xl border border-border-strong max-w-[270px] sm:max-w-[290px] mb-1 text-xs relative cursor-pointer group hover:border-primary/60 transition-all"
             >
               <div class="flex items-start justify-between gap-2 mb-1.5">
                 <div class="flex items-center gap-1.5">
                   <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-whatsapp-green opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-whatsapp-green"></span>
                   </span>
-                  <span class="font-black text-[10px] text-blue-600 uppercase tracking-wider">ElectroSat AI</span>
+                  <span class="font-black text-[10px] text-primary uppercase tracking-wider">ElectroSat AI</span>
                 </div>
                 <button 
                   onclick="event.stopPropagation(); window.Assistant.dismissBubble()" 
                   title="Скрыть" 
-                  class="text-slate-400 hover:text-slate-700 p-0.5 rounded-md hover:bg-slate-100 transition-colors"
+                  class="text-text-muted hover:text-text-primary p-0.5 rounded-md hover:bg-surface-container transition-colors"
                 >
-                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                  <span class="material-symbols-outlined text-[16px]">close</span>
                 </button>
               </div>
-              <p class="font-semibold leading-snug mb-2.5 text-slate-800">
+              <p class="font-semibold leading-snug mb-2.5 text-text-primary">
                 👋 Здравствуйте! Помочь подобрать пульт для телевизора или спутниковое ТВ?
               </p>
-              <div class="flex flex-wrap gap-1.5 pt-1.5 border-t border-slate-100">
+              <div class="flex flex-wrap gap-1.5 pt-1.5 border-t border-border-subtle">
                 <button 
                   onclick="event.stopPropagation(); window.Assistant.openChatWithQuery('Подобрать пульт для телевизора')" 
-                  class="text-[10px] font-bold bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 px-2.5 py-1 rounded-lg transition-colors"
+                  class="text-[10px] font-bold bg-primary/10 text-primary hover:bg-primary/20 px-2.5 py-1 rounded-lg border border-primary/20 transition-colors"
                 >
                   📺 Подобрать пульт
                 </button>
                 <button 
                   onclick="event.stopPropagation(); window.Assistant.openChatWithQuery('Комплекты спутникового ТВ Телекарта и Отау')" 
-                  class="text-[10px] font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 px-2.5 py-1 rounded-lg transition-colors"
+                  class="text-[10px] font-bold bg-surface-container-low text-text-primary hover:bg-surface-container px-2.5 py-1 rounded-lg border border-border-subtle transition-colors"
                 >
                   📡 Отау ТВ
                 </button>
               </div>
               <!-- Указатель-стрелка -->
-              <div class="absolute -bottom-1.5 right-6 w-3 h-3 bg-white border-r border-b border-slate-200/90 transform rotate-45"></div>
+              <div class="absolute -bottom-1.5 right-6 w-3 h-3 bg-surface-card border-r border-b border-border-strong transform rotate-45"></div>
             </div>
           ` : ''}
 
           <!-- Плавающая круглая кнопка помощника с пульсацией -->
           <button 
             id="assistant-toggle-btn" 
-            class="assistant-trigger-btn assistant-glow-btn flex items-center justify-center w-14 h-14 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-700 hover:to-indigo-800 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-white/80 group relative cursor-pointer" 
+            class="assistant-trigger-btn assistant-glow-btn flex items-center justify-center w-14 h-14 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-700 hover:to-indigo-800 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-primary/50 group relative cursor-pointer" 
             title="Онлайн-помощник ElectroSat"
           >
-            <i data-lucide="bot" class="w-6 h-6 text-white group-hover:scale-110 transition-transform"></i>
+            <span class="material-symbols-outlined text-[28px] text-white group-hover:scale-110 transition-transform">smart_toy</span>
             <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white"></span>
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-whatsapp-green opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-whatsapp-green border-2 border-surface"></span>
             </span>
           </button>
         </div>
@@ -541,56 +541,56 @@ ${productCatalogText}
     const hasGrok = !!this.getApiKey();
 
     container.innerHTML = `
-      <div class="assistant-window w-[92vw] sm:w-[380px] md:w-[410px] h-[520px] sm:h-[560px] bg-white rounded-3xl shadow-2xl flex flex-col border border-slate-200/80 overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-300 z-50 fixed bottom-4 right-4 sm:bottom-6 sm:right-6">
+      <div class="assistant-window w-[92vw] sm:w-[380px] md:w-[410px] h-[520px] sm:h-[560px] bg-surface-card rounded-3xl shadow-2xl flex flex-col border border-border-strong overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-300 z-50 fixed bottom-4 right-4 sm:bottom-6 sm:right-6">
         <!-- Шапка чата -->
-        <div class="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white p-3.5 sm:p-4 flex items-center justify-between border-b border-blue-900/40">
+        <div class="bg-surface-container-lowest text-text-primary p-3.5 sm:p-4 flex items-center justify-between border-b border-border-subtle">
           <div class="flex items-center gap-3">
             <div class="relative">
-              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-blue-600 flex items-center justify-center shadow-inner text-white font-bold border border-blue-400/30">
-                <i data-lucide="bot" class="w-5 h-5"></i>
+              <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-primary flex items-center justify-center shadow-inner text-white font-bold border border-primary/40">
+                <span class="material-symbols-outlined text-[20px]">smart_toy</span>
               </div>
-              <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+              <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-whatsapp-green border-2 border-surface-container-lowest rounded-full"></span>
             </div>
             <div>
               <div class="flex items-center gap-2">
-                <h4 class="font-bold text-xs sm:text-sm tracking-tight">ElectroSat AI</h4>
-                <span class="text-[10px] ${hasGrok ? 'bg-emerald-500/30 text-emerald-200 border-emerald-400/30' : 'bg-blue-500/30 text-blue-200 border-blue-400/20'} px-1.5 py-0.2 rounded font-medium border">
+                <h4 class="font-bold text-xs sm:text-sm tracking-tight text-text-primary">ElectroSat AI</h4>
+                <span class="text-[10px] ${hasGrok ? 'bg-whatsapp-green/20 text-whatsapp-green border-whatsapp-green/40' : 'bg-primary/20 text-primary border-primary/30'} px-1.5 py-0.2 rounded font-medium border">
                   ${hasGrok ? 'Grok AI' : 'Консультант'}
                 </span>
               </div>
-              <p class="text-[11px] text-slate-300">г. Сатпаев • ТД «Арман»</p>
+              <p class="text-[11px] text-text-muted">г. Сатпаев • ТД «Арман»</p>
             </div>
           </div>
           <div class="flex items-center gap-1">
-            <button id="assistant-restart-btn" title="Начать сначала" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors">
-              <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+            <button id="assistant-restart-btn" title="Начать сначала" class="p-1.5 text-text-muted hover:text-text-primary rounded-lg hover:bg-surface-container transition-colors">
+              <span class="material-symbols-outlined text-[18px]">refresh</span>
             </button>
-            <button id="assistant-close-btn" title="Закрыть" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-white/10 transition-colors">
-              <i data-lucide="x" class="w-5 h-5"></i>
+            <button id="assistant-close-btn" title="Закрыть" class="p-1.5 text-text-muted hover:text-text-primary rounded-lg hover:bg-surface-container transition-colors">
+              <span class="material-symbols-outlined text-[18px]">close</span>
             </button>
           </div>
         </div>
 
         <!-- Тело сообщений -->
-        <div id="assistant-messages-body" class="flex-1 overflow-y-auto p-3.5 space-y-3 bg-slate-50 text-xs sm:text-sm">
+        <div id="assistant-messages-body" class="flex-1 overflow-y-auto p-3.5 space-y-3 bg-surface-container-lowest text-xs sm:text-sm">
           ${this.messages.map((m) => `
             <div class="flex flex-col ${m.sender === 'user' ? 'items-end' : 'items-start'} gap-1">
-              <div class="max-w-[88%] ${m.sender === 'user' ? 'bg-blue-600 text-white rounded-2xl rounded-tr-none px-3.5 py-2 shadow-xs' : 'bg-white text-slate-800 border border-slate-200/90 rounded-2xl rounded-tl-none p-3 shadow-xs'}">
+              <div class="max-w-[88%] ${m.sender === 'user' ? 'bg-primary text-white rounded-2xl rounded-tr-none px-3.5 py-2 shadow-xs' : 'bg-surface-card text-text-primary border border-border-subtle rounded-2xl rounded-tl-none p-3 shadow-xs'}">
                 <div class="leading-relaxed whitespace-pre-wrap">${this.formatMarkdown(m.text)}</div>
                 
                 ${m.products && m.products.length > 0 ? `
                   <div class="mt-2.5 space-y-2">
                     ${m.products.map(prod => `
-                      <div class="bg-slate-50 border border-slate-200 rounded-xl p-2 flex gap-2.5 items-center hover:border-blue-300 transition-colors">
-                        <img src="${prod.images[0]}" alt="${prod.name}" class="w-12 h-12 object-contain rounded-lg bg-white border border-slate-200 flex-shrink-0 p-0.5">
+                      <div class="bg-surface-container-low border border-border-subtle rounded-xl p-2 flex gap-2.5 items-center hover:border-primary/40 transition-colors">
+                        <img src="${prod.images[0]}" alt="${prod.name}" class="w-12 h-12 object-contain rounded-lg bg-surface-container-lowest border border-border-subtle flex-shrink-0 p-0.5">
                         <div class="flex-1 min-w-0">
-                          <p class="font-semibold text-xs text-slate-900 truncate leading-snug">${prod.name}</p>
-                          <span class="text-blue-600 font-bold text-xs block">${prod.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
+                          <p class="font-semibold text-xs text-text-primary truncate leading-snug">${prod.name}</p>
+                          <span class="text-primary font-bold text-xs block">${prod.price.toLocaleString('ru-RU')} ${config.CURRENCY_SYMBOL || '₸'}</span>
                           <div class="flex gap-1.5 mt-1.5">
-                            <button onclick="window.App.openProductModal('${prod.id}')" class="text-[10px] bg-blue-50 text-blue-600 hover:bg-blue-100 font-bold px-2 py-0.5 rounded transition-colors">
+                            <button onclick="window.App.openProductModal('${prod.id}')" class="text-[10px] bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 font-bold px-2 py-0.5 rounded transition-colors">
                               Инфо
                             </button>
-                            <button onclick="window.Cart.addItem('${prod.id}', 1); window.Assistant.closeChat();" class="text-[10px] bg-blue-600 text-white hover:bg-blue-700 font-bold px-2 py-0.5 rounded transition-colors">
+                            <button onclick="window.Cart.addItem('${prod.id}', 1); window.Assistant.closeChat();" class="text-[10px] bg-primary text-white hover:bg-blue-600 font-bold px-2 py-0.5 rounded transition-colors">
                               В корзину
                             </button>
                           </div>
@@ -600,18 +600,18 @@ ${productCatalogText}
                   </div>
                 ` : ''}
 
-                <span class="block text-[9px] ${m.sender === 'user' ? 'text-blue-100 text-right' : 'text-slate-400'} mt-1">${m.time}</span>
+                <span class="block text-[9px] ${m.sender === 'user' ? 'text-blue-200 text-right' : 'text-text-muted'} mt-1">${m.time}</span>
               </div>
 
               ${m.options && m.options.length > 0 ? `
                 <div class="flex flex-wrap gap-1 mt-1 max-w-[95%]">
                   ${m.options.map(opt => `
                     ${opt.url ? `
-                      <a href="${opt.url}" target="_blank" class="inline-flex items-center gap-1 text-[11px] bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-300 px-2.5 py-1 rounded-xl font-semibold transition-all">
+                      <a href="${opt.url}" target="_blank" class="inline-flex items-center gap-1 text-[11px] bg-whatsapp-green/10 text-whatsapp-green hover:bg-whatsapp-green/20 border border-whatsapp-green/30 px-2.5 py-1 rounded-xl font-semibold transition-all">
                         ${opt.label}
                       </a>
                     ` : `
-                      <button data-action="${opt.action}" data-payload="${opt.payload || ''}" class="assistant-opt-btn inline-flex items-center gap-1 text-[11px] bg-white text-slate-700 hover:text-blue-700 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 px-2.5 py-1 rounded-xl font-medium transition-all shadow-2xs">
+                      <button data-action="${opt.action}" data-payload="${opt.payload || ''}" class="assistant-opt-btn inline-flex items-center gap-1 text-[11px] bg-surface-container-low text-text-primary hover:text-primary hover:bg-surface-container border border-border-subtle hover:border-primary/40 px-2.5 py-1 rounded-xl font-medium transition-all shadow-2xs">
                         ${opt.label}
                       </button>
                     `}
@@ -622,9 +622,9 @@ ${productCatalogText}
           `).join('')}
 
           ${this.isTyping ? `
-            <div class="flex items-center gap-2 text-slate-400 text-xs py-1">
-              <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center animate-pulse">
-                <i data-lucide="bot" class="w-3.5 h-3.5"></i>
+            <div class="flex items-center gap-2 text-text-muted text-xs py-1">
+              <div class="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center animate-pulse">
+                <span class="material-symbols-outlined text-[14px]">smart_toy</span>
               </div>
               <span>ElectroSat AI печатает ответ...</span>
             </div>
@@ -632,23 +632,23 @@ ${productCatalogText}
         </div>
 
         <!-- Нижний блок ввода -->
-        <div class="p-2.5 sm:p-3 bg-white border-t border-slate-200">
+        <div class="p-2.5 sm:p-3 bg-surface-card border-t border-border-subtle">
           <form id="assistant-input-form" class="flex items-center gap-2">
             <input 
               id="assistant-text-input" 
               type="text" 
               placeholder="Спросите о пультах, ТВ или монтаже..." 
-              class="flex-1 bg-slate-100 focus:bg-white text-slate-800 text-xs px-3.5 py-2.5 rounded-xl border border-transparent focus:border-blue-500 focus:outline-none transition-all placeholder:text-slate-400"
+              class="flex-1 bg-surface-container-low focus:bg-surface text-text-primary text-xs px-3.5 py-2.5 rounded-xl border border-border-subtle focus:border-primary focus:outline-none transition-all placeholder:text-text-muted"
               autocomplete="off"
             />
-            <button type="submit" class="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white p-2.5 rounded-xl transition-all shadow-sm">
-              <i data-lucide="send" class="w-4 h-4"></i>
+            <button type="submit" class="bg-primary hover:bg-blue-600 active:scale-95 text-white p-2.5 rounded-xl transition-all shadow-sm flex items-center justify-center">
+              <span class="material-symbols-outlined text-[18px]">send</span>
             </button>
           </form>
-          <div class="flex items-center justify-between mt-1.5 px-1 text-[10px] text-slate-400">
-            <span>Магазин: <strong>ТД «Арман»</strong></span>
-            <a href="https://wa.me/${config.WHATSAPP_NUMBER || '77052202575'}" target="_blank" class="text-emerald-600 hover:underline font-bold flex items-center gap-0.5">
-              <i data-lucide="message-circle" class="w-3 h-3"></i> WhatsApp
+          <div class="flex items-center justify-between mt-1.5 px-1 text-[10px] text-text-muted">
+            <span>Магазин: <strong class="text-text-primary">ТД «Арман»</strong></span>
+            <a href="https://wa.me/${config.WHATSAPP_NUMBER || '77052202575'}" target="_blank" class="text-whatsapp-green hover:underline font-bold flex items-center gap-0.5">
+              <span class="material-symbols-outlined text-[12px]">chat</span> WhatsApp
             </a>
           </div>
         </div>

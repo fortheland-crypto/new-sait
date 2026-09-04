@@ -1,63 +1,78 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="ru" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Видеонаблюдение и Спутниковое ТВ: Установка под ключ | ElectroSat г. Сатпаев</title>
-  <meta name="description" content="Видеонаблюдение и Спутниковое ТВ: профессиональная установка под ключ в г. Сатпаев и Жезказган. Комплекты Телекарта HD, Отау ТВ, камеры видеонаблюдения, пульты ДУ и аксессуары. Выезд мастера в день заказа." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>ElectroSat KZ — Монтаж Видеонаблюдения и Спутникового ТВ под ключ в Сатпаеве</title>
+  <meta name="description" content="ElectroSat KZ: монтаж видеонаблюдения и спутникового ТВ (Отау ТВ, Телекарта HD) под ключ за 1 день с гарантией до 3 лет в г. Сатпаев и Жезказган. Склад в ТД «Арман», подбор пультов ДУ." />
   
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#bae6fd',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-              800: '#075985',
-              900: '#0c4a6e',
-            },
-            accent: {
-              orange: '#ea580c',
-              emerald: '#10b981',
-            }
+            'background': '#0b1326',
+            'surface': '#0b1326',
+            'surface-base': '#0B1120',
+            'surface-card': '#182647',
+            'surface-raised': '#131E35',
+            'surface-container': '#171f33',
+            'surface-container-low': '#131b2e',
+            'surface-container-high': '#222a3d',
+            'surface-container-highest': '#2d3449',
+            'surface-container-lowest': '#060e20',
+            'surface-bright': '#31394d',
+            'primary': '#b4c5ff',
+            'primary-container': '#2563eb',
+            'on-primary': '#002a78',
+            'on-primary-container': '#eeefff',
+            'secondary': '#ffb690',
+            'secondary-container': '#ec6a06',
+            'tertiary': '#ffb596',
+            'tertiary-container': '#bc4800',
+            'whatsapp-green': '#22C55E',
+            'badge-amber': '#F59E0B',
+            'text-primary': '#F8FAFC',
+            'text-muted': '#94A3B8',
+            'border-subtle': '#1E293B',
+            'border-prominent': '#334155'
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+            'spec-code': ['"Plus Jakarta Sans"', 'monospace']
           }
         }
       }
-    }
+    };
   </script>
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white pb-16 sm:pb-0">
-
-  <!-- ==========================================
+  <link rel="stylesheet" href="css/styles.css" />  <!-- ==========================================
        ВЕРХНЯЯ ИНФОРМАЦИОННАЯ ПАНЕЛЬ (TOPBAR)
        ========================================== -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 border-b border-slate-800">
+  <div class="bg-surface-container-lowest text-text-muted text-xs py-2 border-b border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <div class="flex items-center gap-4 sm:gap-6">
         <!-- Адрес -->
-        <div class="flex items-center gap-1.5 text-slate-200">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-400"></i>
+        <div class="flex items-center gap-1.5 text-text-primary">
+          <span class="material-symbols-outlined text-[16px] text-badge-amber">location_on</span>
           <span data-config="ADDRESS">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман» (бывшая Комарова 20А)</span>
         </div>
         <!-- Режим работы -->
         <div class="hidden md:flex items-center gap-1.5">
-          <i data-lucide="clock" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
           <span data-config="WORKING_HOURS">Пн–Сб: 11:00 – 19:00, Вс: 11:00 – 17:00</span>
         </div>
       </div>
@@ -65,18 +80,18 @@
       <div class="flex items-center gap-4">
         <!-- Мессенджеры быстрые ссылки -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="#" data-config="WA_LINK" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1">
-            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <a href="#" data-config="WA_LINK" target="_blank" class="hover:text-whatsapp-green transition-colors flex items-center gap-1 font-medium">
+            <span class="material-symbols-outlined text-[16px] text-whatsapp-green">chat</span>
             <span>WhatsApp</span>
           </a>
-          <a href="#" data-config="TG_LINK" target="_blank" class="hover:text-sky-400 transition-colors flex items-center gap-1">
-            <i data-lucide="send" class="w-3.5 h-3.5 text-sky-400"></i>
+          <a href="#" data-config="TG_LINK" target="_blank" class="hover:text-sky-400 transition-colors flex items-center gap-1 font-medium">
+            <span class="material-symbols-outlined text-[16px] text-sky-400">send</span>
             <span>Telegram</span>
           </a>
         </div>
         <!-- Телефон -->
-        <a href="#" data-config="TEL_LINK" class="text-white font-bold hover:text-blue-400 transition-colors flex items-center gap-1.5">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-blue-400"></i>
+        <a href="#" data-config="TEL_LINK" class="text-text-primary font-bold hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px] text-whatsapp-green">call</span>
           <span data-config="PHONE">+7 (705) 220-25-75</span>
         </a>
       </div>
@@ -86,32 +101,35 @@
   <!-- ==========================================
        ГЛАВНАЯ ШАПКА САЙТА (HEADER)
        ========================================== -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-2xs">
+  <header class="sticky top-0 z-40 bg-surface-container-lowest/85 backdrop-blur-xl border-b border-border-subtle shadow-[0_1px_8px_rgba(0,0,0,0.18)]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 gap-4">
         
-        <!-- Логотип -->
+        <!-- Логотип ElectroSat KZ -->
         <a href="#" class="flex items-center gap-3 group flex-shrink-0">
-          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-700 to-blue-500 text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-all">
-            <i data-lucide="zap" class="w-6 h-6 text-amber-300"></i>
+          <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_2px_10px_rgba(37,99,235,0.35)] group-hover:scale-105 transition-transform flex-shrink-0">
+            <span class="material-symbols-outlined text-[24px]">satellite_alt</span>
           </div>
-          <div>
+          <div class="flex flex-col min-w-0">
             <div class="flex items-center gap-1.5">
-              <span data-config="COMPANY_NAME" class="font-extrabold text-xl text-slate-900 tracking-tight">ElectroSat</span>
-              <span class="text-[10px] bg-blue-100 text-blue-800 font-bold px-1.5 py-0.5 rounded">KZ</span>
+              <span data-config="COMPANY_NAME" class="font-extrabold text-lg text-text-primary tracking-tight">ElectroSat KZ</span>
+              <span class="w-2 h-2 rounded-full bg-whatsapp-green animate-pulse"></span>
             </div>
-            <p data-config="COMPANY_SUBTITLE" class="text-[11px] text-slate-500 font-medium">Видеонаблюдение • Спутниковое ТВ: Установка под ключ</p>
+            <span class="text-[11px] text-text-muted truncate flex items-center gap-1 font-medium">
+              <span class="material-symbols-outlined text-[13px] text-badge-amber">store</span>
+              г. Сатпаев • ТД «Арман»
+            </span>
           </div>
         </a>
 
         <!-- Навигация (Desktop) -->
-        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
-          <a href="#catalog-section" class="hover:text-blue-600 transition-colors">Каталог</a>
-          <a href="#services-section" class="hover:text-blue-600 transition-colors">Установка под ключ</a>
-          <a href="#remote-checker-section" class="hover:text-blue-600 transition-colors">Подбор пультов</a>
-          <a href="#advantages-section" class="hover:text-blue-600 transition-colors">О компании</a>
-          <a href="#portfolio-section" class="hover:text-blue-600 transition-colors">Наши работы</a>
-          <a href="#contacts-section" class="hover:text-blue-600 transition-colors">Контакты & 2ГИС</a>
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-text-muted">
+          <a href="#flagship-systems" class="hover:text-text-primary transition-colors">Флагманские решения</a>
+          <a href="#remote-checker-section" class="hover:text-text-primary transition-colors">Подбор пультов</a>
+          <a href="#catalog-section" class="hover:text-text-primary transition-colors">Каталог товаров</a>
+          <a href="#services-section" class="hover:text-text-primary transition-colors">Услуги монтажа</a>
+          <a href="#portfolio-section" class="hover:text-text-primary transition-colors">Наши работы</a>
+          <a href="#contacts-section" class="hover:text-text-primary transition-colors">Контакты & 2ГИС</a>
         </nav>
 
         <!-- Поисковая строка в шапке -->
@@ -119,56 +137,51 @@
           <input 
             type="text" 
             placeholder="Поиск камер, пультов, Отау ТВ..." 
-            class="header-search-input w-full bg-slate-100 focus:bg-white text-slate-800 text-xs px-3.5 py-2.5 pl-9 rounded-2xl border border-transparent focus:border-blue-500 focus:outline-none transition-all placeholder:text-slate-400"
+            class="header-search-input w-full bg-surface-container focus:bg-surface-card text-text-primary text-xs px-3.5 py-2.5 pl-9 rounded-xl border border-border-subtle focus:border-primary-container focus:outline-none transition-all placeholder:text-text-muted"
           />
-          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
+          <span class="material-symbols-outlined text-[18px] text-text-muted absolute left-2.5 top-2.5">search</span>
         </div>
 
-        <!-- Кнопки действий: Избранное, Сравнение, Корзина, Связаться -->
-        <div class="flex items-center gap-2.5">
+        <!-- Кнопки действий: Телефон на связи, Избранное, Сравнение, Корзина -->
+        <div class="flex items-center gap-2.5 flex-shrink-0">
+          <!-- Телефон звонок кнопка (Stitch style) -->
+          <a href="tel:+77052202575" data-config="TEL_LINK" class="min-h-[44px] px-3 rounded-xl bg-surface-card hover:bg-surface-raised active:scale-95 flex items-center gap-2 text-primary transition-all duration-150 border border-border-subtle">
+            <span class="material-symbols-outlined text-[20px] text-whatsapp-green">call</span>
+            <div class="hidden xs:flex flex-col text-left">
+              <span class="text-xs font-bold text-text-primary leading-tight font-spec-code">+7 (705) 220-25-75</span>
+              <span class="text-[10px] text-whatsapp-green leading-none font-semibold">На связи</span>
+            </div>
+          </a>
+
           <!-- Сравнение -->
           <button 
             onclick="window.App.openCompareModal()"
             title="Сравнение товаров"
-            class="relative w-10 h-10 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 hidden sm:flex items-center justify-center transition-all"
+            class="relative w-10 h-10 rounded-xl bg-surface-card hover:bg-surface-raised text-text-muted hover:text-text-primary hidden sm:flex items-center justify-center transition-all border border-border-subtle"
           >
-            <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
-            <span class="compare-count-badge hidden absolute -top-1 -right-1 bg-blue-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+            <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+            <span class="compare-count-badge hidden absolute -top-1 -right-1 bg-primary-container text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
           </button>
 
           <!-- Избранное -->
           <button 
             onclick="window.App.openFavoritesModal()"
             title="Избранные товары"
-            class="relative w-10 h-10 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 hidden sm:flex items-center justify-center transition-all"
+            class="relative w-10 h-10 rounded-xl bg-surface-card hover:bg-surface-raised text-text-muted hover:text-rose-400 hidden sm:flex items-center justify-center transition-all border border-border-subtle"
           >
-            <i data-lucide="heart" class="w-5 h-5"></i>
+            <span class="material-symbols-outlined text-[20px]">favorite</span>
             <span class="fav-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
           </button>
 
           <!-- Корзина -->
           <button 
             onclick="window.App.openCartDrawer()"
-            title="Корзина"
-            class="relative flex items-center gap-2 bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 px-3.5 py-2.5 rounded-2xl transition-all font-semibold text-xs"
+            title="Корзина покупок"
+            class="relative min-h-[44px] px-3.5 rounded-xl bg-primary-container hover:bg-blue-600 text-white flex items-center gap-1.5 shadow-md transition-all active:scale-95"
           >
-            <div class="relative">
-              <i data-lucide="shopping-cart" class="w-5 h-5"></i>
-              <span class="cart-count-badge hidden absolute -top-2 -right-2 bg-blue-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
-            </div>
-            <span class="hidden md:inline">Корзина</span>
+            <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+            <span class="cart-count-badge font-bold text-xs">0</span>
           </button>
-
-          <!-- Главная кнопка «Связаться» -->
-          <a 
-            href="#" 
-            data-config="WA_LINK"
-            target="_blank"
-            class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs px-4 py-2.5 rounded-2xl shadow-md hover:shadow-lg transition-all transform active:scale-95"
-          >
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Связаться</span>
-          </a>
 
           <!-- Мобильное меню кнопка -->
           <button 
@@ -183,118 +196,128 @@
   </header>
 
   <!-- ==========================================
-       ПЕРВЫЙ ЭКРАН (HERO SECTION)
+       СЕКЦИЯ 1: ПЕРВЫЙ ЭКРАН (HERO SECTION)
        ========================================== -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-blue-50/60 via-slate-50 to-white pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200">
-    <!-- Фоновые декоративные круги -->
-    <div class="absolute top-0 right-1/4 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-indigo-100/40 rounded-full blur-3xl pointer-events-none"></div>
+  <section class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
+    <!-- Ambient background glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-primary/15 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
         
-        <!-- Текстовый блок первого экрана -->
+        <!-- Hero Left content -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 bg-white border border-blue-200 text-blue-700 text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-2xs">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Профессиональный монтаж и настройка в Сатпаеве и Жезказгане</span>
+          <!-- Verified City Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-card border border-border-subtle text-xs font-semibold text-text-primary shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-whatsapp-green animate-pulse"></span>
+            <span class="tracking-wide">САТПАЕВ &amp; ЖЕЗКАЗГАН</span>
+            <span class="text-text-muted">•</span>
+            <span class="text-text-muted">Выезд мастера в день заявки</span>
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
-            Видеонаблюдение и Спутниковое ТВ <br class="hidden sm:inline" />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">с установкой под ключ</span>
+          <!-- Main Title -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-text-primary leading-[1.15]">
+            Монтаж видеонаблюдения и <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-emerald-400">
+              Спутникового ТВ под ключ
+            </span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-            Профессиональный монтаж систем видеонаблюдения с удалённым просмотром на смартфоне и установка спутникового ТВ (Телекарта HD, Отау ТВ) для дома, дачи и бизнеса в Сатпаеве и Жезказгане. Подбор оборудования, выезд мастера и официальная гарантия.
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-text-muted max-w-2xl leading-relaxed">
+            Профессиональная установка систем безопасности с просмотром со смартфона и спутникового ТВ (Отау ТВ, Телекарта HD). Оригинальное оборудование, собственный склад в Сатпаеве и официальная гарантия до 3 лет.
           </p>
 
-          <!-- Кнопки действий -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <a 
-              href="#services-section" 
-              class="bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold text-sm px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all flex items-center gap-2"
-            >
-              <i data-lucide="wrench" class="w-5 h-5"></i>
-              <span>Заказать установку под ключ</span>
-            </a>
-
-            <a 
-              href="#catalog-section" 
-              class="bg-white hover:bg-slate-100 text-slate-800 border border-slate-200/90 font-bold text-sm px-5 py-4 rounded-2xl shadow-sm transition-all flex items-center gap-2 active:scale-95"
-            >
-              <i data-lucide="shopping-bag" class="w-5 h-5 text-blue-600"></i>
-              <span>Каталог оборудования</span>
-            </a>
-
-            <button 
-              onclick="window.Assistant.openChat()"
-              class="text-blue-600 hover:text-blue-700 font-semibold text-sm px-3 py-2 flex items-center gap-1 hover:underline"
-            >
-              <i data-lucide="sparkles" class="w-4 h-4"></i>
-              <span>Подобрать с AI-помощником</span>
-            </button>
+          <!-- Metric Badges Row (3 key highlights) -->
+          <div class="grid grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+            <div class="bg-surface-card/80 backdrop-blur-md border border-border-subtle p-3 sm:p-3.5 rounded-2xl">
+              <div class="text-lg sm:text-2xl font-black text-text-primary tracking-tight">от 65 000 ₸</div>
+              <div class="text-[10px] sm:text-[11px] text-text-muted font-medium mt-0.5">с монтажом под ключ</div>
+            </div>
+            <div class="bg-surface-card/80 backdrop-blur-md border border-border-subtle p-3 sm:p-3.5 rounded-2xl">
+              <div class="text-lg sm:text-2xl font-black text-whatsapp-green tracking-tight">2 часа</div>
+              <div class="text-[10px] sm:text-[11px] text-text-muted font-medium mt-0.5">выезд на объект</div>
+            </div>
+            <div class="bg-surface-card/80 backdrop-blur-md border border-border-subtle p-3 sm:p-3.5 rounded-2xl">
+              <div class="text-lg sm:text-2xl font-black text-badge-amber tracking-tight">до 3 лет</div>
+              <div class="text-[10px] sm:text-[11px] text-text-muted font-medium mt-0.5">гарантия сервиса</div>
+            </div>
           </div>
 
-          <!-- Блок преимуществ (4 плашки) -->
-          <div id="hero-advantages-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-            <!-- Заполняется динамически -->
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a 
+              href="#" 
+              data-config="WA_LINK"
+              target="_blank"
+              class="bg-whatsapp-green hover:bg-emerald-600 active:scale-95 text-slate-950 font-bold text-xs sm:text-sm px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl shadow-lg shadow-whatsapp-green/20 transition-all flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-[20px] sm:text-[22px]">chat</span>
+              <span>Рассчитать стоимость в WhatsApp</span>
+            </a>
+
+            <a 
+              href="#flagship-systems"
+              class="bg-surface-card hover:bg-surface-raised active:scale-95 text-text-primary border border-border-subtle font-bold text-xs sm:text-sm px-5 py-3.5 sm:py-4 rounded-2xl transition-all flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-[20px] text-primary">verified</span>
+              <span>Готовые комплекты</span>
+            </a>
+          </div>
+
+          <!-- Proof Bar -->
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-3 text-xs text-text-muted border-t border-border-subtle/60">
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-whatsapp-green text-[18px]">verified</span>
+              <span>В наличии на складе в Сатпаеве</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-primary text-[18px]">storefront</span>
+              <span>ТД «Арман» (Мангилик Ел 20А)</span>
+            </div>
           </div>
         </div>
 
-        <!-- Визуальная композиция Hero -->
+        <!-- Hero Visual Right -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            <!-- Основное фото с небом и спутниковым оборудованием -->
-            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
-              <img 
-                src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1400&q=85" 
-                alt="Спутниковое оборудование Телекарта и Отау ТВ на фоне неба" 
-                class="w-full h-[380px] sm:h-[440px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent"></div>
-              
-              <!-- 2 Флагманские плашки спутникового ТВ -->
-              <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 space-y-2">
+            <div class="relative rounded-3xl overflow-hidden border border-border-subtle bg-surface-card shadow-2xl p-2.5 group">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-surface-container-lowest">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida-public/AB65w1A39bL2vN_y6sJ2L_P-7d7kC6cM61E-Y7xG9ZlV-nN0R_9_xL9Z1XzK5E4b0=w800-h600-no" 
+                  alt="Установка видеонаблюдения и спутникового ТВ ElectroSat"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.src='https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80'"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
                 
-                <!-- 1. Телекарта 75 000 ₸ -->
+                <!-- Floating Live status -->
+                <div class="absolute top-3 left-3 bg-surface/85 backdrop-blur-md border border-border-subtle rounded-xl px-3 py-1.5 flex items-center gap-2 text-xs font-semibold text-text-primary">
+                  <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+                  <span>REC • 4K UltraHD</span>
+                </div>
+              </div>
+
+              <!-- 2 Quick Solution Click-Cards -->
+              <div class="grid grid-cols-2 gap-2 mt-2">
                 <div 
-                  onclick="window.App.openProductModal('sat-telekarta-65k')" 
-                  class="bg-slate-900/90 hover:bg-slate-900 backdrop-blur-md border border-slate-700/80 rounded-2xl p-3 sm:p-3.5 shadow-xl text-white cursor-pointer hover:scale-[1.02] transition-all"
+                  onclick="window.App.openProductModal('sat-telekarta-65k')"
+                  class="bg-surface-container-low hover:bg-surface-raised border border-border-subtle p-3 rounded-xl cursor-pointer transition-all"
                 >
-                  <div class="flex items-center justify-between gap-2">
-                    <div class="min-w-0">
-                      <div class="flex items-center gap-1.5">
-                        <span class="text-[10px] bg-red-600 text-white font-extrabold px-2 py-0.5 rounded-md">230+ КАНАЛОВ</span>
-                        <span class="text-[11px] text-red-400 font-semibold">Хит продаж</span>
-                      </div>
-                      <h4 class="font-bold text-xs sm:text-sm text-white truncate mt-0.5">Спутниковое ТВ «Телекарта HD»</h4>
-                    </div>
-                    <div class="text-right flex-shrink-0">
-                      <span class="text-xs sm:text-sm font-black bg-gradient-to-r from-red-600 to-rose-600 text-white px-3 py-1.5 rounded-xl shadow-xs inline-block">75 000 ₸</span>
-                    </div>
-                  </div>
+                  <div class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">Телекарта HD</div>
+                  <div class="font-extrabold text-xs sm:text-sm text-text-primary mt-0.5 truncate">230+ каналов</div>
+                  <div class="text-xs font-bold text-rose-400 mt-1">75 000 ₸ <span class="text-[10px] font-normal text-text-muted">с монтажом</span></div>
                 </div>
 
-                <!-- 2. Отау ТВ (Otau TV) -->
                 <div 
-                  onclick="window.App.openProductModal('sat-otau-tv-kit')" 
-                  class="bg-slate-900/90 hover:bg-slate-900 backdrop-blur-md border border-slate-700/80 rounded-2xl p-3 sm:p-3.5 shadow-xl text-white cursor-pointer hover:scale-[1.02] transition-all"
+                  onclick="window.App.openProductModal('sat-otau-tv-kit')"
+                  class="bg-surface-container-low hover:bg-surface-raised border border-border-subtle p-3 rounded-xl cursor-pointer transition-all"
                 >
-                  <div class="flex items-center justify-between gap-2">
-                    <div class="min-w-0">
-                      <div class="flex items-center gap-1.5">
-                        <span class="text-[10px] bg-emerald-600 text-white font-extrabold px-2 py-0.5 rounded-md">OTAU TV</span>
-                        <span class="text-[11px] text-emerald-400 font-semibold">Казахстанские каналы HD</span>
-                      </div>
-                      <h4 class="font-bold text-xs sm:text-sm text-white truncate mt-0.5">Спутниковое ТВ «Отау ТВ»</h4>
-                    </div>
-                    <div class="text-right flex-shrink-0">
-                      <span class="text-xs sm:text-sm font-black bg-emerald-600 text-white px-3 py-1.5 rounded-xl shadow-xs inline-block">65 000 ₸</span>
-                    </div>
-                  </div>
+                  <div class="text-[10px] font-bold text-whatsapp-green uppercase tracking-wider">Отау ТВ</div>
+                  <div class="font-extrabold text-xs sm:text-sm text-text-primary mt-0.5 truncate">Каз. каналы HD</div>
+                  <div class="text-xs font-bold text-whatsapp-green mt-1">65 000 ₸ <span class="text-[10px] font-normal text-text-muted">с монтажом</span></div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -305,77 +328,328 @@
   </section>
 
   <!-- ==========================================
-       КАТЕГОРИИ ТОВАРОВ
+       СЕКЦИЯ 2: ФЛАГМАНСКИЕ СИСТЕМЫ ПОД КЛЮЧ
        ========================================== -->
-  <section class="py-14 bg-slate-50">
+  <section id="flagship-systems" class="py-16 bg-surface-container-low/50 border-y border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
-            Каталог оборудования
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
-            Популярные категории
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+            <span>Готовые решения 2026</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-black text-text-primary tracking-tight">
+            Флагманские системы с установкой
           </h2>
         </div>
-        <p class="text-xs sm:text-sm text-slate-500 max-w-md">
-          Широкий выбор оригинального оборудования в наличии с официальной гарантией и возможностью выездного монтажа.
+        <p class="text-xs sm:text-sm text-text-muted max-w-md leading-relaxed">
+          Полностью укомплектованные наборы оборудования: выезд инженера, прокладка кабеля, надёжное крепление и настройка мобильного приложения.
         </p>
       </div>
 
-      <div id="categories-grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Карточки категорий рендерятся через JS -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Карточка 1: Видеонаблюдение -->
+        <div class="bg-surface-card border border-border-subtle rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-primary/50 transition-all group">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-primary/15 text-primary flex items-center justify-center border border-primary/20">
+                <span class="material-symbols-outlined text-[28px]">videocam</span>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-primary/20 text-blue-300 border border-primary/30">
+                Хит для частного дома
+              </span>
+            </div>
+
+            <h3 class="text-xl sm:text-2xl font-black text-text-primary mb-2 group-hover:text-primary transition-colors">
+              Комплект Видеонаблюдения UltraHD
+            </h3>
+            <p class="text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
+              Надёжный контроль территории 24/7. Ночная ИК-подсветка до 30-50м, защита от мороза IP67, датчики движения с мгновенными push-уведомлениями на телефон.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <div class="bg-surface-container-low p-3 rounded-xl border border-border-subtle/60 text-xs">
+                <div class="font-bold text-text-primary flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px] text-whatsapp-green">check_circle</span>
+                  <span>iOS / Android</span>
+                </div>
+                <div class="text-[11px] text-text-muted mt-0.5">Удалённый просмотр</div>
+              </div>
+              <div class="bg-surface-container-low p-3 rounded-xl border border-border-subtle/60 text-xs">
+                <div class="font-bold text-text-primary flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px] text-whatsapp-green">check_circle</span>
+                  <span>IP67 Морозостойкость</span>
+                </div>
+                <div class="text-[11px] text-text-muted mt-0.5">Работа до -40°C</div>
+              </div>
+              <div class="bg-surface-container-low p-3 rounded-xl border border-border-subtle/60 text-xs">
+                <div class="font-bold text-text-primary flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px] text-whatsapp-green">check_circle</span>
+                  <span>Ночной режим</span>
+                </div>
+                <div class="text-[11px] text-text-muted mt-0.5">Чёткое видео в темноте</div>
+              </div>
+              <div class="bg-surface-container-low p-3 rounded-xl border border-border-subtle/60 text-xs">
+                <div class="font-bold text-text-primary flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px] text-whatsapp-green">check_circle</span>
+                  <span>Архив записей</span>
+                </div>
+                <div class="text-[11px] text-text-muted mt-0.5">Хранение до 30 дней</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="text-[11px] text-text-muted uppercase font-bold">Стоимость с монтажом:</div>
+              <div class="text-2xl font-black text-text-primary">от 68 000 ₸</div>
+            </div>
+            <button 
+              onclick="window.App.openServiceModal('srv-cctv-install')"
+              class="bg-primary hover:bg-blue-600 active:scale-95 text-white text-xs sm:text-sm font-bold px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+            >
+              <span>Заказать установку</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Карточка 2: Спутниковое ТВ (Телекарта / Отау) -->
+        <div class="bg-surface-card border border-border-subtle rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-whatsapp-green/50 transition-all group">
+          <div>
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-whatsapp-green/15 text-whatsapp-green flex items-center justify-center border border-whatsapp-green/20">
+                <span class="material-symbols-outlined text-[28px]">satellite_alt</span>
+              </div>
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-whatsapp-green/20 text-emerald-300 border border-whatsapp-green/30">
+                Без помех и интернета
+              </span>
+            </div>
+
+            <h3 class="text-xl sm:text-2xl font-black text-text-primary mb-2 group-hover:text-whatsapp-green transition-colors">
+              Спутниковое ТВ (Отау ТВ / Телекарта HD)
+            </h3>
+            <p class="text-xs sm:text-sm text-text-muted mb-6 leading-relaxed">
+              Идеальное телевидение высокого разрешения для квартир, коттеджей, загородных домов и производственных баз. Работает стабильно в любую погоду без интернета.
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <!-- Отау ТВ -->
+              <div 
+                onclick="window.App.openProductModal('sat-otau-tv-kit')"
+                class="bg-surface-container-low hover:bg-surface-raised p-3.5 rounded-xl border border-border-subtle/80 flex items-center justify-between cursor-pointer transition-all"
+              >
+                <div>
+                  <div class="font-bold text-sm text-text-primary flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-whatsapp-green"></span>
+                    <span>Отау ТВ (Казахстанские каналы HD)</span>
+                  </div>
+                  <div class="text-[11px] text-text-muted mt-0.5">Антенна 0.9м + ресивер + кабель + монтаж</div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <span class="text-sm font-black text-whatsapp-green">65 000 ₸</span>
+                </div>
+              </div>
+
+              <!-- Телекарта HD -->
+              <div 
+                onclick="window.App.openProductModal('sat-telekarta-65k')"
+                class="bg-surface-container-low hover:bg-surface-raised p-3.5 rounded-xl border border-border-subtle/80 flex items-center justify-between cursor-pointer transition-all"
+              >
+                <div>
+                  <div class="font-bold text-sm text-text-primary flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                    <span>Телекарта HD (230+ каналов)</span>
+                  </div>
+                  <div class="text-[11px] text-text-muted mt-0.5">Фильмы, спорт, детские каналы в цифровом качестве</div>
+                </div>
+                <div class="text-right flex-shrink-0">
+                  <span class="text-sm font-black text-rose-400">75 000 ₸</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div class="text-[11px] text-text-muted uppercase font-bold">Монтаж антенны:</div>
+              <div class="text-2xl font-black text-whatsapp-green">65 000 – 75 000 ₸</div>
+            </div>
+            <button 
+              onclick="window.App.openServiceModal('srv-satellite-install')"
+              class="bg-whatsapp-green hover:bg-emerald-600 active:scale-95 text-slate-950 text-xs sm:text-sm font-bold px-6 py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+            >
+              <span>Вызвать мастера</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ==========================================
-       ИНТЕРАКТИВНЫЙ БЛОК: ПРОВЕРКА СОВМЕСТИМОСТИ ПУЛЬТОВ
+       СЕКЦИЯ 3: ПОДБОР ПУЛЬТОВ ДУ С ЧИПАМИ БРЕНДОВ
        ========================================== -->
-  <section id="remote-checker-section" class="py-12 bg-gradient-to-r from-blue-900 via-slate-900 to-indigo-950 text-white relative overflow-hidden">
+  <section id="remote-checker-section" class="py-16 bg-surface relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <div class="lg:col-span-6 space-y-3">
-          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-blue-300 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-400/20">
-            <i data-lucide="tv" class="w-3.5 h-3.5"></i>
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+            <span class="material-symbols-outlined text-[16px]">settings_remote</span>
             <span>Экспресс-подбор пульта ДУ</span>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">
+          <h2 class="text-2xl sm:text-3xl font-black text-text-primary tracking-tight leading-snug">
             Не знаете, какой пульт подойдёт к вашему телевизору?
           </h2>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-            Введите марку телевизора (LG, Samsung, Xiaomi, TCL, Sony, DEXP и др.) или модель — наш алгоритм мгновенно покажет 100% совместимый пульт.
+          <p class="text-xs sm:text-sm text-text-muted leading-relaxed">
+            Выберите марку вашего ТВ или введите модель в строку поиска. В наличии более 50 видов пультов для современных Smart TV и классических моделей.
           </p>
-          <div class="flex items-center gap-2 text-xs text-blue-200">
-            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
-            <span>Или сфотографируйте старый пульт и отправьте в WhatsApp для точного подбора</span>
+
+          <!-- Brand Chips Row -->
+          <div class="space-y-2 pt-2">
+            <div class="text-xs font-bold text-text-muted uppercase tracking-wider">Популярные бренды:</div>
+            <div class="flex flex-wrap gap-2">
+              <button onclick="window.fillRemoteBrand('Samsung')" class="px-3 py-1.5 rounded-xl bg-surface-card hover:bg-surface-raised border border-border-subtle text-xs font-semibold text-text-primary hover:text-primary transition-all">Samsung</button>
+              <button onclick="window.fillRemoteBrand('LG Smart')" class="px-3 py-1.5 rounded-xl bg-surface-card hover:bg-surface-raised border border-border-subtle text-xs font-semibold text-text-primary hover:text-primary transition-all">LG Smart</button>
+              <button onclick="window.fillRemoteBrand('Xiaomi')" class="px-3 py-1.5 rounded-xl bg-surface-card hover:bg-surface-raised border border-border-subtle text-xs font-semibold text-text-primary hover:text-primary transition-all">Xiaomi</button>
+              <button onclick="window.fillRemoteBrand('TCL')" class="px-3 py-1.5 rounded-xl bg-surface-card hover:bg-surface-raised border border-border-subtle text-xs font-semibold text-text-primary hover:text-primary transition-all">TCL</button>
+              <button onclick="window.fillRemoteBrand('DEXP')" class="px-3 py-1.5 rounded-xl bg-surface-card hover:bg-surface-raised border border-border-subtle text-xs font-semibold text-text-primary hover:text-primary transition-all">DEXP</button>
+              <button onclick="window.fillRemoteBrand('Отау ТВ')" class="px-3 py-1.5 rounded-xl bg-surface-card hover:bg-surface-raised border border-border-subtle text-xs font-semibold text-text-primary hover:text-whatsapp-green transition-all">Отау ТВ</button>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a 
+              href="#" 
+              data-config="WA_LINK" 
+              target="_blank"
+              class="inline-flex items-center gap-2 text-xs font-bold text-whatsapp-green hover:underline"
+            >
+              <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+              <span>Сфотографировать старый пульт и отправить в WhatsApp</span>
+            </a>
           </div>
         </div>
 
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-2xl text-slate-800">
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-              Марка или модель вашего ТВ / приставки:
+        <!-- Checker Form Box -->
+        <div class="lg:col-span-7">
+          <div class="bg-surface-card border border-border-subtle rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <label class="block text-xs font-bold text-text-muted uppercase tracking-wider mb-2.5">
+              Введите марку или модель телевизора / приставки:
             </label>
-            <div class="flex gap-2 mb-3">
-              <input 
-                id="remote-checker-input" 
-                type="text" 
-                placeholder="Например: LG Magic, Samsung QLED, Xiaomi P1..." 
-                class="flex-1 bg-slate-100 focus:bg-white text-slate-900 text-sm px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-600 focus:outline-none transition-all placeholder:text-slate-400 font-medium"
-              />
+            <div class="flex flex-col sm:flex-row gap-2.5 mb-4">
+              <div class="relative flex-1">
+                <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-text-muted text-[20px]">search</span>
+                <input 
+                  id="remote-checker-input" 
+                  type="text" 
+                  placeholder="Например: LG Magic, Samsung Smart, Xiaomi Mi TV, Отау..." 
+                  class="w-full bg-surface-container-low border border-border-subtle focus:border-primary text-text-primary placeholder:text-text-muted text-sm rounded-xl pl-10 pr-4 py-3 focus:outline-none transition-all"
+                />
+              </div>
               <button 
-                id="remote-checker-btn" 
-                class="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition-all shadow-md active:scale-95 flex items-center gap-1.5"
+                id="remote-checker-btn"
+                class="bg-primary hover:bg-blue-600 active:scale-95 text-white font-bold text-xs sm:text-sm px-6 py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 flex-shrink-0"
               >
-                <i data-lucide="search" class="w-4 h-4"></i>
-                <span>Проверить</span>
+                <span>Найти пульт</span>
+                <span class="material-symbols-outlined text-[18px]">check</span>
               </button>
             </div>
 
-            <!-- Результат проверки -->
+            <!-- Result Container -->
             <div id="remote-checker-result" class="hidden"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       СЕКЦИЯ 4: КАК ПРОХОДИТ МОНТАЖ (4 ШАГА)
+       ========================================== -->
+  <section class="py-16 bg-surface-container-low/40 border-y border-border-subtle">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+          <span class="material-symbols-outlined text-[16px]">timeline</span>
+          <span>Прозрачный процесс</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-text-primary tracking-tight">
+          Как проходит установка: 4 простых шага
+        </h2>
+        <p class="text-xs sm:text-sm text-text-muted mt-2">
+          От вашей заявки до работающей системы — всё берем на себя.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Шаг 1 -->
+        <div class="bg-surface-card border border-border-subtle p-6 rounded-3xl relative flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-primary/15 text-primary font-black text-base flex items-center justify-center border border-primary/20 mb-4">
+              01
+            </div>
+            <h3 class="font-bold text-base text-text-primary mb-2">Заявка и консультация</h3>
+            <p class="text-xs text-text-muted leading-relaxed">
+              Вы оставляете заявку на сайте или в WhatsApp. Мы уточняем задачу и подбираем оптимальный комплект.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-border-subtle/50 text-[11px] font-semibold text-primary">
+            Время: 5-10 минут
+          </div>
+        </div>
+
+        <!-- Шаг 2 -->
+        <div class="bg-surface-card border border-border-subtle p-6 rounded-3xl relative flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-primary/15 text-primary font-black text-base flex items-center justify-center border border-primary/20 mb-4">
+              02
+            </div>
+            <h3 class="font-bold text-base text-text-primary mb-2">Выезд на объект</h3>
+            <p class="text-xs text-text-muted leading-relaxed">
+              Специалист приезжает в удобное время со всем необходимым оборудованием и профессиональным инструментом.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-border-subtle/50 text-[11px] font-semibold text-whatsapp-green">
+            В день заявки
+          </div>
+        </div>
+
+        <!-- Шаг 3 -->
+        <div class="bg-surface-card border border-border-subtle p-6 rounded-3xl relative flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-primary/15 text-primary font-black text-base flex items-center justify-center border border-primary/20 mb-4">
+              03
+            </div>
+            <h3 class="font-bold text-base text-text-primary mb-2">Монтаж и настройка</h3>
+            <p class="text-xs text-text-muted leading-relaxed">
+              Аккуратная прокладка кабеля, надёжное крепление оборудования, точная юстировка спутника и фокуса камер.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-border-subtle/50 text-[11px] font-semibold text-text-primary">
+            Чистая работа без пыли
+          </div>
+        </div>
+
+        <!-- Шаг 4 -->
+        <div class="bg-surface-card border border-border-subtle p-6 rounded-3xl relative flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-2xl bg-whatsapp-green/15 text-whatsapp-green font-black text-base flex items-center justify-center border border-whatsapp-green/20 mb-4">
+              04
+            </div>
+            <h3 class="font-bold text-base text-text-primary mb-2">Сдача и гарантия</h3>
+            <p class="text-xs text-text-muted leading-relaxed">
+              Подключаем приложение на смартфоне, обучаем пользованию, выдаем гарантийный талон и чек.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-border-subtle/50 text-[11px] font-semibold text-badge-amber">
+            Гарантия до 3 лет
           </div>
         </div>
 
@@ -386,35 +660,36 @@
   <!-- ==========================================
        ПОПУЛЯРНЫЕ ТОВАРЫ (КАТАЛОГ)
        ========================================== -->
-  <section id="catalog-section" class="py-16 bg-white border-b border-slate-200">
+  <section id="catalog-section" class="py-16 bg-surface border-b border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Заголовок и фильтры-табы -->
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
-            Каталог продукции
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+            <span class="material-symbols-outlined text-[16px]">inventory_2</span>
+            <span>Каталог продукции</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-text-primary tracking-tight">
             Популярные товары и комплекты
           </h2>
         </div>
 
         <!-- Табы переключения категорий -->
         <div class="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none">
-          <button data-category="all" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-blue-600 text-white shadow-xs whitespace-nowrap">
+          <button data-category="all" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-primary text-white shadow-xs whitespace-nowrap">
             Все товары и комплекты
           </button>
-          <button data-category="satellite-telekarta" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
+          <button data-category="satellite-telekarta" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-surface-card hover:bg-surface-raised text-text-muted hover:text-text-primary border border-border-subtle whitespace-nowrap">
             📡 Телекарта
           </button>
-          <button data-category="satellite-otau" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
+          <button data-category="satellite-otau" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-surface-card hover:bg-surface-raised text-text-muted hover:text-text-primary border border-border-subtle whitespace-nowrap">
             🛰️ Отау ТВ
           </button>
-          <button data-category="remotes" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
+          <button data-category="remotes" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-surface-card hover:bg-surface-raised text-text-muted hover:text-text-primary border border-border-subtle whitespace-nowrap">
             📺 Пульты для ТВ
           </button>
-          <button data-category="appliances" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap">
+          <button data-category="appliances" class="category-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-surface-card hover:bg-surface-raised text-text-muted hover:text-text-primary border border-border-subtle whitespace-nowrap">
             🔲 Кронштейны и полки
           </button>
         </div>
@@ -431,17 +706,18 @@
   <!-- ==========================================
        УСЛУГИ («ПОДБЕРЁМ И УСТАНОВИМ ПОД КЛЮЧ»)
        ========================================== -->
-  <section id="services-section" class="py-16 bg-slate-50 border-b border-slate-200">
+  <section id="services-section" class="py-16 bg-surface-container-low/40 border-b border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
-          Профессиональный сервис
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 mb-3">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+          <span class="material-symbols-outlined text-[16px]">home_repair_service</span>
+          <span>Профессиональный сервис</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-text-primary tracking-tight">
           Подберём и установим под ключ
         </h2>
-        <p class="text-xs sm:text-sm text-slate-500">
+        <p class="text-xs sm:text-sm text-text-muted mt-2">
           Собственная бригада сертифицированных монтажников. Работаем аккуратно, чисто, с гарантией на все выполненные работы до 3 лет.
         </p>
       </div>
@@ -456,17 +732,18 @@
   <!-- ==========================================
        ПРЕИМУЩЕСТВА («ПОЧЕМУ НАМ ДОВЕРЯЮТ»)
        ========================================== -->
-  <section id="advantages-section" class="py-16 bg-white border-b border-slate-200">
+  <section id="advantages-section" class="py-16 bg-surface border-b border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
-          Надёжность и качество
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 mb-3">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+          <span class="material-symbols-outlined text-[16px]">verified</span>
+          <span>Надёжность и качество</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-text-primary tracking-tight">
           Почему клиенты выбирают нас
         </h2>
-        <p class="text-xs sm:text-sm text-slate-500">
+        <p class="text-xs sm:text-sm text-text-muted mt-2">
           Мы не просто продаём технику, а решаем вашу задачу от подбора до настройки приложения на вашем смартфоне.
         </p>
       </div>
@@ -481,23 +758,24 @@
   <!-- ==========================================
        ПОРТФОЛИО И ОТЗЫВЫ КЛИЕНТОВ
        ========================================== -->
-  <section id="portfolio-section" class="py-16 bg-slate-50 border-b border-slate-200">
+  <section id="portfolio-section" class="py-16 bg-surface-container-low/40 border-b border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Портфолио -->
       <div class="mb-14">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
-              Наш опыт
-            </span>
-            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+              <span class="material-symbols-outlined text-[16px]">photo_library</span>
+              <span>Наш опыт</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-text-primary tracking-tight">
               Выполненные работы
             </h2>
           </div>
-          <a href="#" data-config="WA_LINK" target="_blank" class="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 hover:underline">
+          <a href="#" data-config="WA_LINK" target="_blank" class="text-xs font-bold text-whatsapp-green hover:underline flex items-center gap-1">
             <span>Запросить фото других объектов в WhatsApp</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
           </a>
         </div>
 
@@ -509,10 +787,11 @@
       <!-- Отзывы клиентов -->
       <div>
         <div class="text-center max-w-2xl mx-auto mb-8">
-          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
-            Реальные оценки
-          </span>
-          <h3 class="text-2xl font-black text-slate-900 mt-2">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+            <span class="material-symbols-outlined text-[16px]">star</span>
+            <span>Реальные оценки</span>
+          </div>
+          <h3 class="text-2xl font-black text-text-primary tracking-tight">
             Отзывы наших покупателей
           </h3>
         </div>
@@ -528,7 +807,7 @@
   <!-- ==========================================
        КОНТАКТЫ И ИНТЕРАКТИВНАЯ КАРТА 2ГИС
        ========================================== -->
-  <section id="contacts-section" class="py-16 bg-white">
+  <section id="contacts-section" class="py-16 bg-surface">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -536,53 +815,54 @@
         <!-- Контактные данные -->
         <div class="lg:col-span-5 space-y-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-md">
-              Магазин и сервис
-            </span>
-            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2 mb-2">
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20 mb-2">
+              <span class="material-symbols-outlined text-[16px]">storefront</span>
+              <span>Магазин и сервис</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black text-text-primary tracking-tight mb-2">
               Контакты и самовывоз
             </h2>
-            <p class="text-xs sm:text-sm text-slate-500">
+            <p class="text-xs sm:text-sm text-text-muted">
               Приезжайте в наш магазин в г. Сатпаев, чтобы лично протестировать камеры, проверить пульт или получить консультацию.
             </p>
           </div>
 
-          <div class="space-y-4">
+          <div class="space-y-3">
             <!-- Адрес -->
-            <div class="flex items-start gap-3.5 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
-              <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center flex-shrink-0">
-                <i data-lucide="map-pin" class="w-5 h-5"></i>
+            <div class="flex items-start gap-3.5 bg-surface-card p-4 rounded-2xl border border-border-subtle">
+              <div class="w-10 h-10 rounded-xl bg-primary/15 text-primary flex items-center justify-center flex-shrink-0 border border-primary/20">
+                <span class="material-symbols-outlined text-[20px]">location_on</span>
               </div>
               <div>
-                <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400 mb-0.5">Адрес магазина:</h4>
-                <p data-config="ADDRESS" class="font-bold text-sm text-slate-900 leading-snug">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман» (бывшая Комарова 20А)</p>
-                <p data-config="ADDRESS_LANDMARK" class="text-xs text-slate-500 mt-0.5">Ориентир: ТД «Арман», удобная парковка перед магазином</p>
+                <h4 class="font-bold text-[10px] uppercase tracking-wider text-text-muted mb-0.5">Адрес магазина:</h4>
+                <p data-config="ADDRESS" class="font-bold text-sm text-text-primary leading-snug">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман» (бывшая Комарова 20А)</p>
+                <p data-config="ADDRESS_LANDMARK" class="text-xs text-text-muted mt-0.5">Ориентир: ТД «Арман», удобная парковка перед магазином</p>
               </div>
             </div>
 
             <!-- Время работы -->
-            <div class="flex items-start gap-3.5 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
-              <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center flex-shrink-0">
-                <i data-lucide="clock" class="w-5 h-5"></i>
+            <div class="flex items-start gap-3.5 bg-surface-card p-4 rounded-2xl border border-border-subtle">
+              <div class="w-10 h-10 rounded-xl bg-surface-raised text-text-muted flex items-center justify-center flex-shrink-0 border border-border-subtle">
+                <span class="material-symbols-outlined text-[20px]">schedule</span>
               </div>
               <div>
-                <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400 mb-0.5">График работы:</h4>
-                <p data-config="WORKING_HOURS" class="font-bold text-sm text-slate-900">Пн–Сб: 11:00 – 19:00, Вс: 11:00 – 17:00</p>
-                <p class="text-xs text-emerald-600 font-medium mt-0.5">Без перерыва на обед</p>
+                <h4 class="font-bold text-[10px] uppercase tracking-wider text-text-muted mb-0.5">График работы:</h4>
+                <p data-config="WORKING_HOURS" class="font-bold text-sm text-text-primary">Пн–Сб: 11:00 – 19:00, Вс: 11:00 – 17:00</p>
+                <p class="text-xs text-whatsapp-green font-medium mt-0.5">Без перерыва на обед</p>
               </div>
             </div>
 
             <!-- Телефон и мессенджеры -->
-            <div class="flex items-start gap-3.5 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
-              <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center flex-shrink-0">
-                <i data-lucide="phone-call" class="w-5 h-5"></i>
+            <div class="flex items-start gap-3.5 bg-surface-card p-4 rounded-2xl border border-border-subtle">
+              <div class="w-10 h-10 rounded-xl bg-whatsapp-green/15 text-whatsapp-green flex items-center justify-center flex-shrink-0 border border-whatsapp-green/20">
+                <span class="material-symbols-outlined text-[20px]">call</span>
               </div>
               <div>
-                <h4 class="font-bold text-xs uppercase tracking-wider text-slate-400 mb-0.5">Телефон для связи:</h4>
-                <a href="tel:+77052202575" data-config="TEL_LINK" class="font-black text-base text-blue-600 hover:underline block leading-tight">
+                <h4 class="font-bold text-[10px] uppercase tracking-wider text-text-muted mb-0.5">Телефон для связи:</h4>
+                <a href="tel:+77052202575" data-config="TEL_LINK" class="font-black text-base text-primary hover:underline block leading-tight">
                   <span data-config="PHONE">+7 (705) 220-25-75</span>
                 </a>
-                <p class="text-xs text-slate-500 mt-0.5">WhatsApp / Telegram: 87052202575</p>
+                <p class="text-xs text-text-muted mt-0.5">WhatsApp / Telegram: 87052202575</p>
               </div>
             </div>
           </div>
@@ -595,7 +875,7 @@
               target="_blank" 
               rel="noopener noreferrer"
               data-action="open-2gis-card"
-              class="flex-1 bg-[#00AA5B] hover:bg-[#00914d] text-white font-bold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95"
+              class="flex-1 bg-[#00AA5B] hover:bg-[#00914d] text-white font-bold text-xs py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95"
             >
               <span class="font-black text-sm">2ГИС</span>
               <span>Открыть в 2ГИС</span>
@@ -606,59 +886,59 @@
               target="_blank" 
               rel="noopener noreferrer"
               data-action="open-2gis-route"
-              class="flex-1 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95"
+              class="flex-1 bg-surface-card hover:bg-surface-raised text-text-primary border border-border-subtle font-bold text-xs py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all active:scale-95"
             >
-              <i data-lucide="navigation" class="w-4 h-4"></i>
-              <span>Построить маршрут</span>
+              <span class="material-symbols-outlined text-[18px]">directions</span>
+              <span>Маршрут</span>
             </a>
 
             <a 
               href="tel:+77052202575" 
               data-config="TEL_LINK"
-              class="w-full sm:w-auto bg-blue-50 text-blue-700 hover:bg-blue-100 font-bold text-xs py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors border border-blue-200"
+              class="w-full sm:w-auto bg-primary/10 text-primary hover:bg-primary/20 font-bold text-xs py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors border border-primary/20"
             >
-              <i data-lucide="phone" class="w-4 h-4"></i>
-              <span>Позвонить прямо сейчас</span>
+              <span class="material-symbols-outlined text-[18px]">phone</span>
+              <span>Позвонить сейчас</span>
             </a>
           </div>
         </div>
 
         <!-- Интерактивная карта 2ГИС / Стилизованный блок карты -->
         <div class="lg:col-span-7">
-          <div class="map-container-frame shadow-xl relative bg-slate-100 flex items-center justify-center">
+          <div class="map-container-frame shadow-2xl relative bg-surface-card border border-border-subtle rounded-3xl overflow-hidden min-h-[380px] flex items-center justify-center">
             <!-- Стилизованная карточка 2ГИС -->
-            <div class="absolute inset-0 bg-slate-200 flex flex-col justify-between p-6">
+            <div class="absolute inset-0 bg-surface-container-low flex flex-col justify-between p-6">
               <div class="flex items-center justify-between">
-                <div class="bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl shadow-md border border-slate-200 flex items-center gap-2">
+                <div class="bg-surface-card/90 backdrop-blur-md px-3.5 py-1.5 rounded-xl shadow-md border border-border-subtle flex items-center gap-2">
                   <span class="w-3 h-3 bg-[#00AA5B] rounded-full"></span>
-                  <span class="text-xs font-bold text-slate-800">2ГИС Сатпаев</span>
+                  <span class="text-xs font-bold text-text-primary">2ГИС Сатпаев</span>
                 </div>
-                <a href="https://2gis.kz/zhezkazgan/search/%D0%A2%D0%94%20%D0%90%D1%80%D0%BC%D0%B0%D0%BD%20%D0%9C%D0%B0%D0%BD%D0%B3%D0%B8%D0%BB%D0%B8%D0%BA%20%D0%95%D0%BB%2020%D0%90/firm/70000001069371110/67.52803%2C47.905774" data-config="DGIS_LINK" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold px-3 py-1.5 rounded-xl shadow-md border flex items-center gap-1">
+                <a href="https://2gis.kz/zhezkazgan/search/%D0%A2%D0%94%20%D0%90%D1%80%D0%BC%D0%B0%D0%BD%20%D0%9C%D0%B0%D0%BD%D0%B3%D0%B8%D0%BB%D0%B8%D0%BA%20%D0%95%D0%BB%2020%D0%90/firm/70000001069371110/67.52803%2C47.905774" data-config="DGIS_LINK" target="_blank" rel="noopener noreferrer" class="bg-surface-card hover:bg-surface-raised text-text-primary text-xs font-bold px-3 py-1.5 rounded-xl shadow-md border border-border-subtle flex items-center gap-1">
                   <span>Развернуть</span>
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                  <span class="material-symbols-outlined text-[16px]">open_in_new</span>
                 </a>
               </div>
 
               <!-- Центральная метка магазина -->
               <div class="self-center text-center animate-bounce duration-1000">
-                <div class="bg-blue-600 text-white p-3.5 rounded-2xl shadow-2xl flex items-center gap-2 border-2 border-white">
-                  <i data-lucide="store" class="w-6 h-6"></i>
+                <div class="bg-primary text-white p-3.5 rounded-2xl shadow-2xl flex items-center gap-2 border-2 border-primary/40">
+                  <span class="material-symbols-outlined text-[24px]">storefront</span>
                   <div class="text-left">
                     <span class="font-bold text-xs block leading-tight" data-config="COMPANY_NAME">ElectroSat</span>
                     <span class="text-[10px] text-blue-100">г. Сатпаев, ТД «Арман»</span>
                   </div>
                 </div>
-                <div class="w-3 h-3 bg-blue-600 rotate-45 mx-auto -mt-1.5 border-r border-b border-white"></div>
+                <div class="w-3 h-3 bg-primary rotate-45 mx-auto -mt-1.5 border-r border-b border-primary/40"></div>
               </div>
 
-              <div class="bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-lg border border-slate-200 flex items-center justify-between text-xs">
-                <div class="flex items-center gap-2">
-                  <i data-lucide="car" class="w-4 h-4 text-slate-500"></i>
-                  <span class="text-slate-700 font-medium">Бесплатная парковка перед ТД «Арман»</span>
+              <div class="bg-surface-card/90 backdrop-blur-md p-3.5 rounded-2xl shadow-lg border border-border-subtle flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2 text-text-primary">
+                  <span class="material-symbols-outlined text-whatsapp-green text-[18px]">local_parking</span>
+                  <span class="font-medium">Бесплатная парковка перед ТД «Арман»</span>
                 </div>
-                <a href="https://2gis.kz/zhezkazgan/firm/70000001069371110/tab/route" data-action="open-2gis-route" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline flex items-center gap-1">
-                  <span>Построить маршрут</span>
-                  <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                <a href="https://2gis.kz/zhezkazgan/firm/70000001069371110/tab/route" data-action="open-2gis-route" target="_blank" rel="noopener noreferrer" class="text-primary font-bold hover:underline flex items-center gap-1">
+                  <span>Маршрут</span>
+                  <span class="material-symbols-outlined text-[16px]">chevron_right</span>
                 </a>
               </div>
             </div>
@@ -673,26 +953,26 @@
   <!-- ==========================================
        ПОДВАЛ САЙТА (FOOTER)
        ========================================== -->
-  <footer class="bg-slate-900 text-slate-400 text-xs pt-16 pb-24 sm:pb-12 border-t border-slate-800">
+  <footer class="bg-surface-container-lowest text-text-muted text-xs pt-16 pb-24 sm:pb-12 border-t border-border-subtle">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <!-- О компании -->
         <div class="space-y-3">
-          <div class="flex items-center gap-2 text-white font-extrabold text-lg">
-            <i data-lucide="zap" class="w-6 h-6 text-amber-400"></i>
-            <span data-config="COMPANY_NAME">ElectroSat</span>
+          <div class="flex items-center gap-2 text-text-primary font-black text-lg">
+            <span class="material-symbols-outlined text-primary text-[24px]">satellite_alt</span>
+            <span data-config="COMPANY_NAME">ElectroSat KZ</span>
           </div>
-          <p class="leading-relaxed text-slate-400">
-            Магазин и сервисный центр: системы видеонаблюдения, спутниковое телевидение (Отау ТВ), пульты ДУ, кронштейны для ТВ и аксессуары.
+          <p class="leading-relaxed text-text-muted">
+            Магазин и сервисный центр: системы видеонаблюдения, спутниковое телевидение (Отау ТВ, Телекарта HD), пульты ДУ, кронштейны для ТВ и аксессуары.
           </p>
-          <div class="pt-2 text-slate-300">
-            <div class="flex items-center gap-2 mb-1">
-              <i data-lucide="map-pin" class="w-4 h-4 text-blue-400"></i>
-              <span data-config="ADDRESS">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман» (бывшая Комарова 20А)</span>
+          <div class="pt-2 text-text-muted space-y-1.5">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-[16px]">location_on</span>
+              <span data-config="ADDRESS">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман»</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+              <span class="material-symbols-outlined text-whatsapp-green text-[16px]">call</span>
               <span data-config="PHONE">+7 (705) 220-25-75</span>
             </div>
           </div>
@@ -700,58 +980,58 @@
 
         <!-- Каталог ссылки -->
         <div class="space-y-2.5">
-          <h4 class="text-white font-bold text-sm tracking-tight mb-3">Каталог продукции</h4>
+          <h4 class="text-text-primary font-bold text-sm tracking-tight mb-3">Каталог продукции</h4>
           <ul class="space-y-2">
-            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('remotes')" class="hover:text-white transition-colors">Пульты для LG, Samsung, Sony</a></li>
-            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('remotes')" class="hover:text-white transition-colors">Пульты для Philips и ARG</a></li>
-            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('satellite')" class="hover:text-white transition-colors">Пульты для Телекарта EVO HD</a></li>
-            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('satellite')" class="hover:text-white transition-colors">Пульты для Отау ТВ ZK-089</a></li>
-            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('appliances')" class="hover:text-white transition-colors">Стеклянные полки под ТВ</a></li>
-            <li><a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"><span>Магазин на Ozon</span> <i data-lucide="external-link" class="w-3.5 h-3.5"></i></a></li>
+            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('remotes')" class="hover:text-text-primary transition-colors">Пульты для LG, Samsung, Sony</a></li>
+            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('remotes')" class="hover:text-text-primary transition-colors">Пульты для Philips, Xiaomi, ARG</a></li>
+            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('satellite-telekarta')" class="hover:text-text-primary transition-colors">Комплект Телекарта HD (230+ каналов)</a></li>
+            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('satellite-otau')" class="hover:text-text-primary transition-colors">Комплект Отау ТВ (Казахстан HD)</a></li>
+            <li><a href="#catalog-section" onclick="window.App.openCatalogWithCategory('appliances')" class="hover:text-text-primary transition-colors">Кронштейны и полки под ТВ</a></li>
+            <li><a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" class="text-primary hover:underline transition-colors flex items-center gap-1"><span>Магазин на Ozon</span> <span class="material-symbols-outlined text-[14px]">open_in_new</span></a></li>
           </ul>
         </div>
 
         <!-- Услуги и сервис -->
         <div class="space-y-2.5">
-          <h4 class="text-white font-bold text-sm tracking-tight mb-3">Услуги и монтаж</h4>
+          <h4 class="text-text-primary font-bold text-sm tracking-tight mb-3">Услуги и монтаж</h4>
           <ul class="space-y-2">
-            <li><a href="#services-section" class="hover:text-white transition-colors">Монтаж видеонаблюдения под ключ</a></li>
-            <li><a href="#services-section" class="hover:text-white transition-colors">Настройка удалённого доступа на телефон</a></li>
-            <li><a href="#services-section" class="hover:text-white transition-colors">Установка спутниковых антенн 0.9м</a></li>
-            <li><a href="#services-section" class="hover:text-white transition-colors">Навес телевизоров 32–85″</a></li>
-            <li><a href="#remote-checker-section" class="hover:text-white transition-colors">Проверка совместимости пультов</a></li>
-            <li><a href="#" data-config="WA_LINK" target="_blank" class="text-emerald-400 hover:underline">Бесплатный выезд инженера на замер</a></li>
+            <li><a href="#services-section" class="hover:text-text-primary transition-colors">Монтаж видеонаблюдения под ключ</a></li>
+            <li><a href="#services-section" class="hover:text-text-primary transition-colors">Настройка удалённого доступа на телефон</a></li>
+            <li><a href="#services-section" class="hover:text-text-primary transition-colors">Установка спутниковых антенн 0.9м</a></li>
+            <li><a href="#services-section" class="hover:text-text-primary transition-colors">Навес телевизоров 32–85″</a></li>
+            <li><a href="#remote-checker-section" class="hover:text-text-primary transition-colors">Проверка совместимости пультов</a></li>
+            <li><a href="#" data-config="WA_LINK" target="_blank" class="text-whatsapp-green hover:underline">Бесплатный расчет сметы в WhatsApp</a></li>
           </ul>
         </div>
 
         <!-- Маркетплейсы и связь -->
         <div class="space-y-3">
-          <h4 class="text-white font-bold text-sm tracking-tight mb-3">Покупка на маркетплейсах</h4>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            Вы также можете приобрести наши товары в официальных магазинах на Ozon и Wildberries.
+          <h4 class="text-text-primary font-bold text-sm tracking-tight mb-3">Покупка на маркетплейсах</h4>
+          <p class="text-text-muted text-xs leading-relaxed">
+            Вы также можете приобрести наши товары в официальных магазинах на Ozon и Wildberries с быстрой доставкой.
           </p>
           <div class="flex flex-col gap-2 pt-1">
-            <a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" rel="noopener noreferrer" class="bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/40 text-white px-3.5 py-2.5 rounded-xl flex items-center justify-between transition-colors shadow-xs">
+            <a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" rel="noopener noreferrer" class="bg-primary/10 hover:bg-primary/20 border border-primary/30 text-text-primary px-3.5 py-2.5 rounded-xl flex items-center justify-between transition-colors shadow-xs">
               <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
                 <span class="font-extrabold text-blue-300">Ozon Магазин</span>
               </div>
-              <i data-lucide="external-link" class="w-4 h-4 text-blue-300"></i>
+              <span class="material-symbols-outlined text-[16px] text-blue-300">open_in_new</span>
             </a>
-            <a href="https://www.wildberries.ru/seller/250158087" target="_blank" rel="noopener noreferrer" class="bg-purple-900/30 hover:bg-purple-900/40 border border-purple-500/40 text-white px-3.5 py-2.5 rounded-xl flex items-center justify-between transition-colors shadow-xs">
+            <a href="https://www.wildberries.ru/seller/250158087" target="_blank" rel="noopener noreferrer" class="bg-purple-900/20 hover:bg-purple-900/30 border border-purple-500/30 text-text-primary px-3.5 py-2.5 rounded-xl flex items-center justify-between transition-colors shadow-xs">
               <div class="flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
                 <span class="font-extrabold text-purple-300">Wildberries Магазин</span>
               </div>
-              <i data-lucide="external-link" class="w-4 h-4 text-purple-300"></i>
+              <span class="material-symbols-outlined text-[16px] text-purple-300">open_in_new</span>
             </a>
           </div>
         </div>
       </div>
 
-      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-        <p>© 2026 ElectroSat. Все права защищены. Цены и наличие актуальны на сегодняшний день.</p>
-        <p>Быстрая передача заказов в WhatsApp и Telegram: 87052202575</p>
+      <div class="pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-text-muted">
+        <p>© 2026 ElectroSat KZ (ИП Михайленко). Все права защищены.</p>
+        <p>Сатпаев • Жезказган • WhatsApp / Звонки: +7 (705) 220-25-75</p>
       </div>
 
     </div>
@@ -765,27 +1045,27 @@
   <!-- ==========================================
        НИЖНЯЯ НАВИГАЦИОННАЯ ПАНЕЛЬ ДЛЯ СМАРТФОНОВ (MOBILE BOTTOM NAV)
        ========================================== -->
-  <nav class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-2 py-1.5 flex items-center justify-around shadow-lg">
-    <a href="#catalog-section" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-slate-600 hover:text-blue-600 p-1">
-      <i data-lucide="grid" class="w-5 h-5"></i>
+  <nav class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-surface-card/95 backdrop-blur-md border-t border-border-subtle px-2 py-1.5 flex items-center justify-around shadow-2xl">
+    <a href="#catalog-section" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-text-muted hover:text-primary p-1">
+      <span class="material-symbols-outlined text-[20px]">grid_view</span>
       <span>Каталог</span>
     </a>
-    <button onclick="window.App.openFavoritesModal()" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-slate-600 hover:text-rose-500 p-1 relative">
-      <i data-lucide="heart" class="w-5 h-5"></i>
+    <button onclick="window.App.openFavoritesModal()" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-text-muted hover:text-rose-400 p-1 relative">
+      <span class="material-symbols-outlined text-[20px]">favorite</span>
       <span class="fav-count-badge hidden absolute top-0 right-1 bg-rose-500 text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
       <span>Избранное</span>
     </button>
-    <button onclick="window.App.openCartDrawer()" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-blue-600 p-1 relative">
-      <i data-lucide="shopping-cart" class="w-5 h-5"></i>
-      <span class="cart-count-badge hidden absolute top-0 right-1 bg-blue-600 text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
+    <button onclick="window.App.openCartDrawer()" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-primary p-1 relative">
+      <span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+      <span class="cart-count-badge hidden absolute top-0 right-1 bg-primary text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">0</span>
       <span>Корзина</span>
     </button>
-    <button onclick="window.Assistant.openChat()" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-slate-600 hover:text-indigo-600 p-1">
-      <i data-lucide="bot" class="w-5 h-5 text-indigo-600"></i>
+    <button onclick="window.Assistant.openChat()" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-text-muted hover:text-primary p-1">
+      <span class="material-symbols-outlined text-[20px] text-primary">smart_toy</span>
       <span>Помощник</span>
     </button>
-    <a href="#" data-config="WA_LINK" target="_blank" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-emerald-600 p-1">
-      <i data-lucide="message-circle" class="w-5 h-5"></i>
+    <a href="#" data-config="WA_LINK" target="_blank" class="flex flex-col items-center gap-0.5 text-[10px] font-semibold text-whatsapp-green p-1">
+      <span class="material-symbols-outlined text-[20px]">chat</span>
       <span>WhatsApp</span>
     </a>
   </nav>
@@ -794,16 +1074,16 @@
        ШТОРКА КОРЗИНЫ (CART DRAWER)
        ========================================== -->
   <div id="cart-drawer" class="fixed inset-0 z-[9999] modal-backdrop hidden flex justify-end">
-    <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col drawer-slide-right relative">
+    <div class="w-full max-w-md bg-surface-card border-l border-border-subtle h-full shadow-2xl flex flex-col drawer-slide-right relative text-text-primary">
       <!-- Шапка корзины -->
-      <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-900 text-white flex-shrink-0">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white">
-            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+      <div class="p-4 border-b border-border-subtle flex items-center justify-between bg-surface-container-lowest text-text-primary flex-shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white">
+            <span class="material-symbols-outlined text-[18px]">shopping_cart</span>
           </div>
           <div>
             <h3 class="font-bold text-sm sm:text-base">Корзина товаров</h3>
-            <span class="text-[11px] text-slate-400">Магазин ElectroSat (г. Сатпаев)</span>
+            <span class="text-[11px] text-text-muted">Магазин ElectroSat KZ (г. Сатпаев)</span>
           </div>
         </div>
         <div class="flex items-center gap-1">
@@ -811,25 +1091,25 @@
             type="button"
             onclick="window.Cart.clearCart()" 
             title="Очистить всю корзину" 
-            class="text-xs text-slate-400 hover:text-rose-400 px-2 py-1 rounded-lg hover:bg-slate-800 transition-colors"
+            class="text-xs text-text-muted hover:text-rose-400 px-2 py-1 rounded-lg hover:bg-surface-raised transition-colors"
           >
             Очистить
           </button>
           <button 
             type="button"
             onclick="window.App.closeCartDrawer()" 
-            class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+            class="p-1.5 text-text-muted hover:text-text-primary rounded-lg hover:bg-surface-raised transition-colors"
           >
-            <i data-lucide="x" class="w-5 h-5"></i>
+            <span class="material-symbols-outlined text-[20px]">close</span>
           </button>
         </div>
       </div>
 
       <!-- Список товаров -->
-      <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-50"></div>
+      <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-4 space-y-3 bg-surface-container-low"></div>
 
       <!-- Итоги и кнопки оплаты -->
-      <div id="cart-drawer-summary" class="flex-shrink-0"></div>
+      <div id="cart-drawer-summary" class="flex-shrink-0 bg-surface-card border-t border-border-subtle"></div>
     </div>
   </div>
 
@@ -837,63 +1117,63 @@
        МОДАЛЬНОЕ ОКНО ОПЛАТЫ И ОФОРМЛЕНИЯ ЗАКАЗА
        ========================================== -->
   <div id="checkout-modal" class="fixed inset-0 z-[9990] modal-backdrop hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
-    <div class="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-6 shadow-2xl border border-slate-200 max-h-[92vh] overflow-y-auto my-auto">
+    <div class="bg-surface-card rounded-3xl max-w-lg w-full p-5 sm:p-6 shadow-2xl border border-border-subtle max-h-[92vh] overflow-y-auto my-auto text-text-primary">
       
       <!-- Шапка оформления -->
-      <div class="flex items-start justify-between mb-4 pb-3 border-b border-slate-100">
+      <div class="flex items-start justify-between mb-4 pb-3 border-b border-border-subtle">
         <div>
-          <span class="text-[10px] font-extrabold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-md">
+          <span class="text-[10px] font-extrabold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-0.5 rounded-md border border-primary/20">
             Оплата и получение
           </span>
-          <h3 class="text-xl font-black text-slate-900 mt-1">Оформление заказа</h3>
-          <p class="text-xs text-slate-500">Магазин ElectroSat • г. Сатпаев, ТД «Арман»</p>
+          <h3 class="text-xl font-black text-text-primary mt-1">Оформление заказа</h3>
+          <p class="text-xs text-text-muted">Магазин ElectroSat • г. Сатпаев, ТД «Арман»</p>
         </div>
-        <button onclick="document.getElementById('checkout-modal').classList.add('hidden')" class="p-1.5 text-slate-400 hover:text-slate-700 rounded-xl hover:bg-slate-100 transition-colors">
-          <i data-lucide="x" class="w-5 h-5"></i>
+        <button onclick="document.getElementById('checkout-modal').classList.add('hidden')" class="p-1.5 text-text-muted hover:text-text-primary rounded-xl hover:bg-surface-raised transition-colors">
+          <span class="material-symbols-outlined text-[20px]">close</span>
         </button>
       </div>
 
       <!-- Сумма заказа плашка -->
-      <div id="checkout-order-summary-box" class="bg-slate-900 text-white rounded-2xl p-3.5 mb-4 flex items-center justify-between">
+      <div id="checkout-order-summary-box" class="bg-surface-container-lowest text-text-primary border border-border-subtle rounded-2xl p-3.5 mb-4 flex items-center justify-between">
         <div>
-          <span class="text-xs text-slate-400 block">К оплате за заказ:</span>
-          <span id="checkout-grand-total" class="text-xl font-black text-blue-400">0 ₸</span>
+          <span class="text-xs text-text-muted block">К оплате за заказ:</span>
+          <span id="checkout-grand-total" class="text-xl font-black text-primary">0 ₸</span>
         </div>
-        <span class="text-[11px] bg-blue-600/30 text-blue-300 border border-blue-500/40 px-2.5 py-1 rounded-lg">
+        <span class="text-[11px] bg-primary/20 text-blue-300 border border-primary/30 px-2.5 py-1 rounded-lg">
           Гарантия 6 месяцев
         </span>
       </div>
 
       <!-- Переключатель способов оплаты -->
       <div class="mb-4">
-        <label class="block text-xs font-bold text-slate-700 mb-2">Выберите способ оплаты:</label>
-        <div class="grid grid-cols-3 gap-1.5 p-1 bg-slate-100 rounded-2xl">
+        <label class="block text-xs font-bold text-text-muted mb-2">Выберите способ оплаты:</label>
+        <div class="grid grid-cols-3 gap-1.5 p-1 bg-surface-container-low rounded-2xl border border-border-subtle">
           <button 
             type="button" 
             onclick="window.App.switchPaymentTab('card')" 
             id="tab-btn-card" 
-            class="payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-white text-blue-600 shadow-xs border border-blue-200"
+            class="payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all bg-primary text-white shadow-xs"
           >
-            <span class="text-sm">💳 Карта онлайн</span>
-            <span class="text-[10px] text-slate-500 font-normal">Visa / Mastercard</span>
+            <span class="text-sm">💳 Карта</span>
+            <span class="text-[10px] text-blue-100 font-normal">Онлайн</span>
           </button>
           <button 
             type="button" 
             onclick="window.App.switchPaymentTab('cash')" 
             id="tab-btn-cash" 
-            class="payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900"
+            class="payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all text-text-muted hover:text-text-primary"
           >
             <span class="text-sm">🏬 ТД «Арман»</span>
-            <span class="text-[10px] text-slate-500 font-normal">При получении</span>
+            <span class="text-[10px] text-text-muted font-normal">При получении</span>
           </button>
           <button 
             type="button" 
             onclick="window.App.switchPaymentTab('marketplaces')" 
             id="tab-btn-marketplaces" 
-            class="payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all text-slate-600 hover:text-slate-900"
+            class="payment-tab-btn flex flex-col items-center justify-center p-2.5 rounded-xl text-xs font-bold transition-all text-text-muted hover:text-text-primary"
           >
             <span class="text-sm">🛍️ Ozon / WB</span>
-            <span class="text-[10px] text-slate-500 font-normal">В приложении</span>
+            <span class="text-[10px] text-text-muted font-normal">В приложении</span>
           </button>
         </div>
       </div>
@@ -901,7 +1181,7 @@
       <!-- Контейнер выбранного способа оплаты -->
       <!-- 1. ОПЛАТА КАРТОЙ ОНЛАЙН -->
       <div id="payment-pane-card" class="payment-pane space-y-4">
-        <div class="bg-gradient-to-tr from-slate-900 to-blue-900 text-white rounded-2xl p-4 shadow-lg relative overflow-hidden">
+        <div class="bg-gradient-to-tr from-surface-container-lowest to-primary/30 border border-border-subtle text-white rounded-2xl p-4 shadow-lg relative overflow-hidden">
           <div class="flex justify-between items-center mb-4">
             <span class="text-xs font-mono tracking-widest text-blue-300">ELECTROSAT PAY</span>
             <div class="flex gap-1.5 text-[10px] font-bold">
@@ -909,22 +1189,22 @@
               <span class="bg-white/20 px-2 py-0.5 rounded">Mastercard</span>
             </div>
           </div>
-          <div class="text-sm font-mono tracking-widest mb-3" id="card-preview-number">•••• •••• •••• ••••</div>
+          <div class="text-sm font-mono tracking-widest mb-3 text-text-primary" id="card-preview-number">•••• •••• •••• ••••</div>
           <div class="flex justify-between items-end text-xs font-mono">
             <div>
-              <span class="text-[9px] text-slate-400 block">ВЛАДЕЛЕЦ</span>
-              <span id="card-preview-holder" class="font-bold">CARD HOLDER</span>
+              <span class="text-[9px] text-text-muted block">ВЛАДЕЛЕЦ</span>
+              <span id="card-preview-holder" class="font-bold text-text-primary">CARD HOLDER</span>
             </div>
             <div>
-              <span class="text-[9px] text-slate-400 block">СРОК</span>
-              <span id="card-preview-exp">MM/YY</span>
+              <span class="text-[9px] text-text-muted block">СРОК</span>
+              <span id="card-preview-exp" class="text-text-primary">MM/YY</span>
             </div>
           </div>
         </div>
 
         <form id="card-payment-form" onsubmit="window.App.handleCardPayment(event)" class="space-y-3">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Номер банковской карты *</label>
+            <label class="block text-xs font-semibold text-text-muted mb-1">Номер банковской карты *</label>
             <input 
               type="text" 
               id="card-number" 
@@ -932,13 +1212,13 @@
               maxlength="19" 
               placeholder="4400 0000 0000 0000" 
               oninput="window.App.formatCardNumber(this)" 
-              class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-mono focus:border-blue-500 focus:outline-none"
+              class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm font-mono text-text-primary focus:border-primary focus:outline-none"
             >
           </div>
 
           <div class="grid grid-cols-2 gap-3">
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Срок (ММ/ГГ) *</label>
+              <label class="block text-xs font-semibold text-text-muted mb-1">Срок (ММ/ГГ) *</label>
               <input 
                 type="text" 
                 id="card-exp" 
@@ -946,49 +1226,49 @@
                 maxlength="5" 
                 placeholder="12/28" 
                 oninput="window.App.formatCardExp(this)" 
-                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-mono focus:border-blue-500 focus:outline-none"
+                class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm font-mono text-text-primary focus:border-primary focus:outline-none"
               >
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">CVV / CVC *</label>
+              <label class="block text-xs font-semibold text-text-muted mb-1">CVV / CVC *</label>
               <input 
                 type="password" 
                 id="card-cvv" 
                 required 
                 maxlength="3" 
                 placeholder="•••" 
-                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-mono focus:border-blue-500 focus:outline-none"
+                class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm font-mono text-text-primary focus:border-primary focus:outline-none"
               >
             </div>
           </div>
 
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Имя на карте (латиницей) *</label>
+            <label class="block text-xs font-semibold text-text-muted mb-1">Имя на карте (латиницей) *</label>
             <input 
               type="text" 
               id="card-holder" 
               required 
               placeholder="YERLAN KAZAKH" 
               oninput="document.getElementById('card-preview-holder').textContent = this.value.toUpperCase() || 'CARD HOLDER'"
-              class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm uppercase focus:border-blue-500 focus:outline-none"
+              class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm uppercase text-text-primary focus:border-primary focus:outline-none"
             >
           </div>
 
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Телефон для получения чека *</label>
-            <input type="tel" id="card-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:border-blue-500 focus:outline-none">
+            <label class="block text-xs font-semibold text-text-muted mb-1">Телефон для получения чека *</label>
+            <input type="tel" id="card-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm text-text-primary focus:border-primary focus:outline-none">
           </div>
 
           <button 
             type="submit" 
             id="card-pay-btn" 
-            class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg transition-all active:scale-98 text-sm"
+            class="w-full bg-primary hover:bg-blue-600 active:scale-95 text-white font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg transition-all text-sm"
           >
-            <i data-lucide="lock" class="w-4 h-4"></i>
+            <span class="material-symbols-outlined text-[18px]">lock</span>
             <span id="card-pay-btn-text">Безопасная оплата картой онлайн</span>
           </button>
           
-          <p class="text-[10px] text-center text-slate-400">
+          <p class="text-[10px] text-center text-text-muted">
             🔒 Защищенное 256-bit SSL соединение. Чек с фискальным номером формируется моментально.
           </p>
         </form>
@@ -996,32 +1276,32 @@
 
       <!-- 3. ОПЛАТА ПРИ ПОЛУЧЕНИИ В ТД АРМАН -->
       <div id="payment-pane-cash" class="payment-pane hidden space-y-4">
-        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 text-xs text-emerald-900 space-y-2">
-          <div class="flex items-center gap-2 font-bold text-sm text-emerald-800">
-            <i data-lucide="store" class="w-4 h-4"></i>
+        <div class="bg-whatsapp-green/10 border border-whatsapp-green/20 rounded-2xl p-4 text-xs text-text-primary space-y-2">
+          <div class="flex items-center gap-2 font-bold text-sm text-whatsapp-green">
+            <span class="material-symbols-outlined text-[18px]">storefront</span>
             <span>Самовывоз в магазине ElectroSat</span>
           </div>
-          <p>Вы можете забрать заказ и оплатить наличными или картой прямо в магазине:</p>
-          <p class="font-semibold text-slate-800">📍 г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман» (бывшая Комарова 20А)</p>
-          <p class="text-slate-600">🕒 Часы работы: Пн–Сб 11:00–19:00, Вс 11:00–17:00</p>
+          <p class="text-text-muted">Вы можете забрать заказ и оплатить наличными или картой прямо в магазине:</p>
+          <p class="font-semibold text-text-primary">📍 г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман»</p>
+          <p class="text-text-muted">🕒 Часы работы: Пн–Сб 11:00–19:00, Вс 11:00–17:00</p>
         </div>
 
         <form id="cash-checkout-form" onsubmit="window.App.handleCashCheckout(event)" class="space-y-3">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Ваше имя *</label>
-            <input type="text" id="cash-name" required placeholder="Например: Кайрат" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:border-emerald-500 focus:outline-none">
+            <label class="block text-xs font-semibold text-text-muted mb-1">Ваше имя *</label>
+            <input type="text" id="cash-name" required placeholder="Например: Кайрат" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm text-text-primary focus:border-whatsapp-green focus:outline-none">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Номер телефона *</label>
-            <input type="tel" id="cash-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:border-emerald-500 focus:outline-none">
+            <label class="block text-xs font-semibold text-text-muted mb-1">Номер телефона *</label>
+            <input type="tel" id="cash-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm text-text-primary focus:border-whatsapp-green focus:outline-none">
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Комментарий / время визита</label>
-            <input type="text" id="cash-comment" placeholder="Например: приеду сегодня к 15:00" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:border-emerald-500 focus:outline-none">
+            <label class="block text-xs font-semibold text-text-muted mb-1">Комментарий / время визита</label>
+            <input type="text" id="cash-comment" placeholder="Например: приеду сегодня к 15:00" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3.5 py-2.5 text-sm text-text-primary focus:border-whatsapp-green focus:outline-none">
           </div>
 
-          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg transition-all active:scale-98 text-sm">
-            <i data-lucide="check" class="w-4 h-4"></i>
+          <button type="submit" class="w-full bg-whatsapp-green hover:bg-emerald-600 text-slate-950 font-bold py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95 text-sm">
+            <span class="material-symbols-outlined text-[18px]">check_circle</span>
             <span>Забронировать товар для самовывоза</span>
           </button>
         </form>
@@ -1029,26 +1309,26 @@
 
       <!-- 4. ПОКУПКА НА МАРКЕТПЛЕЙСАХ (OZON / WB) -->
       <div id="payment-pane-marketplaces" class="payment-pane hidden space-y-4">
-        <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4 text-xs text-blue-900 space-y-2">
-          <div class="font-bold text-sm flex items-center gap-1.5">
-            <i data-lucide="shopping-bag" class="w-4 h-4 text-blue-600"></i>
+        <div class="bg-primary/10 border border-primary/20 rounded-2xl p-4 text-xs text-text-primary space-y-2">
+          <div class="font-bold text-sm flex items-center gap-1.5 text-primary">
+            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
             <span>Оформление через маркетплейсы</span>
           </div>
-          <p>Если вам привычнее покупать со своего личного аккаунта Ozon или Wildberries с доставкой в ближайший пункт выдачи (ПВЗ):</p>
+          <p class="text-text-muted">Если вам привычнее покупать со своего личного аккаунта Ozon или Wildberries с доставкой в ближайший пункт выдачи (ПВЗ):</p>
         </div>
 
         <div id="checkout-marketplace-links" class="space-y-2 max-h-60 overflow-y-auto">
           <!-- Ссылки на товары из корзины на Ozon / WB -->
         </div>
 
-        <div class="pt-2 border-t border-slate-100 space-y-2">
-          <a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-colors shadow-sm">
+        <div class="pt-2 border-t border-border-subtle space-y-2">
+          <a href="https://ozon.kz/seller/ip-mihaylenko/" target="_blank" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-colors shadow-sm">
             <span>Открыть весь наш Ozon Магазин</span>
-            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
           </a>
           <a href="https://www.wildberries.ru/seller/250158087" target="_blank" class="w-full bg-purple-700 hover:bg-purple-800 text-white font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs transition-colors shadow-sm">
             <span>Открыть наш магазин на Wildberries</span>
-            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            <span class="material-symbols-outlined text-[16px]">open_in_new</span>
           </a>
         </div>
       </div>
@@ -1060,16 +1340,16 @@
        ЭКРАН БЛАГОДАРНОСТИ / ЧЕК (THANK YOU MODAL)
        ========================================== -->
   <div id="thankyou-modal" class="fixed inset-0 z-[10000] modal-backdrop hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
-    <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-slate-200 text-slate-800 my-auto" id="thankyou-modal-content"></div>
+    <div class="bg-surface-card rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-border-subtle text-text-primary my-auto" id="thankyou-modal-content"></div>
   </div>
 
   <!-- ==========================================
        МОДАЛЬНОЕ ОКНО ДЕТАЛЕЙ ТОВАРА
        ========================================== -->
   <div id="product-detail-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-3 sm:p-6">
-    <div class="bg-white rounded-3xl max-w-3xl w-full shadow-2xl border border-slate-200 max-h-[92vh] overflow-y-auto relative">
-      <button class="modal-close-btn absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors">
-        <i data-lucide="x" class="w-5 h-5"></i>
+    <div class="bg-surface-card rounded-3xl max-w-3xl w-full shadow-2xl border border-border-subtle max-h-[92vh] overflow-y-auto relative text-text-primary">
+      <button onclick="document.getElementById('product-detail-modal').classList.add('hidden')" class="modal-close-btn absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-surface-raised hover:bg-surface-card text-text-muted hover:text-text-primary flex items-center justify-center transition-colors border border-border-subtle">
+        <span class="material-symbols-outlined text-[20px]">close</span>
       </button>
       <div id="product-detail-content"></div>
     </div>
@@ -1079,42 +1359,42 @@
        МОДАЛЬНОЕ ОКНО БЫСТРОГО ЗАКАЗА В 1 КЛИК
        ========================================== -->
   <div id="quick-order-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-200">
+    <div class="bg-surface-card rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-border-subtle text-text-primary">
       <div class="flex items-center justify-between mb-3">
-        <h3 class="text-base font-bold text-slate-900">Быстрый заказ в 1 клик</h3>
-        <button class="modal-close-btn p-1 text-slate-400 hover:text-slate-600">
-          <i data-lucide="x" class="w-5 h-5"></i>
+        <h3 class="text-base font-bold text-text-primary">Быстрый заказ в 1 клик</h3>
+        <button onclick="document.getElementById('quick-order-modal').classList.add('hidden')" class="modal-close-btn p-1 text-text-muted hover:text-text-primary">
+          <span class="material-symbols-outlined text-[20px]">close</span>
         </button>
       </div>
 
-      <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 mb-4">
-        <h5 id="quick-order-product-title" class="font-bold text-xs text-slate-900 leading-snug line-clamp-2"></h5>
-        <span id="quick-order-product-price" class="text-blue-600 font-extrabold text-sm block mt-1"></span>
+      <div class="bg-surface-container-low border border-border-subtle rounded-xl p-3 mb-4">
+        <h5 id="quick-order-product-title" class="font-bold text-xs text-text-primary leading-snug line-clamp-2"></h5>
+        <span id="quick-order-product-price" class="text-primary font-extrabold text-sm block mt-1"></span>
       </div>
 
       <form id="quick-order-form" class="space-y-3">
         <div>
-          <label class="block text-xs font-medium text-slate-700 mb-1">Ваше имя *</label>
-          <input type="text" id="quick-order-name" required placeholder="Имя" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:border-blue-500 focus:outline-none">
+          <label class="block text-xs font-medium text-text-muted mb-1">Ваше имя *</label>
+          <input type="text" id="quick-order-name" required placeholder="Имя" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3 py-2 text-xs text-text-primary focus:border-primary focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs font-medium text-slate-700 mb-1">Телефон *</label>
-          <input type="tel" id="quick-order-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:border-blue-500 focus:outline-none">
+          <label class="block text-xs font-medium text-text-muted mb-1">Телефон *</label>
+          <input type="tel" id="quick-order-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3 py-2 text-xs text-text-primary focus:border-primary focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs font-medium text-slate-700 mb-1">Канал связи:</label>
+          <label class="block text-xs font-medium text-text-muted mb-1">Канал связи:</label>
           <div class="grid grid-cols-2 gap-2 text-xs">
-            <label class="flex items-center gap-1.5 p-2 border border-slate-200 rounded-lg cursor-pointer bg-slate-50 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50 font-medium">
-              <input type="radio" name="quick-channel" value="WhatsApp" checked class="text-emerald-600">
+            <label class="flex items-center gap-1.5 p-2 border border-border-subtle rounded-lg cursor-pointer bg-surface-container-low has-[:checked]:border-whatsapp-green has-[:checked]:bg-whatsapp-green/10 font-medium text-text-primary">
+              <input type="radio" name="quick-channel" value="WhatsApp" checked class="text-whatsapp-green">
               <span>WhatsApp</span>
             </label>
-            <label class="flex items-center gap-1.5 p-2 border border-slate-200 rounded-lg cursor-pointer bg-slate-50 has-[:checked]:border-sky-500 has-[:checked]:bg-sky-50 font-medium">
-              <input type="radio" name="quick-channel" value="Telegram" class="text-sky-600">
+            <label class="flex items-center gap-1.5 p-2 border border-border-subtle rounded-lg cursor-pointer bg-surface-container-low has-[:checked]:border-primary has-[:checked]:bg-primary/10 font-medium text-text-primary">
+              <input type="radio" name="quick-channel" value="Telegram" class="text-primary">
               <span>Telegram</span>
             </label>
           </div>
         </div>
-        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-xl text-xs transition-all mt-2">
+        <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-2.5 rounded-xl text-xs transition-all mt-2">
           Отправить заявку
         </button>
       </form>
@@ -1125,34 +1405,34 @@
        МОДАЛЬНОЕ ОКНО ЗАКАЗА УСЛУГИ
        ========================================== -->
   <div id="service-order-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200">
+    <div class="bg-surface-card rounded-3xl max-w-md w-full p-6 shadow-2xl border border-border-subtle text-text-primary">
       <div class="flex items-center justify-between mb-2">
-        <h3 class="text-base font-bold text-slate-900" id="service-order-title">Заказ услуги</h3>
-        <button class="modal-close-btn p-1 text-slate-400 hover:text-slate-600">
-          <i data-lucide="x" class="w-5 h-5"></i>
+        <h3 class="text-base font-bold text-text-primary" id="service-order-title">Заказ услуги</h3>
+        <button onclick="document.getElementById('service-order-modal').classList.add('hidden')" class="modal-close-btn p-1 text-text-muted hover:text-text-primary">
+          <span class="material-symbols-outlined text-[20px]">close</span>
         </button>
       </div>
-      <p id="service-order-desc" class="text-xs text-slate-500 mb-4"></p>
+      <p id="service-order-desc" class="text-xs text-text-muted mb-4"></p>
 
       <form id="service-order-form" class="space-y-3">
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Имя *</label>
-          <input type="text" id="service-order-name" required placeholder="Ваше имя" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:border-blue-500 focus:outline-none">
+          <label class="block text-xs font-semibold text-text-muted mb-1">Имя *</label>
+          <input type="text" id="service-order-name" required placeholder="Ваше имя" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3 py-2 text-xs text-text-primary focus:border-primary focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Телефон *</label>
-          <input type="tel" id="service-order-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:border-blue-500 focus:outline-none">
+          <label class="block text-xs font-semibold text-text-muted mb-1">Телефон *</label>
+          <input type="tel" id="service-order-phone" required placeholder="+7 (___) ___-__-__" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3 py-2 text-xs text-text-primary focus:border-primary focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Адрес объекта</label>
-          <input type="text" id="service-order-address" placeholder="Район / улица" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:border-blue-500 focus:outline-none">
+          <label class="block text-xs font-semibold text-text-muted mb-1">Адрес объекта</label>
+          <input type="text" id="service-order-address" placeholder="Район / улица" class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3 py-2 text-xs text-text-primary focus:border-primary focus:outline-none">
         </div>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Комментарий</label>
-          <textarea id="service-order-comment" rows="2" placeholder="Желаемая дата выезда, особенности..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:border-blue-500 focus:outline-none"></textarea>
+          <label class="block text-xs font-semibold text-text-muted mb-1">Комментарий</label>
+          <textarea id="service-order-comment" rows="2" placeholder="Желаемая дата выезда, особенности..." class="w-full bg-surface-container-low border border-border-subtle rounded-xl px-3 py-2 text-xs text-text-primary focus:border-primary focus:outline-none"></textarea>
         </div>
-        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5 shadow-md">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <button type="submit" class="w-full bg-whatsapp-green hover:bg-emerald-600 text-slate-950 font-bold py-3 rounded-xl text-xs transition-all flex items-center justify-center gap-1.5 shadow-md">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
           <span>Отправить заявку в WhatsApp</span>
         </button>
       </form>
@@ -1163,14 +1443,14 @@
        МОДАЛЬНОЕ ОКНО ИЗБРАННОГО (FAVORITES)
        ========================================== -->
   <div id="favorites-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 max-h-[85vh] flex flex-col">
-      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+    <div class="bg-surface-card rounded-3xl max-w-md w-full p-6 shadow-2xl border border-border-subtle max-h-[85vh] flex flex-col text-text-primary">
+      <div class="flex items-center justify-between pb-3 border-b border-border-subtle">
         <div class="flex items-center gap-2">
-          <i data-lucide="heart" class="w-5 h-5 text-rose-500 fill-current"></i>
-          <h3 class="font-bold text-base text-slate-900">Избранные товары</h3>
+          <span class="material-symbols-outlined text-[22px] text-rose-500">favorite</span>
+          <h3 class="font-bold text-base text-text-primary">Избранные товары</h3>
         </div>
-        <button class="modal-close-btn p-1 text-slate-400 hover:text-slate-600">
-          <i data-lucide="x" class="w-5 h-5"></i>
+        <button onclick="document.getElementById('favorites-modal').classList.add('hidden')" class="modal-close-btn p-1 text-text-muted hover:text-text-primary">
+          <span class="material-symbols-outlined text-[20px]">close</span>
         </button>
       </div>
       <div id="favorites-modal-items" class="flex-1 overflow-y-auto py-3 space-y-2"></div>
@@ -1181,16 +1461,16 @@
        МОДАЛЬНОЕ ОКНО СРАВНЕНИЯ (COMPARE)
        ========================================== -->
   <div id="compare-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-4xl w-full p-6 shadow-2xl border border-slate-200 max-h-[90vh] flex flex-col">
-      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+    <div class="bg-surface-card rounded-3xl max-w-4xl w-full p-6 shadow-2xl border border-border-subtle max-h-[90vh] flex flex-col text-text-primary">
+      <div class="flex items-center justify-between pb-3 border-b border-border-subtle">
         <div class="flex items-center gap-2">
-          <i data-lucide="bar-chart-2" class="w-5 h-5 text-blue-600"></i>
-          <h3 class="font-bold text-base text-slate-900">Сравнение характеристик</h3>
+          <span class="material-symbols-outlined text-[22px] text-primary">compare_arrows</span>
+          <h3 class="font-bold text-base text-text-primary">Сравнение характеристик</h3>
         </div>
         <div class="flex items-center gap-2">
-          <button onclick="window.Cart.clearCompare()" class="text-xs text-slate-400 hover:text-red-500 font-medium">Очистить всё</button>
-          <button class="modal-close-btn p-1 text-slate-400 hover:text-slate-600">
-            <i data-lucide="x" class="w-5 h-5"></i>
+          <button onclick="window.Cart.clearCompare()" class="text-xs text-text-muted hover:text-rose-400 font-medium">Очистить всё</button>
+          <button onclick="document.getElementById('compare-modal').classList.add('hidden')" class="modal-close-btn p-1 text-text-muted hover:text-text-primary">
+            <span class="material-symbols-outlined text-[20px]">close</span>
           </button>
         </div>
       </div>
@@ -1202,34 +1482,35 @@
        МОБИЛЬНОЕ МЕНЮ ШТОРКА (MOBILE MENU)
        ========================================== -->
   <div id="mobile-menu-drawer" class="fixed inset-0 z-50 modal-backdrop hidden flex">
-    <div class="w-4/5 max-w-xs bg-slate-900 text-white h-full p-6 flex flex-col justify-between shadow-2xl">
+    <div class="w-4/5 max-w-xs bg-surface-card border-r border-border-subtle text-text-primary h-full p-6 flex flex-col justify-between shadow-2xl">
       <div class="space-y-6">
-        <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-          <div class="flex items-center gap-2 font-bold text-lg">
-            <i data-lucide="zap" class="w-6 h-6 text-amber-400"></i>
+        <div class="flex items-center justify-between border-b border-border-subtle pb-4">
+          <div class="flex items-center gap-2 font-bold text-lg text-text-primary">
+            <span class="material-symbols-outlined text-primary text-[24px]">satellite_alt</span>
             <span data-config="COMPANY_NAME">ElectroSat</span>
           </div>
-          <button onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="p-1 text-slate-400 hover:text-white">
-            <i data-lucide="x" class="w-5 h-5"></i>
+          <button onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="p-1 text-text-muted hover:text-text-primary">
+            <span class="material-symbols-outlined text-[20px]">close</span>
           </button>
         </div>
 
-        <nav class="flex flex-col gap-4 text-sm font-semibold">
-          <a href="#catalog-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-blue-400">Каталог товаров</a>
-          <a href="#services-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-blue-400">Установка под ключ</a>
-          <a href="#remote-checker-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-blue-400">Подбор пультов ДУ</a>
-          <a href="#advantages-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-blue-400">Почему нам доверяют</a>
-          <a href="#portfolio-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-blue-400">Выполненные работы</a>
-          <a href="#contacts-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-blue-400">Контакты & 2ГИС</a>
+        <nav class="flex flex-col gap-4 text-sm font-semibold text-text-muted">
+          <a href="#flagship-systems" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-primary transition-colors">Готовые комплекты</a>
+          <a href="#catalog-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-primary transition-colors">Каталог оборудования</a>
+          <a href="#remote-checker-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-primary transition-colors">Подбор пультов ДУ</a>
+          <a href="#services-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-primary transition-colors">Установка под ключ</a>
+          <a href="#advantages-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-primary transition-colors">Преимущества</a>
+          <a href="#portfolio-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-primary transition-colors">Выполненные работы</a>
+          <a href="#contacts-section" onclick="document.getElementById('mobile-menu-drawer').classList.add('hidden')" class="hover:text-primary transition-colors">Контакты & 2ГИС</a>
         </nav>
       </div>
 
-      <div class="space-y-3 pt-6 border-t border-slate-800 text-xs">
-        <a href="#" data-config="TEL_LINK" class="flex items-center gap-2 text-white font-bold">
-          <i data-lucide="phone" class="w-4 h-4 text-blue-400"></i>
+      <div class="space-y-3 pt-6 border-t border-border-subtle text-xs">
+        <a href="#" data-config="TEL_LINK" class="flex items-center gap-2 text-text-primary font-bold">
+          <span class="material-symbols-outlined text-primary text-[18px]">call</span>
           <span data-config="PHONE">+7 (705) 220-25-75</span>
         </a>
-        <p data-config="ADDRESS" class="text-slate-400">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман» (бывшая Комарова 20А)</p>
+        <p data-config="ADDRESS" class="text-text-muted">г. Сатпаев, ул. Мангилик Ел 20А, ТД «Арман»</p>
       </div>
     </div>
   </div>
@@ -1237,9 +1518,9 @@
   <!-- ==========================================
        ВСПЛЫВАЮЩИЕ TOAST УВЕДОМЛЕНИЯ
        ========================================== -->
-  <div id="app-toast" class="fixed top-5 right-5 z-50 max-w-sm bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3 transition-all duration-300 transform translate-y-12 opacity-0 hidden">
-    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
-      <i data-lucide="check" class="w-4 h-4 text-white"></i>
+  <div id="app-toast" class="fixed top-5 right-5 z-50 max-w-sm bg-surface-card text-text-primary px-4 py-3 rounded-2xl shadow-2xl border border-border-subtle flex items-center gap-3 transition-all duration-300 transform translate-y-12 opacity-0 hidden">
+    <div class="w-8 h-8 rounded-full bg-whatsapp-green/20 text-whatsapp-green flex items-center justify-center flex-shrink-0">
+      <span class="material-symbols-outlined text-[18px]">check</span>
     </div>
     <p id="app-toast-text" class="text-xs font-medium leading-snug"></p>
   </div>

@@ -58,6 +58,33 @@ const REMOTE_COMPATIBILITY_DB = [
     commonModels: ["ZK-089+10", "ZK-089", "OTAU TV HD"]
   },
   {
+    brand: "Xiaomi",
+    keywords: ["xiaomi", "сяоми", "mi tv", "redmi", "mitv", "mi box", "mi stick"],
+    recommendedProductId: "ozon-1853547422",
+    recommendedProductName: "Пульт для Xiaomi Mi TV / Android TV",
+    matchTypes: ["Xiaomi Mi TV 4A/4S/P1/A2", "Redmi TV", "Xiaomi TV Box & Stick"],
+    tip: "Пульт с поддержкой Bluetooth и голосового поиска для всех телевизоров и приставок Xiaomi/Redmi.",
+    commonModels: ["Mi TV 4S 43/55", "Mi TV P1 32/43/55", "Mi TV A2", "Xiaomi TV Stick 4K"]
+  },
+  {
+    brand: "TCL",
+    keywords: ["tcl", "тсл", "android tv tcl", "google tv tcl"],
+    recommendedProductId: "ozon-1853547422",
+    recommendedProductName: "Универсальный пульт для телевизоров TCL",
+    matchTypes: ["TCL Smart TV", "TCL Android TV", "TCL Google TV", "TCL 4K UHD"],
+    tip: "Совместимый пульт для современных телевизоров TCL всех диагоналей от 32 до 65 дюймов.",
+    commonModels: ["TCL 32S5200", "TCL 43P635", "TCL 50P735", "TCL 55C735", "TCL 65C835"]
+  },
+  {
+    brand: "DEXP",
+    keywords: ["dexp", "дексп"],
+    recommendedProductId: "ozon-4944656456",
+    recommendedProductName: "Пульт универсальный для телевизоров DEXP",
+    matchTypes: ["DEXP LED TV", "DEXP Smart TV", "DEXP Android TV"],
+    tip: "Универсальный пульт для телевизоров DEXP. Работает без дополнительной настройки.",
+    commonModels: ["DEXP H32D7000", "DEXP F43D7000", "DEXP U50E9000", "DEXP U55E9000"]
+  },
+  {
     brand: "Телекарта",
     keywords: ["telekarta", "телекарта", "evo", "evo 09", "evo 07", "evo 01", "эво"],
     recommendedProductId: "ozon-1829366751",
@@ -107,7 +134,7 @@ class RemoteChecker {
       status: "universal",
       brand: "Проверка по модели",
       recommendedProduct: defaultProduct,
-      tip: "У нас в наличии пульты для LG, Samsung, Sony, Philips, ARG, Отау ТВ и Телекарта! Отправьте нам фото старого пульта или шильдика ТВ в WhatsApp, и мы подберем 100% совместимый вариант за 2 минуты.",
+      tip: "У нас в наличии пульты для LG, Samsung, Sony, Philips, ARG, Xiaomi, TCL, DEXP, Отау ТВ и Телекарта! Отправьте нам фото старого пульта или шильдика ТВ в WhatsApp, и мы подберем 100% совместимый вариант за 2 минуты.",
       query: query
     };
   }
@@ -126,3 +153,16 @@ class RemoteChecker {
 }
 
 window.RemoteChecker = new RemoteChecker();
+
+// Глобальная функция для клика по чипам брендов
+window.fillRemoteBrand = function(brand) {
+  const input = document.getElementById("remote-checker-input");
+  const btn = document.getElementById("remote-checker-btn");
+  if (input) {
+    input.value = brand;
+    if (btn) {
+      btn.click();
+    }
+    input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
