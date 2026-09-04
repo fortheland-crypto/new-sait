@@ -4,9 +4,9 @@
 const SERVICES_DATA = [
   {
     id: "srv-cctv",
-    title: "Установка систем видеонаблюдения",
-    priceText: "от 4 500 ₸ / точка",
-    priceValue: 4500,
+    title: "Установка видеонаблюдения дома и офиса",
+    priceText: "от 11 000 ₸",
+    priceValue: 11000,
     icon: "camera",
     image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
     badge: "Гарантия",
@@ -52,9 +52,9 @@ const SERVICES_DATA = [
   },
   {
     id: "srv-tv-mount",
-    title: "Обустройство ТВ-зоны и навес телевизоров",
-    priceText: "от 3 500 ₸",
-    priceValue: 3500,
+    title: "Навес телевизора и подключение бытовой техники",
+    priceText: "от 5 000 ₸",
+    priceValue: 5000,
     icon: "monitor",
     image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=800&q=80",
     badge: "Чистый монтаж",
